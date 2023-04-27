@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Derma Medical Application</string>
+    <string name="new_user_signup">Chưa có tài khoản ? <b>Đăng ký ngay</b></string>
 </resources>

@@ -71,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/usernameTil"
             android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
             app:hintEnabled="false">
 
             <EditText
@@ -87,6 +88,40 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!--   Forgot password    -->
+        <TextView
+            android:id="@+id/forgotTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordTil"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Quên mật khẩu ?"
+            android:textColor="@color/gray"/>
+
+        <!--    Login Button    -->
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgotTv"
+            android:text="Đăng nhập"
+            android:layout_marginTop="20dp"
+            android:shadowDy="4"
+            android:background="@drawable/shape_button01"
+            android:textColor="@color/white"/>
+
+        <!--    No Account Register    -->
+        <TextView
+            android:id="@+id/noAccountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/new_user_signup"/>
     </RelativeLayout>
 
 
