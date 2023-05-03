@@ -4,77 +4,215 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ghost_white"
+    android:background="@drawable/back02"
     tools:context=".HomeActivity">
 
     <RelativeLayout
+        android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/back01">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true">
 
-        <RelativeLayout
-            android:id="@+id/toolbarRl"
-            android:layout_width="match_parent"
+        <!--   Search Button     -->
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_alignParentEnd="true">
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_search_white"
+            android:padding="5dp"
+            android:layout_toLeftOf="@id/notifyBtn"/>
 
-            <!--   Search Button     -->
-            <ImageButton
-                android:id="@+id/searchBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_search_white"
-                android:padding="5dp"
-                android:layout_toLeftOf="@id/notifyBtn"/>
-
-            <!--   Notification Button     -->
-            <ImageButton
-                android:id="@+id/notifyBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_notifications_white"
-                android:padding="5dp"
-                android:layout_alignParentEnd="true"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/welcomeAndExploreRl"
-            android:layout_width="match_parent"
+        <!--   Notification Button     -->
+        <ImageButton
+            android:id="@+id/notifyBtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_below="@id/toolbarRl">
-
-            <!--    Welcome TextView     -->
-            <TextView
-                android:id="@+id/welcomeTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Xin chào, Phú !"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="25sp"
-                android:layout_centerVertical="true"
-                />
-
-            <!--    Explore Button   -->
-            <android.widget.Button
-                android:id="@+id/exploreBtn"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Khám phá"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:background="@drawable/shape_button02"
-                android:layout_alignParentEnd="true"/>
-
-        </RelativeLayout>
-
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_notifications_white"
+            android:padding="5dp"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/welcomeAndExploreRl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/toolbarRl">
+
+        <!--    Welcome TextView     -->
+        <TextView
+            android:id="@+id/welcomeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào, Phú !"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_centerVertical="true"
+            />
+
+        <!--    Explore Button   -->
+        <android.widget.Button
+            android:id="@+id/exploreBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Khám phá"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:background="@drawable/shape_button02"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statsRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/welcomeAndExploreRl">
+
+        <RelativeLayout
+            android:id="@+id/diagnosisNumRl"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_stat01">
+
+            <RelativeLayout
+                android:id="@+id/firstLineDiagnosisRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/diagnosisIconIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_medication_blueblack" />
+
+                <TextView
+                    android:id="@+id/diagnosisTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@id/diagnosisIconIv"
+                    android:text="Số lần chẩn đoán bệnh"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_blue" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLineDiagnosisRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/firstLineDiagnosisRl">
+
+                <TextView
+                    android:id="@+id/numberDiagnosisTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_blue"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/unitDiagnosisTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lần"
+                    android:textColor="@color/black_blue"
+                    android:layout_toRightOf="@id/numberTv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/drinkWaterRl"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/shape_stat02">
+
+            <RelativeLayout
+                android:id="@+id/firstLineWaterRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/drinkWaterIconIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_drink_blueblack" />
+
+                <TextView
+                    android:id="@+id/drinkWaterTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toRightOf="@id/drinkWaterIconIv"
+                    android:text="Lượng nước bổ sung trong ngày"
+                    android:textColor="@color/black_blue"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLineRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstLineWaterRl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/numberDrinkWaterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.5 / 2"
+                    android:textColor="@color/black_blue"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/unitDrinkWaterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@id/numberDrinkWaterTv"
+                    android:text="lít"
+                    android:textColor="@color/black_blue" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
