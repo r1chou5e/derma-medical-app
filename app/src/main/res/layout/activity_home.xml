@@ -135,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:text="lần"
                     android:textColor="@color/black_blue"
-                    android:layout_toRightOf="@id/numberTv"
+                    android:layout_toRightOf="@id/numberDiagnosisTv"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="5dp"
                     android:layout_alignParentBottom="true"/>
@@ -208,9 +208,90 @@
                     android:textColor="@color/black_blue" />
 
             </LinearLayout>
-
-
+            
         </RelativeLayout>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/dermaStatusRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statsRl"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_stat03">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/back03">
+
+            <TextView
+                android:id="@+id/dermaStatusTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T3, 03-04-2023"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/secondLineDermaSttRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dermaStatusTimeTv"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/dermaStatusTitleTv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tình trạng da của bạn hiện tại"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black_blue"
+                    android:layout_marginStart="20dp"/>
+
+                <ImageView
+                    android:id="@+id/dermaStatusIconIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/smiling"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/postListRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dermaStatusRl"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/postListTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BÀI VIẾT PHỔ BIẾN"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/diagnosisRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/postListTitleTv"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/post_row"/>
 
     </RelativeLayout>
 

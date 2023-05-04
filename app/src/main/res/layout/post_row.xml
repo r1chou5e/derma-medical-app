@@ -8,7 +8,7 @@
     app:cardCornerRadius="20dp"
     app:cardElevation="0dp"
     app:cardBackgroundColor="@color/white">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,57 +23,29 @@
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:shapeAppearanceOverlay="@style/rounded_corner"
-            app:srcCompat="@drawable/diagnosis" />
+            app:srcCompat="@drawable/thumbnail01" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/titleTv"
+                android:id="@+id/postTitleTv"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chẩn đoán 1"
+                android:text="Nguyên nhân khiến da trẻ nhỏ bị nổi nốt trắng li ti"
                 android:textSize="17sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/timestampTv"
-                android:layout_marginTop="3dp"
-                android:layout_below="@id/titleTv"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/postTitleTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Thời gian: 00:33 03/02/2021" />
-
-            <TextView
-                android:id="@+id/diseaseTv"
-                android:layout_marginTop="2dp"
-                android:layout_below="@id/timestampTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bệnh: Mề đay" />
-
-            <TextView
-                android:id="@+id/statusTv"
-                android:layout_marginTop="2dp"
-                android:layout_below="@id/diseaseTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tình trạng: nhẹ" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_arrow_detail_gray"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"/>
+                android:text="Viêm da cơ địa, ngứa nhiều, bé gãi nhiều, đưa vi khuẩn từ móng tay xâm nhập..." />
 
         </RelativeLayout>
 
