@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/white">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/diagnosisIv"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/diagnosis"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_thumbnail"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chẩn đoán 1"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/timestampTv"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian: 00:33 03/02/2021" />
+
+            <TextView
+                android:id="@+id/diseaseTv"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/timestampTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bệnh: Mề đay" />
+
+            <TextView
+                android:id="@+id/statusTv"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/diseaseTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tình trạng: nhẹ" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_detail_gray"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
