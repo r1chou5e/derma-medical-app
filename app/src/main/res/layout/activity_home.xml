@@ -281,10 +281,11 @@
             android:layout_height="wrap_content"
             android:text="BÀI VIẾT PHỔ BIẾN"
             android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
             android:textStyle="bold"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/diagnosisRv"
+            android:id="@+id/postListRv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/postListTitleTv"
