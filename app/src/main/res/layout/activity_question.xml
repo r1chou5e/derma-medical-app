@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ghost_white"
-    tools:context=".HistoryActivity">
+    tools:context=".QuestionActivity">
 
     <RelativeLayout
         android:id="@+id/toolbarRl"
@@ -26,18 +26,16 @@
             android:padding="5dp"
             android:src="@drawable/ic_back_gray" />
 
-        <!--  History Title  -->
         <TextView
-            android:id="@+id/titleTv"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LỊCH SỬ CHẨN ĐOÁN"
+            android:layout_centerInParent="true"
             android:layout_marginStart="75dp"
-            android:layout_marginBottom="5dp"
             android:layout_toRightOf="@id/backBtn"
-            android:layout_centerVertical="true"
+            android:text="CHI TIẾT CHẨN ĐOÁN"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <!--   Search Button     -->
         <ImageButton
@@ -62,23 +60,15 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_below="@id/toolbarRl">
-
-        <!--  Diagnosis History  -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/diagnosisRv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/titleTv"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/diagnosis_row"/>
-
-
+        android:layout_below="@id/toolbarRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        tools:layout_alignParentBottom="true">
 
     </RelativeLayout>
+
 
 </RelativeLayout>

@@ -20,6 +20,17 @@
             android:layout_marginStart="10dp"
             app:srcCompat="@drawable/ic_back_gray" />
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="75dp"
+            android:layout_toRightOf="@id/backBtn"
+            android:text="CHI TIẾT CHẨN ĐOÁN"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <ImageView
             android:id="@+id/notificationBtn"
             android:layout_width="wrap_content"
@@ -45,14 +56,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         tools:layout_alignParentBottom="true">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="CHI TIẾT CHẨN ĐOÁN"
-            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/imageView3"
