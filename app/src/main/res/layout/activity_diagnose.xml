@@ -43,7 +43,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         tools:layout_alignParentBottom="true">
 
         <TextView
@@ -51,11 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:text="Chi tiết chuẩn đoán"
-            android:textColor="#120000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:text="Chi tiết chuẩn đoán" />
+            android:text="CHI TIẾT CHẨN ĐOÁN"
+            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -65,7 +62,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/shadow"
-            android:elevation="20dp"
+            android:elevation="10dp"
             app:srcCompat="@drawable/small_white_curved_rectangle" />
 
         <RelativeLayout
@@ -239,7 +236,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView3"
             android:text="Liên hệ bác sĩ"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:shadowDy="4"
