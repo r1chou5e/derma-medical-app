@@ -13,5 +13,9 @@ class QuestionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
     }
 }
