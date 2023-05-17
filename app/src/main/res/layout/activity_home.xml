@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeRl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back02"
@@ -276,6 +277,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/dermaStatusRl"
+        android:layout_above="@id/bottomNavigationView"
         android:layout_marginTop="10dp">
 
         <TextView
@@ -300,5 +302,14 @@
 
     </RelativeLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>

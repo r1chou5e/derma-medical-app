@@ -1,5 +1,6 @@
 package com.example.dermamedicalapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dermamedicalapplication.databinding.ActivityHistoryBinding
@@ -22,6 +23,22 @@ class HistoryActivity : AppCompatActivity() {
         }
 
         loadDiagnosises()
+
+        binding.bottomNavigationView.selectedItemId = R.id.history
+
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.home -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    overridePendingTransition(0, 0)
+                }
+                R.id.diagnose -> {
+                    startActivity(Intent(this, QuestionActivity::class.java))
+                    overridePendingTransition(0, 0)
+                }
+            }
+            true
+        }
     }
 
     private fun loadDiagnosises() {

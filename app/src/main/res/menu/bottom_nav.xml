@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Home"
+    <item android:title="Trang chủ"
         android:id="@+id/home"
         android:icon="@drawable/ic_home_gray"/>
-    <item android:title="History"
+    <item android:title="Chẩn đoán"
+        android:id="@+id/diagnose"
+        android:icon="@drawable/ic_add_gray"/>
+    <item android:title="Lịch sử"
         android:id="@+id/history"
         android:icon="@drawable/ic_history_gray"/>
-    <item android:title="Profile"
+    <item android:title="Hồ sơ"
         android:id="@+id/profile"
         android:icon="@drawable/ic_user_filled_gray"/>
-    <item android:title="Settings"
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_settings_gray"/>
 </menu>

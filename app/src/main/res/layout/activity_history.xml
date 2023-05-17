@@ -62,11 +62,13 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/diagnosisRl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_below="@id/toolbarRl">
+        android:layout_below="@id/toolbarRl"
+        android:layout_above="@id/bottomNavigationView">
 
         <!--  Diagnosis History  -->
         <androidx.recyclerview.widget.RecyclerView
@@ -75,10 +77,19 @@
             android:layout_height="match_parent"
             android:layout_below="@id/titleTv"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/diagnosis_row"/>
-
-
+            tools:listitem="@layout/diagnosis_row"
+            tools:ignore="NotSibling" />
 
     </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>
