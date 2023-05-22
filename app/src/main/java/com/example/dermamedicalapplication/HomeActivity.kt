@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.dermamedicalapplication.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var postArrayList: ArrayList<PostModel>
 
@@ -18,6 +21,11 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // init firebase auth
+        firebaseAuth = FirebaseAuth.getInstance()
+        checkUser()
+
         loadPosts()
 
         binding.bottomNavigationView.selectedItemId = R.id.home
@@ -34,6 +42,25 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+
+        binding.logoutBtn.setOnClickListener {
+            firebaseAuth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+
+    }
+
+    private fun checkUser() {
+        // get current user
+        val firebaseUser = firebaseAuth.currentUser
+        if (firebaseUser == null) {
+            binding.fullnameTv.text = "Chưa đăng nhập"
+        }
+        else {
+            val email = firebaseUser.email
+
         }
     }
 
