@@ -15,7 +15,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
         android:background="@android:color/transparent"
         android:padding="10dp"
         android:src="@drawable/ic_back_gray" />
@@ -25,7 +24,6 @@
         android:id="@+id/registerTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_below="@id/backBtn"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-condensed"
@@ -63,7 +61,7 @@
 
         <!--   Username    -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameTil"
+            android:id="@+id/emailTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/fullnameTil"
@@ -71,13 +69,13 @@
             app:hintEnabled="false">
 
             <EditText
-                android:id="@+id/usernameEt"
+                android:id="@+id/emailEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_edittext01"
                 android:padding="15dp"
-                android:hint="Tên đăng nhập"
-                android:inputType="textPersonName|number"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:textColorHint="@color/gray"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,7 +85,7 @@
             android:id="@+id/passwordTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/usernameTil"
+            android:layout_below="@id/emailTil"
             android:layout_marginTop="30dp"
             app:hintEnabled="false"
             app:passwordToggleEnabled="true">
@@ -149,12 +147,12 @@
 
         <!--    Register Button    -->
         <android.widget.Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/phoneTil"
             android:text="Đăng ký"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:shadowDy="4"
             android:background="@drawable/shape_button01"
             android:textColor="@color/white"/>

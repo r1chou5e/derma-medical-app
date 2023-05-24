@@ -45,21 +45,21 @@
 
         <!--   Username    -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameTil"
+            android:id="@+id/emailTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hintEnabled="false">
 
             <EditText
-                android:id="@+id/usernameEt"
+                android:id="@+id/emailEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_edittext01"
-                android:drawableStart="@drawable/ic_user_gray"
+                android:drawableStart="@drawable/ic_mail_gray"
                 android:drawablePadding="10dp"
                 android:padding="15dp"
-                android:hint="Tên đăng nhập"
-                android:inputType="textPersonName|number"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:textColorHint="@color/gray"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -69,7 +69,7 @@
             android:id="@+id/passwordTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/usernameTil"
+            android:layout_below="@id/emailTil"
             android:layout_marginTop="20dp"
             app:passwordToggleEnabled="true"
             app:hintEnabled="false">
