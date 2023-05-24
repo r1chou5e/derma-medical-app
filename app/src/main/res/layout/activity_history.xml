@@ -17,14 +17,6 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp">
 
-        <!--   Back Button     -->
-        <ImageButton
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_back_gray" />
 
         <!--  History Title  -->
         <TextView
@@ -32,32 +24,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LỊCH SỬ CHẨN ĐOÁN"
-            android:layout_marginStart="60dp"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@id/backBtn"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <!--   Search Button     -->
-        <ImageButton
-            android:id="@+id/searchBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/notifyBtn"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_search_gray" />
-
-        <!--   Notification Button     -->
-        <ImageButton
-            android:id="@+id/notifyBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_notification_gray" />
 
     </RelativeLayout>
 

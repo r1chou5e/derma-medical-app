@@ -18,10 +18,6 @@ class HistoryActivity : AppCompatActivity() {
         binding = ActivityHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.backBtn.setOnClickListener {
-            onBackPressed()
-        }
-
         loadDiagnosises()
 
         binding.bottomNavigationView.selectedItemId = R.id.history

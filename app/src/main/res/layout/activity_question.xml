@@ -17,68 +17,33 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp">
 
-        <!--   Back Button     -->
-        <ImageButton
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_back_gray" />
-
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="60dp"
-            android:layout_toRightOf="@id/backBtn"
-            android:text="CHI TIẾT CHẨN ĐOÁN"
+            android:text="THỰC HIỆN CHẨN ĐOÁN"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!--   Search Button     -->
-        <ImageButton
-            android:id="@+id/searchBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/notifyBtn"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_search_gray" />
-
-        <!--   Notification Button     -->
-        <ImageButton
-            android:id="@+id/notifyBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_notification_gray" />
-
     </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbarRl"
-        android:layout_above="@id/bottomNavigationView">
     <RelativeLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRl"
+        android:layout_above="@id/bottomNavigationView"
         android:layout_centerHorizontal="true">
 
         <ImageView
             android:id="@+id/innerBg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="550dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:background="@drawable/shadow"
-            android:elevation="15dp"
-            android:src="@drawable/large_white_curved_rectangle"
+            android:background="@drawable/large_white_curved_rectangle"
             tools:layout_centerHorizontal="true"/>
 
         <RelativeLayout
@@ -107,198 +72,217 @@
                 android:textStyle="bold"/>
 
         </RelativeLayout>
-        
-        <RelativeLayout
-            android:id="@+id/genderQuizRl"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
+
+        <ScrollView
+            android:id="@+id/questionSv"
             android:layout_below="@id/questionTitleRl"
-            android:layout_alignEnd="@id/innerBg"
-            android:elevation="20dp">
-
-            <TextView
-                android:id="@+id/genderQuestionTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:text="Giới tính của bạn ?"
-                android:textColor="@color/black"
-                android:textStyle="bold|normal"
-                android:textSize="20sp" />
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:scrollbars="none"
+            android:layout_centerHorizontal="true">
 
             <RelativeLayout
-                android:id="@+id/genderAnswerRl"
+                android:id="@+id/questionListRl"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/genderQuestionTv">
-                
-                <RadioGroup
-                    android:id="@+id/genderAnswerRg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
+                android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/male"
-                        android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/genderQuizRl"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/questionTitleRl"
+                    android:layout_alignEnd="@id/innerBg"
+                    android:elevation="20dp"
+                    tools:ignore="NotSibling">
+
+                    <TextView
+                        android:id="@+id/genderQuestionTv"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Nam" />
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Giới tính của bạn ?"
+                        android:textColor="@color/black"
+                        android:textStyle="bold|normal"
+                        android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/female"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:id="@+id/genderAnswerRl"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:textSize="18sp"
-                        android:text="Nữ" />
+                        android:layout_below="@id/genderQuestionTv">
 
-                </RadioGroup>
+                        <RadioGroup
+                            android:id="@+id/genderAnswerRg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
 
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Nam" />
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="50dp"
+                                android:textSize="18sp"
+                                android:text="Nữ" />
+
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/symptomQuizRl"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderQuizRl"
+                    android:layout_alignEnd="@id/innerBg"
+                    android:elevation="20dp"
+                    tools:ignore="NotSibling">
+
+                    <TextView
+                        android:id="@+id/symptomQuestionTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:textStyle="bold"
+                        android:text="Thời gian bắt đầu triệu chứng ?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/symptomAnswerRl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/symptomQuestionTv">
+
+                        <RadioGroup
+                            android:id="@+id/symptomAnswerRg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/week"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Trong vòng 1 tuần" />
+
+                            <RadioButton
+                                android:id="@+id/month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Trong vòng 1 tháng" />
+
+                            <RadioButton
+                                android:id="@+id/year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Trong vòng 1 năm" />
+
+                            <RadioButton
+                                android:id="@+id/congential"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Trên 1 năm / Bẩm sinh" />
+
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/levelQuizRl"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/symptomQuizRl"
+                    android:layout_alignEnd="@id/innerBg"
+                    android:elevation="20dp"
+                    tools:ignore="NotSibling">
+
+                    <TextView
+                        android:id="@+id/levelQuestionTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Mức độ của các triệu chứng đau, ngứa ?"
+                        android:textColor="@color/black"
+                        android:textStyle="bold|normal"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/levelAnswerRl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/levelQuestionTv">
+
+                        <RadioGroup
+                            android:id="@+id/levelAnswerRg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/nothing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Không có" />
+
+                            <RadioButton
+                                android:id="@+id/normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Nhẹ - Trung bình" />
+
+                            <RadioButton
+                                android:id="@+id/serious"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:textSize="18sp"
+                                android:text="Nặng" />
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/symptomQuizRl"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/genderQuizRl"
-            android:layout_alignEnd="@id/innerBg"
-            android:elevation="20dp">
-
-            <TextView
-                android:id="@+id/symptomQuestionTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:textStyle="bold"
-                android:text="Thời gian bắt đầu triệu chứng ?"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <RelativeLayout
-                android:id="@+id/symptomAnswerRl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/symptomQuestionTv">
-
-                <RadioGroup
-                    android:id="@+id/symptomAnswerRg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
-
-                    <RadioButton
-                        android:id="@+id/week"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Trong vòng 1 tuần" />
-
-                    <RadioButton
-                        android:id="@+id/month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Trong vòng 1 tháng" />
-
-                    <RadioButton
-                        android:id="@+id/year"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Trong vòng 1 năm" />
-
-                    <RadioButton
-                        android:id="@+id/congential"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Trên 1 năm / Bẩm sinh" />
-
-                </RadioGroup>
-
-
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/levelQuizRl"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/symptomQuizRl"
-            android:layout_alignEnd="@id/innerBg"
-            android:elevation="20dp">
-
-            <TextView
-                android:id="@+id/levelQuestionTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:text="Mức độ của các triệu chứng đau, ngứa ?"
-                android:textColor="@color/black"
-                android:textStyle="bold|normal"
-                android:textSize="20sp" />
-
-            <RelativeLayout
-                android:id="@+id/levelAnswerRl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/levelQuestionTv">
-
-                <RadioGroup
-                    android:id="@+id/levelAnswerRg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
-
-                    <RadioButton
-                        android:id="@+id/nothing"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Không có" />
-
-                    <RadioButton
-                        android:id="@+id/normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Nhẹ - Trung bình" />
-
-                    <RadioButton
-                        android:id="@+id/serious"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:textSize="18sp"
-                        android:text="Nặng" />
-
-                </RadioGroup>
-
-
-            </RelativeLayout>
-
-        </RelativeLayout>
+        </ScrollView>
 
         <android.widget.Button
             android:id="@+id/scanBtn"
@@ -306,17 +290,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/innerBg"
             android:text="Chụp ảnh vị trí vết thương"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:shadowDy="4"
             android:background="@drawable/shape_button01"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            tools:ignore="NotSibling" />
 
     </RelativeLayout>
 
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         app:itemIconTint="@color/blue"

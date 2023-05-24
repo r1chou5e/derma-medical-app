@@ -30,9 +30,5 @@ class QuestionActivity : AppCompatActivity() {
             }
             true
         }
-
-        binding.backBtn.setOnClickListener {
-            onBackPressed()
-        }
     }
 }
