@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="60dp"
-            android:text="THỰC HIỆN CHẨN ĐOÁN"
+            android:text="BẮT ĐẦU CHẨN ĐOÁN"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -143,11 +143,45 @@
 
                 </RelativeLayout>
 
+               <RelativeLayout
+                   android:id="@+id/dobRl"
+                   android:layout_width="350dp"
+                   android:layout_height="wrap_content"
+                   android:layout_alignEnd="@id/innerBg"
+                   android:elevation="20dp"
+                   android:layout_below="@id/genderQuizRl"
+                   tools:ignore="NotSibling">
+
+                    <TextView
+                        android:id="@+id/dobTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngày tháng năm sinh ?"
+                        android:textSize="20sp"
+                        android:layout_marginStart="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                   <EditText
+                       android:id="@+id/dobEt"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/dobTv"
+                       android:inputType="none"
+                       android:hint="Chọn năm"
+                       android:focusable="false"
+                       android:textAlignment="center"
+                       android:onClick="showDatePickerDialog"
+                       android:layout_marginStart="20dp"/>
+
+
+               </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/symptomQuizRl"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/genderQuizRl"
+                    android:layout_below="@id/dobRl"
                     android:layout_alignEnd="@id/innerBg"
                     android:elevation="20dp"
                     tools:ignore="NotSibling">
