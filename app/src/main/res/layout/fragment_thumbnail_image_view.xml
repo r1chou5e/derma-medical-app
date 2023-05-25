@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThumbnailImageViewFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ảnh đã chọn"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            style="@style/TextAppearance.AppCompat.Title" />
+
+        <ImageButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_cancel_gray"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/toolbarRl">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/thumbnailIv"
+            app:shapeAppearanceOverlay="@style/rounded_corner"
+            app:srcCompat="@drawable/placeholder_square"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/buttonRl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/thumbnailIv"
+            android:layout_centerHorizontal="true">
+
+            <android.widget.Button
+                android:id="@+id/addBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_button01"
+                android:shadowDy="4"
+                android:text="Chọn ảnh từ máy"
+                android:textColor="@color/white" />
+
+            <android.widget.Button
+                android:id="@+id/saveBtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/addBtn"
+                android:background="@drawable/shape_button01"
+                android:shadowDy="4"
+                android:text="Lưu ảnh"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
