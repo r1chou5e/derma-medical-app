@@ -23,6 +23,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed(Runnable {
             checkUser()
+//          startActivity(Intent(this, ThumbnailImageViewFragment::class.java))
         }, 2000)
     }
 
