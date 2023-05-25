@@ -24,7 +24,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="60dp"
             android:text="BẮT ĐẦU CHẨN ĐOÁN"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
@@ -40,10 +40,10 @@
         <ImageView
             android:id="@+id/innerBg"
             android:layout_width="wrap_content"
-            android:layout_height="550dp"
+            android:layout_height="520dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:background="@drawable/large_white_curved_rectangle"
+            android:background="@drawable/small_white_curved_rectangle"
             tools:layout_centerHorizontal="true"/>
 
         <RelativeLayout
@@ -77,7 +77,7 @@
             android:id="@+id/questionSv"
             android:layout_below="@id/questionTitleRl"
             android:layout_width="wrap_content"
-            android:layout_height="500dp"
+            android:layout_height="470dp"
             android:scrollbars="none"
             android:layout_centerHorizontal="true">
 
@@ -324,10 +324,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/innerBg"
             android:text="Chụp ảnh vị trí vết thương"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
-            android:layout_marginBottom="15dp"
             android:shadowDy="4"
             android:background="@drawable/shape_button01"
             android:textColor="@color/white"
