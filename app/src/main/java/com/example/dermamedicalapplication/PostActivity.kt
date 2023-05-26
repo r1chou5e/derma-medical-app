@@ -158,8 +158,7 @@ class PostActivity : AppCompatActivity(), ThumbnailImageViewFragment.ThumbnailIm
             }
     }
 
-
-    override fun onImageSelected(imageUri: Uri?) {
-
+    override fun onSaveButtonClicked(imageUri: Uri?) {
+        this.imageUri = imageUri
     }
 }

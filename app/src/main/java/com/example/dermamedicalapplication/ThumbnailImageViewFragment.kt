@@ -36,7 +36,7 @@ class ThumbnailImageViewFragment : BottomSheetDialogFragment() {
 
 
     interface ThumbnailImageListener {
-        fun onImageSelected(imageUri: Uri?)
+        fun onSaveButtonClicked(imageUri: Uri?)
     }
 
 
@@ -55,6 +55,11 @@ class ThumbnailImageViewFragment : BottomSheetDialogFragment() {
         }
 
         binding.cancelBtn.setOnClickListener {
+            dismiss()
+        }
+
+        binding.saveBtn.setOnClickListener {
+            listener?.onSaveButtonClicked(imageUri)
             dismiss()
         }
 
@@ -84,7 +89,6 @@ class ThumbnailImageViewFragment : BottomSheetDialogFragment() {
 
                 binding.thumbnailIv.setImageURI(imageUri)
 
-                listener?.onImageSelected(imageUri)
             }
         }
     )
