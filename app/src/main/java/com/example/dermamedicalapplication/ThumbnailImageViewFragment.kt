@@ -1,6 +1,7 @@
 package com.example.dermamedicalapplication
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -24,11 +25,19 @@ private const val ARG_PARAM2 = "param2"
  * Use the [ThumbnailImageViewFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class ThumbnailImageViewFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentThumbnailImageViewBinding
 
     private var imageUri: Uri? = null
+
+    private var listener: ThumbnailImageListener? = null
+
+
+    interface ThumbnailImageListener {
+        fun onImageSelected(imageUri: Uri?)
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +61,14 @@ class ThumbnailImageViewFragment : BottomSheetDialogFragment() {
         return binding.root
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is ThumbnailImageListener) {
+            listener = context
+        }
+    }
+
+
     private fun pickImageGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
@@ -66,6 +83,8 @@ class ThumbnailImageViewFragment : BottomSheetDialogFragment() {
                 imageUri = data!!.data
 
                 binding.thumbnailIv.setImageURI(imageUri)
+
+                listener?.onImageSelected(imageUri)
             }
         }
     )

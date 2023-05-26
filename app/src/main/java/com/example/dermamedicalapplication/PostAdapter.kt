@@ -37,7 +37,7 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
         val title = model.title
         val uid = model.uid
         val timestamp = model.timestamp
-        val description = model.description
+        val content = model.content
     }
 
     inner class PostHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

@@ -5,5 +5,6 @@ class PostModel {
     var title:String = ""
     var timestamp:String = ""
     var uid:String = ""
-    var description:String = ""
+    var image:String = ""
+    var content:String = ""
 }
