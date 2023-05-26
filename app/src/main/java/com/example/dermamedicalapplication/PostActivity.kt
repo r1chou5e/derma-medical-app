@@ -88,7 +88,7 @@ class PostActivity : AppCompatActivity(), ThumbnailImageViewFragment.ThumbnailIm
         Log.d(TAG, "uploadPostToStorage: uploading to storage...")
 
         // show progress dialog
-        progressDialog.setMessage("Uploading post...")
+        progressDialog.setMessage("Đang đăng bài viết...")
         progressDialog.show()
 
         // timestamp
