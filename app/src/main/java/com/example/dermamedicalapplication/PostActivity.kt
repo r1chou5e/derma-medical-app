@@ -88,7 +88,7 @@ class PostActivity : AppCompatActivity(), ThumbnailImageViewFragment.ThumbnailIm
         Log.d(TAG, "uploadPostToStorage: uploading to storage...")
 
         // show progress dialog
-        progressDialog.setMessage("Đang đăng bài viết...")
+        progressDialog.setMessage("Đang lưu ảnh...")
         progressDialog.show()
 
         // timestamp
@@ -126,7 +126,7 @@ class PostActivity : AppCompatActivity(), ThumbnailImageViewFragment.ThumbnailIm
     private fun uploadPostToDb(uploadedImageUrl: String, timestamp: Long) {
         // upload image
         Log.d(TAG, "uploadPostIntoDb: uploading to db")
-        progressDialog.setMessage("Đang upload ảnh...")
+        progressDialog.setMessage("Đang đăng bài viết...")
 
         // uid of current user
         val uid = firebaseAuth.uid
