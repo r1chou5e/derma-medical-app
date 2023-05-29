@@ -1,6 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ReminderSetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghost_white"
+    tools:context=".QuestionActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <!--   Back Button     -->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_gray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="60dp"
+            android:layout_toRightOf="@id/backBtn"
+            android:text="NHẮC NHỞ UỐNG NƯỚC"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--   Search Button     -->
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/notifyBtn"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_search_gray" />
+
+        <!--   Notification Button     -->
+        <ImageButton
+            android:id="@+id/notifyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_notification_gray" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/innerBg"
+                android:layout_width="wrap_content"
+                android:layout_height="600dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shadow"
+                android:elevation="15dp"
+                android:src="@drawable/large_white_curved_rectangle"
+                tools:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:id="@+id/questionTitleRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/innerBg"
+                android:layout_centerHorizontal="true"
+                android:elevation="20dp">
+
+                <ImageView
+                    android:id="@+id/questionTitleBgIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_blue_curved_corner_title" />
+
+                <TextView
+                    android:id="@+id/questionTitleTv"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Cài đặt thông báo"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wakeUpTimeRl"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTitleRl"
+                android:layout_alignEnd="@id/innerBg"
+                android:elevation="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/genderQuestionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Thông báo uống nước"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold|normal" />
+
+                <Switch
+                    android:id="@+id/notifSwitch"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/genderQuestionTv" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sleepTimeRl"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wakeUpTimeRl"
+                android:layout_alignEnd="@id/innerBg"
+                android:layout_marginTop="20dp"
+                android:elevation="20dp">
+
+                <TextView
+                    android:id="@+id/symptomQuestionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Thời gian thức dậy"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/symptomQuestionTv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:timePickerMode="spinner" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/levelQuizRl"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleepTimeRl"
+                android:layout_alignEnd="@id/innerBg"
+                android:elevation="20dp">
+
+                <TextView
+                    android:id="@+id/symptomQuestionTv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Thời gian đi ngủ"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TimePicker
+                    android:id="@+id/timePicker2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/symptomQuestionTv3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:timePickerMode="spinner" />
+            </RelativeLayout>
+
+            <android.widget.Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/innerBg"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_button01"
+                android:shadowDy="4"
+                android:text="Xác nhận"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        app:menu="@menu/bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

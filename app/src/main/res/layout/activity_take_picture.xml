@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TakePictureActivity">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_back_gray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="60dp"
+            android:layout_toRightOf="@id/backBtn"
+            android:text="CHI TIẾT CHẨN ĐOÁN"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notificationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_notification_gray" />
+
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/notificationBtn"
+            app:srcCompat="@drawable/ic_search_gray" />
+
+    </RelativeLayout>
+
+    <android.widget.Button
+        android:id="@+id/Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayPic"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/shape_button01"
+        android:shadowDy="4"
+        android:text="Xác nhận"
+        android:textColor="@color/white" />
+
+    <android.widget.Button
+        android:id="@+id/Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Confirm"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/shape_button01"
+        android:shadowDy="4"
+        android:text="Huỷ"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/displayPic"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        app:menu="@menu/bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

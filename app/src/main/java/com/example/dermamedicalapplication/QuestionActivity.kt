@@ -1,23 +1,52 @@
 package com.example.dermamedicalapplication
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.DatePicker
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.dermamedicalapplication.databinding.ActivityQuestionBinding
+
 import java.text.SimpleDateFormat
 import java.util.*
+import com.github.dhaval2404.imagepicker.ImagePicker
 
 class QuestionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuestionBinding
 
     private lateinit var calendar: Calendar
+    companion object {
+        lateinit var imageUri: Uri
+    }
 
+    private val startForProfileImageResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+    {
+            result: androidx.activity.result.ActivityResult ->
+        val resultCode = result.resultCode
+        val data = result.data
+        when (resultCode) {
+            Activity.RESULT_OK -> {
+                //Image Uri will not be null for RESULT_OK
+                imageUri = data?.data!!
+                startActivity(Intent(this, TakePictureActivity::class.java))
+
+            }
+            ImagePicker.RESULT_ERROR -> {
+                Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                Toast.makeText(this, "Task Cancelled", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionBinding.inflate(layoutInflater)
@@ -42,6 +71,15 @@ class QuestionActivity : AppCompatActivity() {
             }
             true
         }
+
+        binding.scanBtn.setOnClickListener {
+            ImagePicker.Companion.with(this)
+                .compress(1024)
+                .maxResultSize(1080, 1080)
+                .createIntent { intent ->
+
+                    startForProfileImageResult.launch(intent)
+                }
     }
 
     fun showDatePickerDialog(view: View) {
@@ -59,4 +97,6 @@ class QuestionActivity : AppCompatActivity() {
 
         datePickerDialog.show()
     }
-}
+
+
+}}

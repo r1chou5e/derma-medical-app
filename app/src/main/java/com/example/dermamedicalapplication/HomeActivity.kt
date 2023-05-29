@@ -48,6 +48,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, PostActivity::class.java))
         }
 
+        binding.drinkWaterRl.setOnClickListener {
+            startActivity(Intent(this, WaterReminderActivity::class.java))
+        }
+
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             startActivity(Intent(this, LoginActivity::class.java))
