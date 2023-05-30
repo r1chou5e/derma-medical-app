@@ -2,12 +2,17 @@ package com.example.dermamedicalapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
+import android.view.View.OnTouchListener
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import android.widget.ProgressBar
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dermamedicalapplication.databinding.ActivityWaterReminderBinding
 import java.lang.Integer.parseInt
-import kotlin.properties.Delegates
+
 
 class WaterReminderActivity : AppCompatActivity() {
     lateinit var binding : ActivityWaterReminderBinding
@@ -95,6 +100,22 @@ class WaterReminderActivity : AppCompatActivity() {
             currentProgress += amount
             progressbar.progress = currentProgress
             binding.textView2.text = "${currentProgress}/2000 ml"
+
+            if(currentProgress >= 2000)
+            {
+                val builder = AlertDialog.Builder(this)
+                getSystemService(LAYOUT_INFLATER_SERVICE)
+                val height = LinearLayout.LayoutParams.WRAP_CONTENT
+                val width = LinearLayout.LayoutParams.WRAP_CONTENT
+                val view = layoutInflater.inflate(R.layout.drinking_goal_reach_popup, null)
+                builder.setView(view)
+                builder.create()
+                builder.show()
+
+
+
+
+            }
 
 
         }

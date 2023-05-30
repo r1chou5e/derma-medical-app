@@ -59,62 +59,50 @@
 
     </RelativeLayout>
 
-    <ScrollView
+    <RelativeLayout
+        android:id="@+id/questionTitleRl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/bottomNavigationView"
-        android:layout_below="@id/toolbarRl">
+        android:layout_alignTop="@id/innerBg"
+        android:layout_centerHorizontal="true"
+        android:elevation="20dp">
+
+        <ImageView
+            android:id="@+id/questionTitleBgIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_blue_curved_corner_title" />
+
+        <TextView
+            android:id="@+id/questionTitleTv"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Cài đặt thông báo"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_below="@id/questionTitleRl"
+        android:layout_centerHorizontal="true"
+        android:elevation="16dp">
 
         <RelativeLayout
             android:id="@+id/content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true">
-
-            <ImageView
-                android:id="@+id/innerBg"
-                android:layout_width="wrap_content"
-                android:layout_height="600dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/shadow"
-                android:elevation="15dp"
-                android:src="@drawable/large_white_curved_rectangle"
-                tools:layout_centerHorizontal="true" />
-
-            <RelativeLayout
-                android:id="@+id/questionTitleRl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/innerBg"
-                android:layout_centerHorizontal="true"
-                android:elevation="20dp">
-
-                <ImageView
-                    android:id="@+id/questionTitleBgIv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/shape_blue_curved_corner_title" />
-
-                <TextView
-                    android:id="@+id/questionTitleTv"
-                    android:layout_width="350dp"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:text="Cài đặt thông báo"
-                    android:textAlignment="gravity"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/wakeUpTimeRl"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/questionTitleRl"
-                android:layout_alignEnd="@id/innerBg"
                 android:elevation="20dp"
                 android:paddingTop="20dp">
 
@@ -198,23 +186,34 @@
                     android:timePickerMode="spinner" />
             </RelativeLayout>
 
-            <android.widget.Button
-                android:id="@+id/confirmBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/innerBg"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/shape_button01"
-                android:shadowDy="4"
-                android:text="Xác nhận"
-                android:textColor="@color/white" />
-
         </RelativeLayout>
 
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/innerBg"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_below="@id/toolbarRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shadow"
+        android:elevation="15dp"
+        android:src="@drawable/large_white_curved_rectangle"
+        app:srcCompat="@drawable/large_white_curved_rectangle" />
+
+    <android.widget.Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/shape_button01"
+        android:shadowDy="4"
+        android:text="Xác nhận"
+        android:textColor="@color/white" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
