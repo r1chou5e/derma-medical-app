@@ -81,9 +81,9 @@ class WaterReminderActivity : AppCompatActivity() {
         if (binding.waterAmount.checkedRadioButtonId == -1)
         {
             android.app.AlertDialog.Builder(this)
-                .setTitle("Water amount is empty")
-                .setMessage("Please select water amount")
-                .setPositiveButton("Okay"){_,_ ->}
+                .setTitle("Chưa có mức nước nào")
+                .setMessage("Vui lòng chọn lượng nước !")
+                .setPositiveButton("Đồng ý"){_,_ ->}
                 .show()
         }else {
             if (binding.ml300.isChecked) {
