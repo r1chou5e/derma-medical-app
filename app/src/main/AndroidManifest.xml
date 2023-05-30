@@ -13,9 +13,12 @@
         android:theme="@style/Theme.DermaMedicalApplication"
         tools:targetApi="31">
         <activity
-            android:name=".PostActivity"
-            android:windowSoftInputMode="adjustPan"
+            android:name=".SearchActivity"
             android:exported="false" />
+        <activity
+            android:name=".PostActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".QuestionActivity"
             android:exported="false" />
