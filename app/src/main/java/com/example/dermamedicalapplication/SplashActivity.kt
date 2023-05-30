@@ -21,8 +21,8 @@ class SplashActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         Handler().postDelayed(Runnable {
-            checkUser()
-//          startActivity(Intent(this, ThumbnailImageViewFragment::class.java))
+//            checkUser()
+          startActivity(Intent(this, SearchActivity::class.java))
         }, 2000)
     }
 
