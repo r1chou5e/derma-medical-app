@@ -6,6 +6,10 @@ import android.os.Bundle
 import com.example.dermamedicalapplication.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class HomeActivity : AppCompatActivity() {
 
@@ -72,20 +76,36 @@ class HomeActivity : AppCompatActivity() {
         }
         else {
             val email = firebaseUser.email
-
         }
     }
 
     private fun loadPosts() {
         postArrayList = ArrayList()
 
-        repeat(10) {
-            postArrayList.add(PostModel())
-        }
+        // get all posts from firebase db
+        val ref = FirebaseDatabase.getInstance().getReference("Post")
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                postArrayList.clear()
+                for (ds in snapshot.children) {
+                    // get data as model
+                    val model = ds.getValue(PostModel::class.java)
+                    // add to arrayList
+                    postArrayList.add(model!!)
+                }
 
-        postAdapter = PostAdapter(this@HomeActivity, postArrayList)
+                // setup adapter
+                postAdapter = PostAdapter(this@HomeActivity, postArrayList)
 
-        binding.postListRv.adapter = postAdapter
+                // set adapter to RecyclerView
+                binding.postListRv.adapter = postAdapter
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
 
     }
 }

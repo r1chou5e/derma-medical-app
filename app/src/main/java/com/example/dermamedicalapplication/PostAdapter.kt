@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Filterable
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.databinding.PostRowBinding
 
@@ -38,10 +40,16 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
         val uid = model.uid
         val timestamp = model.timestamp
         val content = model.content
+
+        // set data
+        holder.postTitleTv.text = title
+        holder.postContentTv.text = content
+
     }
 
     inner class PostHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
+        var postTitleTv:TextView = binding.postTitleTv
+        var postContentTv:TextView = binding.postContentTv
     }
 
 
