@@ -58,6 +58,10 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.searchBtn.setOnClickListener {
+            startActivity(Intent(this, SearchActivity::class.java))
+        }
+
     }
 
     private fun checkUser() {

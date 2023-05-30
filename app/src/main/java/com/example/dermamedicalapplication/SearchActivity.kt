@@ -15,6 +15,10 @@ class SearchActivity : AppCompatActivity() {
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
+
         val posts = arrayOf("Vì sao phải uống nước", "Top 5 bài thuốc dân gian trị nấm ngoài da", "Mật ong có tác dụng gì cho làn da của bạn ?", "Thức khuya có làm ảnh hưởng đến sức khỏe ?")
         val postAdapter: ArrayAdapter<String> = ArrayAdapter (
             this, android.R.layout.simple_list_item_1,

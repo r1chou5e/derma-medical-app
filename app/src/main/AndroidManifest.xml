@@ -17,6 +17,8 @@
         <activity
             android:name=".TakePictureActivity"
             android:exported="false" />
+        <activity android:name=".SearchActivity"
+            android:exported="false" />
         <activity
             android:name=".PostActivity"
             android:exported="false"
