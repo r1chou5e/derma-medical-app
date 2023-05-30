@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.databinding.PostRowBinding
+import com.squareup.picasso.Picasso
 
 class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
 
@@ -37,6 +38,7 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
         val model = postArrayList[position]
         val id = model.id
         val title = model.title
+        val imageUrl = model.imageUrl
         val uid = model.uid
         val timestamp = model.timestamp
         val content = model.content
@@ -45,11 +47,24 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
         holder.postTitleTv.text = title
         holder.postContentTv.text = content
 
+        if (imageUrl.isNotEmpty()) {
+            Picasso.get()
+                .load(imageUrl)
+                .placeholder(R.drawable.placeholder_square) // Placeholder image, nếu muốn
+                .error(R.drawable.placeholder_square) // Image lỗi, nếu muốn
+                .fit()
+                .centerCrop()
+                .into(holder.thumbnailIv)
+        } else {
+            // Xử lý khi đường dẫn ảnh rỗng
+            holder.thumbnailIv.setImageResource(R.drawable.placeholder_square)
+        }
     }
 
     inner class PostHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var postTitleTv:TextView = binding.postTitleTv
         var postContentTv:TextView = binding.postContentTv
+        var thumbnailIv:ImageView = binding.thumbnailIv
     }
 
 
