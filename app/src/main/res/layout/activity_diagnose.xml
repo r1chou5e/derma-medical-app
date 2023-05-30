@@ -131,7 +131,7 @@
         </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/diagnosePic"
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:layout_below="@id/Time"
@@ -145,7 +145,7 @@
             android:id="@+id/Description"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageView7"
+            android:layout_below="@id/diagnosePic"
             android:layout_alignEnd="@id/imageView3"
             android:layout_alignStart="@id/imageView3"
             android:layout_marginStart="20dp"

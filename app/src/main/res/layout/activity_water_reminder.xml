@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/WaterReminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghost_white"
+    tools:context=".QuestionActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <!--   Back Button     -->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_gray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="60dp"
+            android:layout_toRightOf="@id/backBtn"
+            android:text="NHẮC NHỞ UỐNG NƯỚC"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--   Search Button     -->
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/notifyBtn"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_search_gray" />
+
+        <!--   Notification Button     -->
+        <ImageButton
+            android:id="@+id/notifyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_notification_gray" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/innerBg"
+                android:layout_width="wrap_content"
+                android:layout_height="450dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shadow"
+                android:elevation="15dp"
+                android:src="@drawable/large_white_curved_rectangle"
+                app:srcCompat="@drawable/large_white_curved_rectangle"
+                tools:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:id="@+id/questionTitleRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/innerBg"
+                android:layout_centerHorizontal="true"
+                android:elevation="20dp">
+
+                <ImageView
+                    android:id="@+id/questionTitleBgIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shape_blue_curved_corner_title" />
+
+                <TextView
+                    android:id="@+id/questionTitleTv"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Cài đặt nhắc nhở"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wakeUpTimeRl"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/questionTitleRl"
+                android:layout_alignEnd="@id/innerBg"
+                android:elevation="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/genderQuestionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Quá trình"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold|normal" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderQuestionTv"
+                    android:layout_alignEnd="@id/progressBar"
+                    android:text="0/2000ml" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="325dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:progressDrawable="@drawable/custom_progress_bar" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sleepTimeRl"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wakeUpTimeRl"
+                android:layout_alignEnd="@id/innerBg"
+                android:layout_marginTop="20dp"
+                android:elevation="20dp">
+
+                <TextView
+                    android:id="@+id/symptomQuestionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Lượng nước"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/symptomAnswerRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/symptomQuestionTv">
+
+                    <RelativeLayout
+                        android:id="@+id/other"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/waterAmount"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/ml"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_toEndOf="@id/otherField"
+                            android:gravity="center_vertical"
+                            android:text="ml"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/otherField"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="20dp"
+                            android:ems="10"
+                            android:gravity="center_vertical|end"
+                            android:inputType="number" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/waterAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/ml300"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="300 ml"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/ml400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="400 ml"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/ml600"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="600 ml"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/otherChoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:checked="false"
+                            android:text="Khác"
+                            android:textSize="18sp" />
+
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/levelQuizRl"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleepTimeRl"
+                android:layout_alignEnd="@id/innerBg"
+                android:elevation="20dp">
+
+            </RelativeLayout>
+
+            <android.widget.Button
+                android:id="@+id/addBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/innerBg"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_button01"
+                android:shadowDy="4"
+                android:text="Đã uống"
+                android:textColor="@color/white" />
+
+            <android.widget.Button
+                android:id="@+id/ReminderToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addBtn"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_button01"
+                android:shadowDy="4"
+                android:text="Cài đặt thông báo"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        app:menu="@menu/bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

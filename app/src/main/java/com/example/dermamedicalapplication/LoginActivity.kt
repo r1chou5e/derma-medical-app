@@ -38,7 +38,6 @@ class LoginActivity : AppCompatActivity() {
         binding.loginBtn.setOnClickListener {
 
             validateData()
-
         }
 
         // handle register click

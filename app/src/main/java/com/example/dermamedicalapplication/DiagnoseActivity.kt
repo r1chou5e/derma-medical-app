@@ -2,6 +2,7 @@ package com.example.dermamedicalapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.dermamedicalapplication.QuestionActivity.Companion.imageUri
 import com.example.dermamedicalapplication.databinding.ActivityDiagnoseBinding
 
 class DiagnoseActivity : AppCompatActivity() {
@@ -12,5 +13,9 @@ class DiagnoseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDiagnoseBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(imageUri != null) {
+            binding.diagnosePic.setImageURI(imageUri)
+        }
     }
 }
