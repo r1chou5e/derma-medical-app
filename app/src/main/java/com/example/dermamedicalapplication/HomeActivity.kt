@@ -3,6 +3,7 @@ package com.example.dermamedicalapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.dermamedicalapplication.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -94,11 +95,18 @@ class HomeActivity : AppCompatActivity() {
                     postArrayList.add(model!!)
                 }
 
-                // setup adapter
-                postAdapter = PostAdapter(this@HomeActivity, postArrayList)
+                if (postArrayList.isEmpty()) {
+                    binding.noPostTv.visibility = View.VISIBLE
+                }
+                else {
+                    binding.noPostTv.visibility = View.GONE
 
-                // set adapter to RecyclerView
-                binding.postListRv.adapter = postAdapter
+                    // setup adapter
+                    postAdapter = PostAdapter(this@HomeActivity, postArrayList)
+
+                    // set adapter to RecyclerView
+                    binding.postListRv.adapter = postAdapter
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {

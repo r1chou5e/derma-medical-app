@@ -50,13 +50,13 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
         if (imageUrl.isNotEmpty()) {
             Picasso.get()
                 .load(imageUrl)
-                .placeholder(R.drawable.placeholder_square) // Placeholder image, nếu muốn
-                .error(R.drawable.placeholder_square) // Image lỗi, nếu muốn
+                .placeholder(R.drawable.placeholder_square) // Placeholder image
+                .error(R.drawable.placeholder_square) // Image error
                 .fit()
                 .centerCrop()
                 .into(holder.thumbnailIv)
         } else {
-            // Xử lý khi đường dẫn ảnh rỗng
+            // if imageUrl empty
             holder.thumbnailIv.setImageResource(R.drawable.placeholder_square)
         }
     }
@@ -66,7 +66,6 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
         var postContentTv:TextView = binding.postContentTv
         var thumbnailIv:ImageView = binding.thumbnailIv
     }
-
 
 
 }
