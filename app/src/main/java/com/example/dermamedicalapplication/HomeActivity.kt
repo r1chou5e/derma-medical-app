@@ -77,6 +77,23 @@ class HomeActivity : AppCompatActivity() {
         }
         else {
             val email = firebaseUser.email
+
+            val userRef = FirebaseDatabase.getInstance().getReference("User").child(firebaseUser.uid)
+            userRef.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        val fullname = snapshot.child("fullname").value.toString()
+                        binding.fullnameTv.text = fullname
+
+                        binding.welcomeTv.text = "Xin chào, " + fullname.substringAfterLast(" ") + " !"
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Xử lý khi có lỗi xảy ra
+                }
+            })
+
         }
     }
 
