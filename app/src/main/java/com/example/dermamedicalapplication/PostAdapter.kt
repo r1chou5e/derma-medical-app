@@ -1,6 +1,7 @@
 package com.example.dermamedicalapplication
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,13 @@ class PostAdapter:RecyclerView.Adapter<PostAdapter.PostHolder> {
             // if imageUrl empty
             holder.thumbnailIv.setImageResource(R.drawable.placeholder_square)
         }
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, PostDetailActivity::class.java)
+            intent.putExtra("postId", id)
+            context.startActivity(intent)
+        }
+
     }
 
     inner class PostHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

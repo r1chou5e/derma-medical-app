@@ -3,4 +3,9 @@
     <string name="new_user_signup">Chưa có tài khoản ? <b>Đăng ký ngay</b></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="post_content_ex"> Nước là hợp chất dễ kiếm nhất và đặc biệt cần thiết cho sự sống. Một người không thể sống mà không có nước trong vòng một tuần. Vì vậy, cơ thể bắt buộc phải cung cấp đủ nước. Nước uống tinh khiết là chất lỏng lành mạnh nhất mà bạn có thể sử dụng gần như cả ngày nếu bạn có một máy lọc nước tốt ở nhà hay nơi làm việc.
+        Dưới đây là một số lợi ích cho thấy nước là thức uống lành mạnh nhất cho sức khỏe con người.
+        Nước là phương tiện để vận chuyển các chất thải ra khỏi tế bào đến thận của bạn. Độc tố chính của cơ thể, urê nitơ máu là một hợp chất hòa tan trong nước được loại bỏ qua nước tiểu. Uống nước đúng cách, đủ lượng nước làm giảm căng thẳng cho thận và giúp nước tiểu của bạn ít đặc. Uống đủ nước là điều quan trọng hơn ở khu vực khí hậu ấm áp để ngăn ngừa sỏi thận.
+        Nước rất cần thiết cho sự phân phối chất dinh dưỡng hợp lý vì đây là thành phần lớn nhất của cơ thể. Nước cũng giúp điều chỉnh nhiệt độ thích hợp trong cơ thể. Nước hỗ trợ các hoạt động của đường tiêu hóa. Một lượng nước không đủ sẽ khiến bạn có nguy cơ bị táo bón.
+    </string>
 </resources>
