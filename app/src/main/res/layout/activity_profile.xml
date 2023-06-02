@@ -91,16 +91,16 @@
         android:layout_below="@id/contentRl"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="80dp">
 
         <RelativeLayout
             android:id="@+id/profileInfoRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_centerHorizontal="true">
 
             <ImageView
@@ -117,7 +117,7 @@
                 android:textColor="@color/black"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/profileInfoIv"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="30dp"
                 android:text="Thông tin cá nhân"/>
 
             <ImageView
@@ -137,10 +137,10 @@
             android:id="@+id/postManageRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_below="@id/viewLine1"
             android:layout_centerHorizontal="true">
 
@@ -158,7 +158,7 @@
                 android:textColor="@color/black"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/postManageIv"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="30dp"
                 android:text="Quản lý bài viết"/>
 
             <ImageView
@@ -171,16 +171,16 @@
         </RelativeLayout>
         <View android:id="@+id/viewLine2" android:layout_below="@+id/postManageRl"
             android:layout_centerHorizontal="true" android:layout_width="wrap_content"
-            android:layout_height="1dp" android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" android:background="#000000" />
+            android:layout_height="1dp" android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" android:background="#000000" />
         <RelativeLayout
             android:id="@+id/logoutRl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_below="@id/viewLine2"
             android:layout_centerHorizontal="true">
 
@@ -198,21 +198,15 @@
                 android:textColor="@color/red"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/logoutIv"
-                android:layout_marginStart="25dp"
-                android:text="Quản lý bài viết"/>
+                android:layout_marginStart="30dp"
+                android:text="Đăng xuất"/>
 
-            <ImageView
-                android:id="@+id/logoutArrowIv"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_chevron_arrow_red"
-                android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>
         <View android:id="@+id/viewLine3" android:layout_below="@+id/profileInfoRl"
             android:layout_centerHorizontal="true" android:layout_width="wrap_content"
-            android:layout_height="1dp" android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" android:background="#000000" />
+            android:layout_height="1dp" android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" android:background="#000000" />
 
     </RelativeLayout>
 
