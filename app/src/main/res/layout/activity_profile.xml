@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back05"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN CÁ NHÂN"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_white"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_setting_white"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl">
+
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_account_circle_white"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/fullnameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileIv"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="Huỳnh Gia Phú"/>
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fullnameTv"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="phugia@gmail.com"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/optionRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentRl"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="100dp">
+
+        <RelativeLayout
+            android:id="@+id/profileInfoRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/profileInfoIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_outline_user_black"/>
+
+            <TextView
+                android:id="@+id/profileInfoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/profileInfoIv"
+                android:layout_marginStart="25dp"
+                android:text="Thông tin cá nhân"/>
+
+            <ImageView
+                android:id="@+id/profileInfoArrowIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_chevron_arrow_black"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+        <View android:id="@+id/viewLine1" android:layout_below="@+id/profileInfoRl"
+            android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+            android:layout_height="1dp" android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" android:background="#000000" />
+
+        <RelativeLayout
+            android:id="@+id/postManageRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/viewLine1"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/postManageIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_article_black"/>
+
+            <TextView
+                android:id="@+id/postManageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/postManageIv"
+                android:layout_marginStart="25dp"
+                android:text="Quản lý bài viết"/>
+
+            <ImageView
+                android:id="@+id/postManageArrowIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_chevron_arrow_black"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+        <View android:id="@+id/viewLine2" android:layout_below="@+id/postManageRl"
+            android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+            android:layout_height="1dp" android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" android:background="#000000" />
+        <RelativeLayout
+            android:id="@+id/logoutRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/viewLine2"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/logoutIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_logout_red"/>
+
+            <TextView
+                android:id="@+id/logoutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/red"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/logoutIv"
+                android:layout_marginStart="25dp"
+                android:text="Quản lý bài viết"/>
+
+            <ImageView
+                android:id="@+id/logoutArrowIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_chevron_arrow_red"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+        <View android:id="@+id/viewLine3" android:layout_below="@+id/profileInfoRl"
+            android:layout_centerHorizontal="true" android:layout_width="wrap_content"
+            android:layout_height="1dp" android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" android:background="#000000" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
