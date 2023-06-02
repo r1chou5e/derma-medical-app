@@ -1,5 +1,6 @@
 package com.example.dermamedicalapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.renderscript.Sampler.Value
@@ -47,8 +48,8 @@ class SearchActivity : AppCompatActivity() {
                     // add to arrayList
                     postArrayList.add(post!!)
 
-                    if (post.title.length > 47) {
-                        val subString = post.title.substring(0,44)
+                    if (post.title.length > 48) {
+                        val subString = post.title.substring(0,45)
                         postTitleArray.add("$subString...")
                     }
                     else {
@@ -86,5 +87,13 @@ class SearchActivity : AppCompatActivity() {
             }
 
         })
+
+        binding.searchResultLv.setOnItemClickListener { parent, view, position, id ->
+            val selectedPost = postArrayList[position]
+
+            val intent = Intent(this@SearchActivity, PostDetailActivity::class.java)
+            intent.putExtra("postId", selectedPost.id)
+            startActivity(intent)
+        }
     }
 }
