@@ -68,6 +68,10 @@ class QuestionActivity : AppCompatActivity() {
                     startActivity(Intent(this, HomeActivity::class.java))
                     overridePendingTransition(0, 0)
                 }
+                R.id.profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    overridePendingTransition(0, 0)
+                }
             }
             true
         }

@@ -32,6 +32,10 @@ class HistoryActivity : AppCompatActivity() {
                     startActivity(Intent(this, QuestionActivity::class.java))
                     overridePendingTransition(0, 0)
                 }
+                R.id.profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    overridePendingTransition(0, 0)
+                }
             }
             true
         }
