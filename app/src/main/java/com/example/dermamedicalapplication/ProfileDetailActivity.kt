@@ -2,12 +2,15 @@ package com.example.dermamedicalapplication
 
 import android.R
 import android.app.DatePickerDialog
+import android.app.ProgressDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.dermamedicalapplication.databinding.ActivityProfileDetailBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -25,10 +28,14 @@ class ProfileDetailActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var calendar: Calendar
+
+    private lateinit var progressDialog: ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        progressDialog = ProgressDialog(this)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
@@ -74,12 +81,48 @@ class ProfileDetailActivity : AppCompatActivity() {
         }
 
         binding.editBtn.setOnClickListener {
-            binding.emailEt.isEnabled = true
             binding.fullnameEt.isEnabled = true
             binding.phoneEt.isEnabled = true
             binding.dobEt.isEnabled = true
             binding.genderSpinner.isEnabled = true
         }
+
+        binding.updateBtn.setOnClickListener {
+            updateInfo()
+        }
+
+    }
+
+    private fun updateInfo() {
+        val uid = firebaseAuth.currentUser?.uid
+
+        if (uid != null) {
+            progressDialog.setMessage("Đang lưu thông tin người dùng...")
+            progressDialog.show()
+
+            // Setup data to add in db
+            val hashMap: HashMap<String, Any?> = HashMap()
+            hashMap["email"] = binding.emailEt.text.toString().trim()
+            hashMap["fullname"] = binding.fullnameEt.text.toString().trim()
+            hashMap["phoneNumber"] = binding.phoneEt.text.toString().trim()
+            hashMap["dob"] = binding.dobEt.text.toString().trim()
+            hashMap["gender"] = binding.genderSpinner.selectedItem.toString()
+
+            val ref = FirebaseDatabase.getInstance().getReference("User").child(uid)
+            ref.updateChildren(hashMap)
+                .addOnSuccessListener {
+                    progressDialog.dismiss()
+                    Toast.makeText(this, "Cập nhật thông tin người dùng thành công !", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    finish()
+                }
+                .addOnFailureListener {e ->
+                    // failed adding data to db
+                    progressDialog.dismiss()
+                    Toast.makeText(this, "Cập nhật thông tin người dùng thất bại !!", Toast.LENGTH_SHORT).show()
+                }
+        }
+
 
     }
 
@@ -97,6 +140,14 @@ class ProfileDetailActivity : AppCompatActivity() {
                         binding.emailEt.setText(user?.email.toString())
                         binding.fullnameEt.setText(user?.fullname.toString())
                         binding.phoneEt.setText(user?.phoneNumber.toString())
+                        binding.dobEt.setText(user?.dob.toString())
+
+                        val gender = user?.gender.toString()
+                        if (gender == "Nam") binding.genderSpinner.setSelection(1)
+                        else if (gender == "Nữ") binding.genderSpinner.setSelection(2)
+                        else {
+                            binding.genderSpinner.setSelection(0)
+                        }
 
                         binding.emailEt.isEnabled = false
                         binding.fullnameEt.isEnabled = false
@@ -108,7 +159,7 @@ class ProfileDetailActivity : AppCompatActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
+
                 }
 
             })

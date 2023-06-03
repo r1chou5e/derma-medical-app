@@ -163,15 +163,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--    Register Button    -->
+        <!--    Update Button    -->
         <android.widget.Button
-            android:id="@+id/registerBtn"
+            android:id="@+id/updateBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/genderTil"
             android:text="Cập nhật"
             android:layout_marginTop="50dp"
-            android:enabled="false"
             android:shadowDy="4"
             android:background="@drawable/shape_button01"
             android:textColor="@color/white"/>
