@@ -54,6 +54,10 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(Intent(this, ProfileDetailActivity::class.java))
         }
 
+        binding.postManageRl.setOnClickListener {
+            startActivity(Intent(this, UserPostActivity::class.java))
+        }
+
     }
 
     private fun loadUserInfo() {
