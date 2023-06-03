@@ -29,13 +29,6 @@
             android:textStyle="bold"/>
 
         <ImageButton
-            android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_white"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
             android:id="@+id/settingBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -182,6 +175,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_below="@id/viewLine2"
+            android:clickable="true"
             android:layout_centerHorizontal="true">
 
             <ImageView
