@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghost_white"
+    tools:context=".PostActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:padding="10dp">
+
+
+        <!--  Add Post Title  -->
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ĐĂNG BÀI VIẾT"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel_white"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/imageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_image_white"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <!--  Add Post Area -->
+    <RelativeLayout
+        android:id="@+id/addPostRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRl">
+
+        <RelativeLayout
+            android:id="@+id/postTitleRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/postTitleEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTitleTheme"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:hint="Nhập tiêu đề bài viết"
+                android:textColorHint="#80FFFFFF"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/postContentRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/postTitleRl"
+            android:layout_above="@id/addBtn"
+            android:padding="10dp"
+            tools:ignore="NotSibling">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:layout_above="@id/addBtn">
+
+                <EditText
+                    android:id="@+id/postContentEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextContentTheme"
+                    android:inputType="textMultiLine"
+                    android:hint="Viết nội dung..."
+                    />
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.widget.Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_button01"
+        android:shadowDy="4"
+        android:text="Đăng bài viết"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

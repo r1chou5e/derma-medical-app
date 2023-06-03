@@ -2,17 +2,61 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_without_title"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_without_title"
         android:supportsRtl="true"
         android:theme="@style/Theme.DermaMedicalApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TakePictureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".WaterReminderActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ReminderSettingActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".Notification"
+            android:enabled="true" />
+
+        <activity
+            android:name=".QuestionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity android:name=".DiagnoseActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

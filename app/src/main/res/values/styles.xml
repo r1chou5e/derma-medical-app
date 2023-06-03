@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rounded_corner">
+        <item name="cornerSize">20dp</item>
+    </style>
+    <style name="EditTextTitleTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#80FFFFFF</item> <!-- Màu chân khi không được chọn -->
+        <item name="colorControlActivated">@color/white</item> <!-- Màu chân khi được chọn -->
+    </style>
+    <style name="EditTextContentTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/transparent</item> <!-- Màu chân khi không được chọn -->
+        <item name="colorControlActivated">#80777777</item> <!-- Màu chân khi được chọn -->
+    </style>
+
+</resources>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeRl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back02"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp">
+
+        <!--   Notification Button     -->
+        <ImageButton
+            android:id="@+id/notifyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_notifications_white" />
+
+        <!--   Search Button     -->
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/notifyBtn"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_search_white" />
+
+        <!--   Add Post Button     -->
+        <ImageButton
+            android:id="@+id/addPostBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_post_add_white" />
+
+        <!--    Welcome TextView     -->
+        <TextView
+            android:id="@+id/fullnameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huỳnh Gia Phú"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/welcomeAndExploreRl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/toolbarRl">
+
+        <!--    Welcome TextView     -->
+        <TextView
+            android:id="@+id/welcomeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào, Phú !"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_centerVertical="true"
+            />
+
+        <!--    Explore Button   -->
+        <android.widget.Button
+            android:id="@+id/exploreBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Khám phá"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:background="@drawable/shape_button02"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statsRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/welcomeAndExploreRl">
+
+        <RelativeLayout
+            android:id="@+id/diagnosisNumRl"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_stat01">
+
+            <RelativeLayout
+                android:id="@+id/firstLineDiagnosisRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/diagnosisIconIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_medication_blueblack" />
+
+                <TextView
+                    android:id="@+id/diagnosisTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@id/diagnosisIconIv"
+                    android:text="Số lần chẩn đoán bệnh"
+                    android:textSize="14sp"
+                    android:textColor="@color/black_blue" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLineDiagnosisRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/firstLineDiagnosisRl">
+
+                <TextView
+                    android:id="@+id/numberDiagnosisTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_blue"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/unitDiagnosisTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lần"
+                    android:textColor="@color/black_blue"
+                    android:layout_toRightOf="@id/numberDiagnosisTv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/drinkWaterRl"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/shape_stat02">
+
+            <RelativeLayout
+                android:id="@+id/firstLineWaterRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/drinkWaterIconIv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_drink_blueblack" />
+
+                <TextView
+                    android:id="@+id/drinkWaterTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toRightOf="@id/drinkWaterIconIv"
+                    android:text="Lượng nước bổ sung trong ngày"
+                    android:textColor="@color/black_blue"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/secondLineRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstLineWaterRl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/numberDrinkWaterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.5 / 2"
+                    android:textColor="@color/black_blue"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/unitDrinkWaterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@id/numberDrinkWaterTv"
+                    android:text="lít"
+                    android:textColor="@color/black_blue" />
+
+            </LinearLayout>
+            
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/dermaStatusRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statsRl"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_stat03">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/back03">
+
+            <TextView
+                android:id="@+id/dermaStatusTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T3, 03-04-2023"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp" />
+
+            <RelativeLayout
+                android:id="@+id/secondLineDermaSttRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dermaStatusTimeTv"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/dermaStatusTitleTv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tình trạng da của bạn hiện tại"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black_blue"
+                    android:layout_marginStart="20dp"/>
+
+                <ImageView
+                    android:id="@+id/dermaStatusIconIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/smiling"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/postListRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dermaStatusRl"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/postListTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BÀI VIẾT PHỔ BIẾN"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/noPostTv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/postListTitleTv"
+            android:text="Chưa có bài viết nào"
+            android:layout_marginStart="20dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postListRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/postListTitleTv"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/post_row"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>
