@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back02"
+    android:background="@color/ghost_white"
     tools:context=".ProfileDetailActivity">
 
     <RelativeLayout
@@ -24,7 +24,7 @@
             android:text="THÔNG TIN CÁ NHÂN"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:textColor="@color/white"
+            android:textColor="@color/gray"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
@@ -32,7 +32,7 @@
             android:id="@+id/settingBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_white"
+            android:src="@drawable/ic_back_gray"
             android:background="@android:color/transparent"/>
 
         <ImageButton
@@ -41,30 +41,16 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_edit_white"/>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/avatarRl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbarRl">
-
-        <ImageView
-            android:id="@+id/profileIv"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ic_account_circle_white"
-            android:layout_centerHorizontal="true"/>
+            android:src="@drawable/ic_edit_gray"/>
 
     </RelativeLayout>
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/avatarRl"
+        android:layout_below="@id/toolbarRl"
         android:layout_marginTop="40dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp">
@@ -133,12 +119,55 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Gender -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/genderTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dobTil"
+            android:layout_marginTop="30dp"
+            app:hintEnabled="false">
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:padding="15dp"
+                android:prompt="@string/select_gender"
+                android:spinnerMode="dropdown"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--   Date of Birth   -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneTil"
+            android:layout_marginTop="30dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/dobEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:padding="15dp"
+                android:hint="Ngày sinh"
+                android:inputType="datetime"
+                android:focusable="false"
+                android:onClick="showDatePickerDialog"
+                android:textColorHint="@color/gray"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!--    Register Button    -->
         <android.widget.Button
             android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/phoneTil"
+            android:layout_below="@id/genderTil"
             android:text="Cập nhật"
             android:layout_marginTop="50dp"
             android:enabled="false"

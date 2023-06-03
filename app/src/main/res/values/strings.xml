@@ -8,4 +8,9 @@
         Nước là phương tiện để vận chuyển các chất thải ra khỏi tế bào đến thận của bạn. Độc tố chính của cơ thể, urê nitơ máu là một hợp chất hòa tan trong nước được loại bỏ qua nước tiểu. Uống nước đúng cách, đủ lượng nước làm giảm căng thẳng cho thận và giúp nước tiểu của bạn ít đặc. Uống đủ nước là điều quan trọng hơn ở khu vực khí hậu ấm áp để ngăn ngừa sỏi thận.
         Nước rất cần thiết cho sự phân phối chất dinh dưỡng hợp lý vì đây là thành phần lớn nhất của cơ thể. Nước cũng giúp điều chỉnh nhiệt độ thích hợp trong cơ thể. Nước hỗ trợ các hoạt động của đường tiêu hóa. Một lượng nước không đủ sẽ khiến bạn có nguy cơ bị táo bón.
     </string>
+    <string name="select_gender">Chọn giới tính</string>
+    <string-array name="gender_array">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
 </resources>
