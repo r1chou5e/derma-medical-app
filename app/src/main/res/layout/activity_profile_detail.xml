@@ -29,7 +29,7 @@
             android:textStyle="bold"/>
 
         <ImageButton
-            android:id="@+id/settingBtn"
+            android:id="@+id/backBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back_gray"
@@ -135,6 +135,7 @@
                 android:background="@drawable/shape_edittext01"
                 android:padding="15dp"
                 android:prompt="@string/select_gender"
+                android:entries="@array/gender_array"
                 android:spinnerMode="dropdown"/>
 
         </com.google.android.material.textfield.TextInputLayout>

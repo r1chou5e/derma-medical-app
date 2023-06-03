@@ -8,7 +8,13 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.dermamedicalapplication.databinding.ActivityProfileDetailBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -16,12 +22,15 @@ class ProfileDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileDetailBinding
 
+    private lateinit var firebaseAuth: FirebaseAuth
+
     private lateinit var calendar: Calendar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        firebaseAuth = FirebaseAuth.getInstance()
 
         // laod Dob
         calendar = Calendar.getInstance()
@@ -58,7 +67,52 @@ class ProfileDetailActivity : AppCompatActivity() {
 
         }
 
+        loadUserInfo()
 
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
+
+        binding.editBtn.setOnClickListener {
+            binding.emailEt.isEnabled = true
+            binding.fullnameEt.isEnabled = true
+            binding.phoneEt.isEnabled = true
+            binding.dobEt.isEnabled = true
+            binding.genderSpinner.isEnabled = true
+        }
+
+    }
+
+    private fun loadUserInfo() {
+        val firebaseUser = firebaseAuth.currentUser
+        if (firebaseUser == null) {
+            onBackPressed()
+        }
+        else {
+            val ref = FirebaseDatabase.getInstance().getReference("User").child(firebaseUser.uid)
+            ref.addListenerForSingleValueEvent(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (snapshot.exists()) {
+                        val user = snapshot.getValue(UserModel::class.java)
+                        binding.emailEt.setText(user?.email.toString())
+                        binding.fullnameEt.setText(user?.fullname.toString())
+                        binding.phoneEt.setText(user?.phoneNumber.toString())
+
+                        binding.emailEt.isEnabled = false
+                        binding.fullnameEt.isEnabled = false
+                        binding.phoneEt.isEnabled = false
+                        binding.dobEt.isEnabled = false
+                        binding.genderSpinner.isEnabled = false
+
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            })
+        }
     }
 
     fun showDatePickerDialog(view: View) {
