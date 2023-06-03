@@ -39,24 +39,12 @@
             android:padding="5dp"
             android:src="@drawable/ic_search_white" />
 
-        <!--   Logout Button     -->
-        <ImageButton
-            android:id="@+id/logoutBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_logout_white" />
-
         <!--   Add Post Button     -->
         <ImageButton
             android:id="@+id/addPostBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/logoutBtn"
             android:background="@android:color/transparent"
-            android:layout_marginLeft="10dp"
             android:padding="5dp"
             android:src="@drawable/ic_post_add_white" />
 

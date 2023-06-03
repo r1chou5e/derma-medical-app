@@ -61,12 +61,6 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, WaterReminderActivity::class.java))
         }
 
-        binding.logoutBtn.setOnClickListener {
-            firebaseAuth.signOut()
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
-
         binding.searchBtn.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
         }
