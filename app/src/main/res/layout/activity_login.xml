@@ -48,6 +48,7 @@
             android:id="@+id/emailTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/TextInputLayoutNoUnderline"
             app:hintEnabled="false">
 
             <EditText
@@ -72,6 +73,7 @@
             android:layout_below="@id/emailTil"
             android:layout_marginTop="20dp"
             app:passwordToggleEnabled="true"
+            style="@style/TextInputLayoutNoUnderline"
             app:hintEnabled="false">
 
             <EditText
