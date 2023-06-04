@@ -84,7 +84,7 @@ class QuestionActivity : AppCompatActivity() {
 
                     startForProfileImageResult.launch(intent)
                 }
-    }
+    }}
 
     fun showDatePickerDialog(view: View) {
         val datePickerDialog = DatePickerDialog(
@@ -101,6 +101,4 @@ class QuestionActivity : AppCompatActivity() {
 
         datePickerDialog.show()
     }
-
-
-}}
+}

@@ -1,0 +1,642 @@
+[
+ {
+  "English": "Melanocytic nevus",
+  "Vietnamese": "Nốt ruồi tế bào da",
+  "Suggestion": "Nếu bạn có melanocytic nevus, hãy tự kiểm tra da định kỳ và xem xét các biến đổi. Nếu nốt ruồi thay đổi kích thước, hình dạng, màu sắc hoặc biên, hãy thăm khám da liễu. Điều này quan trọng để phát hiện sớm ung thư da."
+ },
+ {
+  "English": "Seborrheic keratosis",
+  "Vietnamese": "Chứng dày sừng tiết bã",
+  "Suggestion": "Để làm dịu chứng dày sừng tiết bã, bạn có thể thực hiện các biện pháp chăm sóc da hàng ngày bao gồm: duy trì độ ẩm da, sử dụng kem dưỡng da giàu chất dưỡng ẩm, tắm nước ấm thay vì nước nóng, sử dụng sản phẩm chăm sóc da nhẹ nhàng và tránh cọ, gãi da quá mức. Nếu tình trạng không được cải thiện, hãy tham khảo ý kiến bác sĩ da liễu để được tư vấn và điều trị thích hợp."
+ },
+ {
+  "English": "Cherry Hemangioma",
+  "Vietnamese": "U mạch máu anh đào",
+  "Suggestion": "Nếu bạn không gặp khó chịu hoặc bất kỳ triệu chứng nào, không cần điều trị. Tuy nhiên, nếu bạn muốn loại bỏ u mạch anh đào vì mục đích thẩm mỹ, bạn có thể tham khảo bác sĩ da liễu để tìm hiểu về các phương pháp như laser, điện diathermy hoặc xóa bỏ bằng dao để loại bỏ u mạch anh đào."
+ },
+ {
+  "English": "Nonspecific (normal)",
+  "Vietnamese": "Không xác định",
+  "Suggestion": "Da của bạn bình thường hoặc ảnh của bạn không rõ vùng da bị tổn thương"
+ },
+ {
+  "English": "Dysplastic nevus",
+  "Vietnamese": "Nốt ruồi không đều",
+  "Suggestion": "Dysplastic nevus không đòi hỏi điều trị đặc biệt trừ khi có dấu hiệu bất thường. Tuy nhiên, việc theo dõi đều đặn và thăm khám chuyên gia da liễu là quan trọng. Họ có thể kiểm tra, chụp ảnh và xác định nguy cơ ung thư da. Nếu cần thiết, nốt ruồi có thể được loại bỏ để ngăn chặn nguy cơ tiềm tàng. Hãy đảm bảo bảo vệ da khỏi tác động mặt trời và sử dụng kem chống nắng để giảm nguy cơ tác động tiếp xúc từ ánh sáng mặt trời."
+ },
+ {
+  "English": "Hemangioma",
+  "Vietnamese": "U máu",
+  "Suggestion": "Việc điều trị hemangioma phụ thuộc vào kích thước, vị trí và tình trạng sức khỏe chung. Trong nhiều trường hợp, hemangioma không đòi hỏi điều trị đặc biệt và tự giảm đi sau thời gian. Tuy nhiên, trong trường hợp cần can thiệp, các phương pháp như thuốc corticosteroid, beta-blocker, laser, hoặc phẫu thuật có thể được sử dụng. Quan trọng nhất là thảo luận với bác sĩ chuyên khoa da liễu hoặc chuyên gia y tế để đánh giá và lên kế hoạch điều trị phù hợp cho từng trường hợp cụ thể."
+ },
+ {
+  "English": "Pyogenic granuloma",
+  "Vietnamese": "U hạt nhiễm khuẩn",
+  "Suggestion": "U hạt nhiễm khuẩn thường không đòi hỏi điều trị đặc biệt nếu không gây khó chịu. Tuy nhiên, nếu bạn muốn loại bỏ u hạt nhiễm khuẩn vì mục đích thẩm mỹ hoặc vấn đề chảy máu, hãy tham khảo bác sĩ da liễu. Họ có thể sử dụng các phương pháp như phẫu thuật, laser, điện diathermy hoặc đông lạnh để loại bỏ u một cách an toàn và hiệu quả. Hãy đảm bảo bảo vệ da khỏi tổn thương và tiếp tục chăm sóc da hàng ngày để ngăn ngừa tái phát."
+ },
+ {
+  "English": "Skin tag",
+  "Vietnamese": "Mụn thịt dư",
+  "Suggestion": "Skin tag thường không gây nguy hiểm và không đòi hỏi điều trị y tế. Tuy nhiên, nếu bạn muốn loại bỏ skin tag vì mục đích thẩm mỹ hoặc khó chịu, hãy tham khảo bác sĩ da liễu. Họ có thể sử dụng các phương pháp như cắt, đốt, làm đông, hoặc sử dụng laser để loại bỏ skin tag an toàn và hiệu quả. Hãy tránh tự loại bỏ skin tag bằng cách căn chỉnh hoặc cắt chúng bằng những phương pháp không an toàn có thể gây ra nhiễm trùng hoặc chảy máu."
+ },
+ {
+  "English": "Wart",
+  "Vietnamese": "Mụn cóc",
+  "Suggestion": "Khi gặp mụn cóc, hãy tham khảo bác sĩ để xác định phương pháp điều trị phù hợp. Có thể sử dụng thuốc bôi chứa axit salicylic hoặc thuốc chứa imiquimod để loại bỏ mụn cóc. Tẩy lớp da ngoài hoặc đông lạnh cũng là các phương pháp phổ biến. Nếu mụn cóc lớn hoặc khó điều trị, phẫu thuật hoặc sử dụng laser có thể được áp dụng. Hãy tránh tự điều trị mụn cóc để tránh gây tổn thương hoặc lây lan virus."
+ },
+ {
+  "English": "Malignant melanoma",
+  "Vietnamese": "Ung thư tế bào hắc tố",
+  "Suggestion": "Điều trị malignant melanoma thường bao gồm một phạm vi các phương pháp, bao gồm phẫu thuật lấy bỏ u, điều trị bằng tia X, immunotherapy, và hóa trị. Quan trọng nhất là phát hiện sớm và điều trị ngay khi phát hiện. Hãy tham khảo bác sĩ chuyên gia về da liễu để được đánh giá và lựa chọn phương pháp điều trị phù hợp dựa trên giai đoạn và đặc điểm cụ thể của bệnh. Chăm sóc sức khỏe tổng thể và tránh ánh nắng mặt trời quá mức cũng là quan trọng."
+ },
+ {
+  "English": "Congenital nevus",
+  "Vietnamese": "Nốt ruồi hắc tố bẩm sinh",
+  "Suggestion": "Congenital nevus không yêu cầu điều trị bắt buộc nếu không gây khó chịu hoặc không có dấu hiệu bất thường. Tuy nhiên, nếu congenital nevus lớn hoặc gây lo lắng, hãy tham khảo ý kiến bác sĩ da liễu. Các phương pháp điều trị có thể bao gồm loại bỏ nốt ruồi bằng phẫu thuật hoặc sử dụng các phương pháp laser. Quan trọng nhất là theo dõi và kiểm tra định kỳ để phát hiện sớm bất kỳ biến đổi nào và loại trừ nguy cơ ung thư da."
+ },
+ {
+  "English": "Dermatofibroma",
+  "Vietnamese": "U sợi bì",
+  "Suggestion": "U sợi bì thường không đòi hỏi điều trị nếu không gây khó chịu. Tuy nhiên, nếu bạn muốn loại bỏ nó vì lý do thẩm mỹ hoặc tình trạng khó chịu, hãy tham khảo ý kiến bác sĩ da liễu. Phẫu thuật mổ hoặc sử dụng laser có thể được áp dụng để loại bỏ u sợi bì. Tuy nhiên, hãy lưu ý rằng có thể xảy ra sẹo hoặc tái phát sau quá trình loại bỏ. Luôn bảo vệ da khỏi tổn thương và duy trì chăm sóc da hàng ngày để ngăn ngừa tình trạng mới xuất hiện."
+ },
+ {
+  "English": "Angiokeratoma",
+  "Vietnamese": "Mạch máu sừng hóa",
+  "Suggestion": "Mạch máu sừng hóa thường không yêu cầu điều trị nếu không gây khó chịu. Tuy nhiên, nếu bạn muốn loại bỏ nó vì lý do thẩm mỹ hoặc tình trạng khó chịu, hãy tham khảo ý kiến bác sĩ da liễu. Các phương pháp điều trị bao gồm sử dụng laser, điện diathermy hoặc phẫu thuật để loại bỏ mạch máu sừng hóa. Hãy nhớ rằng sau quá trình điều trị, có thể xuất hiện sẹo hoặc tái phát, do đó hãy thảo luận kỹ với bác sĩ để đảm bảo lựa chọn phương pháp phù hợp."
+ },
+ {
+  "English": "Mucosal melanotic macule",
+  "Vietnamese": "Rối loạn sắc tố niêm mạc",
+  "Suggestion": "Rối loạn sắc tố niêm mạc có nhiều dạng khác nhau, vì vậy việc điều trị phụ thuộc vào từng trường hợp cụ thể. Đôi khi không cần điều trị nếu không gây khó chịu hoặc nguy hiểm. Tuy nhiên, nếu bạn quan ngại hoặc có triệu chứng bất thường, hãy tham khảo bác sĩ da liễu để được đánh giá và tư vấn phương pháp điều trị thích hợp. Điều trị có thể bao gồm việc sử dụng kem chống nắng, thuốc trị sẹo, laser, hoặc phẫu thuật để điều chỉnh màu sắc và vẻ ngoài của niêm mạc."
+ },
+ {
+  "English": "Scar",
+  "Vietnamese": "Sẹo",
+  "Suggestion": "Để điều trị sẹo, có một số lời khuyên bạn có thể tham khảo. Trước hết, hãy giữ vùng sẹo sạch sẽ và dưỡng ẩm hàng ngày bằng việc sử dụng kem dưỡng da hoặc dầu tự nhiên. Bạn cũng có thể thử các liệu pháp như mát-xa vùng sẹo, sử dụng sản phẩm chứa các thành phần như vitamin E, silicone hoặc retinoid. Ngoài ra, hãy hạn chế tiếp xúc với ánh nắng mặt trời bằng cách sử dụng kem chống nắng và đảm bảo mặc quần áo bảo vệ. Nếu sẹo của bạn gây khó chịu hoặc ảnh hưởng đến tâm lý, hãy tham khảo ý kiến của bác sĩ để tìm hiểu thêm về các phương pháp điều trị chuyên sâu như laser, phẫu thuật hoặc phương pháp điều trị bằng công nghệ cao."
+ },
+ {
+  "English": "Lentigo",
+  "Vietnamese": "Đồi mồi",
+  "Suggestion": "Để điều trị đồi mồi, hãy bảo vệ da khỏi tác động của ánh nắng mặt trời bằng cách sử dụng kem chống nắng. Nếu đồi mồi gây phiền toái thẩm mỹ, bạn có thể tham khảo ý kiến của bác sĩ da liễu về các phương pháp điều trị như laser, cryotherapy hoặc thuốc tẩy da. Đảm bảo tuân thủ đúng hướng dẫn và hãy kiên nhẫn vì quá trình điều trị có thể mất thời gian."
+ },
+ {
+  "English": "Halo nevus",
+  "Vietnamese": "Nốt ruồi có quầng",
+  "Suggestion": "Khi bạn phát hiện một nốt ruồi có quầng, quan trọng nhất là thăm khám bởi bác sĩ da liễu để đảm bảo tính an toàn và loại trừ nguy cơ ung thư da. Đừng tự mình cố gắng loại bỏ nốt ruồi này. Nếu không có nguy cơ, bác sĩ có thể loại bỏ nó một cách an toàn và không đau. Luôn bảo vệ da khỏi tác động mặt trời bằng cách sử dụng kem chống nắng và tránh tiếp xúc mặt trực tiếp với ánh nắng mặt trời. Theo dõi nốt ruồi thường xuyên để phát hiện sự thay đổi kích thước, hình dạng, màu sắc hoặc bất thường khác."
+ },
+ {
+  "English": "Actinic keratosis",
+  "Vietnamese": "Dày sừng ánh sáng",
+  "Suggestion": "Khi điều trị dày sừng ánh sáng, có một số phương pháp khác nhau. Bác sĩ da liễu có thể tiến hành việc bôi thuốc lên vùng bị ảnh hưởng, sử dụng thuốc chứa 5-fluorouracil hoặc imiquimod. Các phương pháp khác bao gồm laser, tia lửa, tác động lạnh hoặc cạo. Điều quan trọng là thảo luận với bác sĩ để tìm hiểu phương pháp tốt nhất cho tình trạng của bạn và tuân thủ chế độ bảo vệ da khỏi ánh nắng mặt trời sau điều trị."
+ },
+ {
+  "English": "Nevus spilus",
+  "Vietnamese": "Nốt đốm da đen nhạt",
+  "Suggestion": "Đối với việc điều trị nốt đốm da đen nhạt, tùy thuộc vào tình trạng và mong muốn của bệnh nhân, các phương pháp có thể bao gồm việc sử dụng laser, phẫu thuật loại bỏ hoặc quan sát định kỳ. Tuy nhiên, quan trọng nhất là tham khảo ý kiến bác sĩ da liễu để đánh giá và tư vấn về phương pháp điều trị phù hợp nhất cho trường hợp cụ thể của bạn."
+ },
+ {
+  "English": "Erythema ab igne",
+  "Vietnamese": "Viêm da từ nhiệt",
+  "Suggestion": "Trong việc điều trị viêm da từ nhiệt, quan trọng nhất là ngừng tiếp xúc với nguồn nhiệt gây ra bệnh. Bạn nên tránh đặt đồ vật nóng trên da và hạn chế thời gian tiếp xúc với nhiệt độ cao. Bạn cũng có thể sử dụng kem chống viêm và dưỡng da, và tham khảo ý kiến bác sĩ da liễu để được tư vấn thêm về các phương pháp điều trị khác như thuốc kháng histamin hoặc steroid."
+ },
+ {
+  "English": "Basal cell carcinoma",
+  "Vietnamese": "Ung thư tế bào gốc da",
+  "Suggestion": "Điều trị ung thư tế bào gốc da thường liên quan đến việc loại bỏ khối u bằng phẫu thuật, laser hoặc tác động nhiệt. Các phương pháp khác như hóa trị, ánh sáng đặc biệt hoặc thuốc topically cũng có thể được sử dụng. Hãy tham khảo ý kiến bác sĩ da liễu để đánh giá tình trạng và lựa chọn phương pháp điều trị tốt nhất cho bạn. Đồng thời, hãy luôn bảo vệ da khỏi ánh sáng mặt trời và thực hiện kiểm tra định kỳ để phát hiện sớm các biểu hiện bất thường."
+ },
+ {
+  "English": "Blue nevus",
+  "Vietnamese": "Nốt ruồi xanh",
+  "Suggestion": "Việc điều trị nốt ruồi xanh thường không cần thiết nếu không gây khó chịu hoặc nguy hiểm. Tuy nhiên, nếu bạn lo lắng hoặc muốn loại bỏ nó vì mục đích thẩm mỹ, hãy tham khảo ý kiến bác sĩ da liễu. Các phương pháp điều trị có thể bao gồm loại bỏ nốt ruồi bằng phẫu thuật, laser hoặc cryotherapy. Tuyệt đối không tự cố gắng loại bỏ nốt ruồi mà không được chỉ định từ chuyên gia y tế."
+ },
+ {
+  "English": "Nipple eczema",
+  "Vietnamese": "Viêm da nhũ hoa",
+  "Suggestion": "Khi điều trị viêm da nhũ hoa, quan trọng nhất là duy trì vệ sinh hàng ngày và tránh các tác nhân gây kích ứng như hóa chất, mỹ phẩm hay vải không thoáng khí. Sử dụng kem chống viêm và dưỡng da thích hợp để giảm ngứa và làm dịu da. Nếu tình trạng không cải thiện hoặc trở nên nghiêm trọng, hãy tham khảo ý kiến bác sĩ da liễu để được tư vấn và có phương pháp điều trị phù hợp."
+ },
+ {
+  "English": "Postinflammatory hyperpigmentation",
+  "Vietnamese": "Tăng sắc tố sau viêm",
+  "Suggestion": "Khi điều trị tăng sắc tố sau viêm da (PIH), việc bảo vệ da khỏi ánh nắng mặt trời là quan trọng. Sử dụng kem chống nắng hàng ngày và giữ da luôn ẩm mượt. Các phương pháp điều trị bao gồm sử dụng kem làm sáng da, thuốc trị nám, peeling hoặc laser. Tuy nhiên, hãy tham khảo ý kiến chuyên gia da liễu để được tư vấn và lựa chọn phương pháp điều trị phù hợp với tình trạng da của bạn."
+ },
+ {
+  "English": "Vitiligo",
+  "Vietnamese": "Bạch biến",
+  "Suggestion": "Việc điều trị bạch biến có thể bao gồm sử dụng kem hoặc thuốc làm tăng sắc tố, áp dụng quang trị liệu (PUVA) hoặc laser, và trang điểm để che giấu các vùng trắng. Hãy tham khảo ý kiến bác sĩ da liễu để được tư vấn và lựa chọn phương pháp điều trị phù hợp với trường hợp cụ thể của bạn. Hơn nữa, hãy bảo vệ da khỏi ánh sáng mặt trời và duy trì một lối sống lành mạnh để hỗ trợ quá trình điều trị và tăng cường sức khỏe tổng thể."
+ },
+ {
+  "English": "Seborrheic keratosis",
+  "Vietnamese": "Chứng dày sừng tiết bã",
+  "Suggestion": "Chứng dày sừng tiết bã thường không cần điều trị nếu không gây khó chịu. Tuy nhiên, nếu muốn loại bỏ vì mục đích thẩm mỹ, có thể áp dụng các phương pháp như cạo bỏ, laser hoặc cryotherapy. Để đảm bảo an toàn và hiệu quả, hãy tham khảo ý kiến bác sĩ da liễu để được tư vấn và chọn phương pháp phù hợp với tình trạng da của bạn."
+ },
+ {
+  "English": "Intraepithelial carcinoma",
+  "Vietnamese": "Bệnh Bowen",
+  "Suggestion": "Điều trị Bệnh Bowen thường liên quan đến việc loại bỏ khối u bằng phẫu thuật, laser hoặc cryotherapy. Các phương pháp khác như hóa trị, chụp ánh sáng đặc biệt hoặc thuốc topically cũng có thể được sử dụng. Hãy tham khảo ý kiến bác sĩ da liễu hoặc chuyên gia ung thư da để đánh giá tình trạng và lựa chọn phương pháp điều trị tốt nhất cho bạn. Đồng thời, hãy duy trì chế độ sống lành mạnh và bảo vệ da khỏi tác động môi trường tiềm ẩn nguy cơ."
+ },
+ {
+  "English": "Androgenic alopecia",
+  "Vietnamese": "Hói đầu",
+  "Suggestion": "Điều trị hói đầu có thể bao gồm sử dụng thuốc tăng trưởng tóc như minoxidil, dùng thuốc hoặc dầu chứa finasteride để kiềm chế hoạt động hormone androgen, hoặc thực hiện phẫu thuật cấy tóc. Hãy tham khảo ý kiến bác sĩ chuyên khoa da liễu hoặc chuyên gia tóc để được đánh giá và tư vấn về phương pháp điều trị phù hợp nhất cho trường hợp cụ thể của bạn. Đồng thời, duy trì lối sống lành mạnh và giảm stress cũng có thể hỗ trợ quá trình điều trị và tình trạng tóc của bạn."
+ },
+ {
+  "English": "Amyloidosis",
+  "Vietnamese": "Bệnh amyloidosis",
+  "Suggestion": "Việc điều trị Amyloidosis tùy thuộc vào dạng và phạm vi bệnh. Điều trị có thể bao gồm thuốc chống viêm, hóa trị, thuốc ức chế miễn dịch, hoặc quá trình cấy tạp chất tương thích. Đồng thời, điều trị căn bệnh gốc và quản lý triệu chứng là quan trọng. Hãy tham vấn với các chuyên gia y tế chuyên về bệnh lý nội tiết để đánh giá tình trạng và lựa chọn phương pháp điều trị phù hợp nhất cho bạn."
+ },
+ {
+  "English": "Purpura",
+  "Vietnamese": "Viêm thành mạch dị ứng",
+  "Suggestion": "Việc điều trị viêm thành mạch dị ứng (Purpura) phụ thuộc vào nguyên nhân cụ thể và tình trạng sức khỏe của mỗi người. Để đạt được kết quả tốt nhất, việc tìm sự tư vấn từ bác sĩ chuyên khoa da liễu hoặc chuyên gia y tế là rất quan trọng. Điều trị có thể bao gồm sử dụng thuốc chống viêm, thuốc kháng histamine, thuốc ức chế miễn dịch hoặc các phương pháp điều trị tùy chỉnh dựa trên nguyên nhân gây ra bệnh. Hãy tuân thủ chính xác các chỉ định và lịch trình điều trị do bác sĩ đề xuất."
+ },
+ {
+  "English": "Dilated pore",
+  "Vietnamese": "Giãn nở lỗ chân lông",
+  "Suggestion": "Điều trị Dilated pore thường tập trung vào việc làm sạch và thông thoáng lỗ chân lông. Bạn có thể thực hiện việc làm sạch da định kỳ, sử dụng các sản phẩm làm sạch nhẹ và không gây tắc nghẽn lỗ chân lông. Nếu cần, bạn có thể thăm bác sĩ da liễu để nhờ họ loại bỏ cẩn thận chất bã nhờn tích tụ trong lỗ chân lông. Hãy tránh việc ép nặn hoặc tự tiến hành quá trình loại bỏ mà không được chỉ dẫn bởi chuyên gia y tế."
+ },
+ {
+  "English": "Folliculitis",
+  "Vietnamese": "Viêm nang lông",
+  "Suggestion": "Viêm nang lông có thể gây khó chịu và tổn thương da. Để điều trị, hãy đảm bảo vệ sinh da sạch sẽ bằng cách rửa sạch vùng bị ảnh hưởng hàng ngày bằng nước ấm và xà phòng nhẹ. Tránh việc cạo hoặc nặn các mụn viêm để tránh lây nhiễm và làm tăng viêm. Sử dụng kem chống viêm và kháng khuẩn để giảm viêm và ngăn chặn sự tái phát. Nếu tình trạng không cải thiện, hãy tham khảo ý kiến của bác sĩ để được tư vấn và điều trị thích hợp."
+ },
+ {
+  "English": "Cellulitis",
+  "Vietnamese": "Viêm mô tế bào",
+  "Suggestion": "Viêm mô tế bào là một trạng thái viêm nhiễm trong đó mô tế bào trở nên viêm, đỏ, sưng và đau. Để điều trị, hãy nghỉ ngơi và hạn chế hoạt động vùng bị ảnh hưởng. Sử dụng đá lạnh hoặc gói lạnh để giảm đau và sưng. Đồng thời, sử dụng thuốc giảm đau và kháng viêm theo chỉ định của bác sĩ. Nếu tình trạng không cải thiện hoặc tiếp tục tồi tệ hơn, hãy tham khảo ý kiến của bác sĩ để được đánh giá và điều trị thích hợp."
+ },
+ {
+  "English": "Telangiectasia",
+  "Vietnamese": "Viêm giãn tĩnh mạch",
+  "Suggestion": "Để điều trị viêm giãn tĩnh mạch, các phương pháp như xóa bỏ bằng laser, điện diathermy, tiếp xúc với ánh sáng Intense Pulsed Light (IPL) hoặc sklerotherapy có thể được sử dụng. Tuy nhiên, tùy thuộc vào trường hợp cụ thể, việc điều trị có thể được tùy chỉnh theo sự tư vấn của bác sĩ da liễu hoặc chuyên gia y tế."
+ },
+ {
+  "English": "Livedoid vasculitis",
+  "Vietnamese": "Viêm mạch ngoài da",
+  "Suggestion": "Lời khuyên điều trị viêm mạch ngoài da gồm sử dụng thuốc giảm đau, thuốc chống viêm, tăng cường tuần hoàn máu và hỗ trợ mạch máu. Duy trì chế độ sống lành mạnh, tránh cắt đứt da và bảo vệ da khỏi tổn thương cũng rất quan trọng. Hãy thường xuyên theo dõi bác sĩ để kiểm soát triệu chứng và nguy cơ biến chứng."
+ },
+ {
+  "English": "Lichen simplex chronicus",
+  "Vietnamese": "Viêm da thần kinh",
+  "Suggestion": "Lời khuyên điều trị viêm da thần kinh bao gồm sử dụng kem chống ngứa, thuốc giảm đau và thuốc chống viêm. Đồng thời, bảo vệ da khỏi tổn thương, duy trì độ ẩm và tránh các chất gây kích ứng là quan trọng. Hãy tham khảo ý kiến bác sĩ để được tư vấn và theo dõi triệu chứng."
+ },
+ {
+  "English": "Porokeratosis",
+  "Vietnamese": "Rối loạn sừng hóa",
+  "Suggestion": "Lời khuyên điều trị rối loạn sừng hóa bao gồm việc sử dụng kem chống viêm, thuốc thoa để làm mềm và giảm vảy da. Đồng thời, hạn chế tiếp xúc với ánh nắng mặt trời và sử dụng kem chống nắng. Nếu triệu chứng nghiêm trọng, phẫu thuật hoặc liệu pháp laser có thể được xem xét. Tuy nhiên, hãy tham khảo ý kiến bác sĩ để được tư vấn và điều trị phù hợp."
+ },
+ {
+  "English": "Epidermal cyst",
+  "Vietnamese": "U bã đậu",
+  "Suggestion": "Để điều trị u bã đậu có thể thực hiện phẫu thuật loại bỏ u. Quá trình này thường an toàn và hiệu quả. Không nên tự lấy u bã đậu tại nhà để tránh nguy cơ nhiễm trùng. Hãy tham khảo ý kiến bác sĩ chuyên khoa da liễu để được đánh giá và lựa chọn phương pháp điều trị phù hợp."
+ },
+ {
+  "English": "Keloid",
+  "Vietnamese": "Sẹo lồi",
+  "Suggestion": "Lời khuyên điều trị sẹo lồi bao gồm sử dụng các phương pháp như laser, liệu pháp ánh sáng, tiêm steroid hoặc thuốc thoa chứa silicon để làm mờ và làm phẳng sẹo. Xoa bóp nhẹ nhàng và thường xuyên có thể giúp cải thiện sự mềm mịn của sẹo. Hãy tham khảo ý kiến bác sĩ để được đánh giá và lựa chọn phương pháp điều trị phù hợp với trạng thái sẹo của bạn."
+ },
+ {
+  "English": "Freckle",
+  "Vietnamese": "Tàn nhang",
+  "Suggestion": "Lời khuyên điều trị tàn nhang bao gồm việc bảo vệ da khỏi ánh nắng mặt trời bằng cách sử dụng kem chống nắng hàng ngày với chỉ số SPF cao. Đồng thời, hạn chế tiếp xúc với ánh nắng mặt trời trong thời gian nắng gắt. Các phương pháp như liệu pháp laser, peeling hóa học hoặc crioablation có thể được sử dụng để làm mờ hoặc loại bỏ tàn nhang. Hãy tham khảo ý kiến bác sĩ da liễu để đánh giá và lựa chọn phương pháp phù hợp với bạn."
+ },
+ {
+  "English": "Bullous pemphigoid",
+  "Vietnamese": "Pemphigoid bọng nước",
+  "Suggestion": "Điều trị bao gồm sử dụng thuốc giảm đau, thuốc chống viêm, corticosteroid và các loại thuốc ức chế miễn dịch. Việc theo dõi và điều trị dưới sự giám sát của bác sĩ da liễu là quan trọng."
+ },
+ {
+  "English": "Keratoacanthoma",
+  "Vietnamese": "U quá sản sừng",
+  "Suggestion": "Lời khuyên điều trị u quá sản sừng bao gồm phẫu thuật để loại bỏ u hoặc các phương pháp điều trị khác như đông yag laser, tác động bằng lạnh hoặc tác động bằng ánh sáng. Việc loại bỏ u sẽ giúp kiểm soát bệnh và ngăn chặn sự phát triển tiếp theo. Hãy tham khảo ý kiến bác sĩ chuyên khoa da liễu để được đánh giá và lựa chọn phương pháp điều trị phù hợp với trạng thái u của bạn."
+ },
+ {
+  "English": "Contact dermatitis",
+  "Vietnamese": "Viêm da tiếp xúc kích thích",
+  "Suggestion": "Để điều trị cần tránh tiếp xúc với chất gây kích ứng. Rửa vùng da bị ảnh hưởng bằng nước sạch và xà phòng nhẹ. Sử dụng kem chống viêm, chất chống ngứa hoặc thuốc corticosteroid để giảm triệu chứng. Áp dụng lạnh lên vùng da bị tổn thương để giảm sưng và ngứa. Nếu triệu chứng không giảm hoặc nặng hơn, hãy tham khảo ý kiến bác sĩ da liễu để được tư vấn và điều trị bổ sung."
+ },
+ {
+  "English": "Soft fibroma",
+  "Vietnamese": "U xơ mềm",
+  "Suggestion": "Phương pháp điều trị u xơ mềm thường bao gồm việc loại bỏ u thông qua phẫu thuật hoặc các phương pháp như cắt bỏ, tiêu chuẩn hoá bằng nhiệt, hoặc laser. Quá trình loại bỏ u sẽ được thực hiện dưới sự hướng dẫn của bác sĩ da liễu để đảm bảo hiệu quả và an toàn. Hãy tham khảo ý kiến chuyên gia y tế để được tư"
+ },
+ {
+  "English": "Vasculitis",
+  "Vietnamese": "Viêm mạch",
+  "Suggestion": "Phương pháp điều trị viêm mạch bao gồm sử dụng thuốc kháng viêm để giảm viêm và giảm triệu chứng như đau, sưng và đỏ. Điều trị cũng có thể bao gồm việc tăng cường tuân thủ chế độ ăn uống lành mạnh, tập thể dục đều đặn và kiểm soát các yếu tố nguy cơ khác như hút thuốc lá, tăng huyết áp hoặc tiểu đường. Tham khảo ý kiến bác sĩ để đánh giá và lựa chọn phương pháp điều trị tốt nhất cho bạn."
+ },
+ {
+  "English": "Erythema nodosum",
+  "Vietnamese": "Nốt ban đỏ",
+  "Suggestion": "Phương pháp điều trị nốt ban đỏ  tập trung vào giảm triệu chứng và xử lý nguyên nhân gây ra. Bác sĩ có thể đề xuất sử dụng thuốc giảm viêm không steroid (NSAIDs) hoặc corticosteroid để giảm viêm và giảm đau. Đồng thời, điều trị nguyên nhân gốc như nhiễm trùng, bệnh autoimmue hoặc thuốc gây ra bệnh. Nghỉ ngơi, nâng cao chân, và sử dụng nhiệt độ lạnh có thể giúp giảm sưng và khó chịu. Hãy tham khảo ý kiến bác sĩ để đánh giá và lựa chọn phương pháp điều trị phù hợp với bạn."
+ },
+ {
+  "English": "Drug eruption",
+  "Vietnamese": "Phát ban do dùng thuốc",
+  "Suggestion": "Lời khuyên điều trị cho bệnh Drug eruption là ngừng sử dụng thuốc ngay lập tức và hỏi ý kiến bác sĩ. Việc xác định loại thuốc gây ra phản ứng và tránh tiếp xúc với nó rất quan trọng. Bác sĩ có thể đề xuất việc sử dụng thuốc kháng histamine, kem chống ngứa hoặc corticosteroid. Hãy giữ da sạch và mát mẻ, tránh việc cọ, gãi hay sử dụng các sản phẩm chăm sóc da mạnh."
+ },
+ {
+  "English": "Acne",
+  "Vietnamese": "Mụn trứng cá",
+  "Suggestion": "Để trị mụn trứng cá, bạn nên thực hiện một chế độ chăm sóc da hợp lý, bao gồm: làm sạch da hàng ngày, sử dụng các sản phẩm chăm sóc da không gây tắc nghẽn lỗ chân lông, tránh chạm tay vào mặt, và kiểm soát stress. Nếu tình trạng nghiêm trọng, hãy tìm kiếm sự tư vấn từ bác sĩ da liễu để được điều trị phù hợp."
+ },
+ {
+  "English": "Insect bite",
+  "Vietnamese": "Vết cắn côn trùng",
+  "Suggestion": "Để xử lý vết cắn côn trùng, bạn có thể thực hiện các biện pháp như rửa vết thương bằng xà phòng nhẹ, áp dụng kem chống ngứa, sử dụng đá lạnh để làm giảm sưng tấy. Nếu tình trạng không giảm đi hoặc có dấu hiệu nhiễm trùng nặng, bạn nên tham khảo ý kiến bác sĩ."
+ },
+ {
+  "English": "Rosacea",
+  "Vietnamese": "Da ửng đỏ hay chứng đỏ mặt",
+  "Suggestion": "Để kiểm soát bệnh, hãy sử dụng sản phẩm dịu nhẹ, tránh tiếp xúc với ánh nắng mặt trời và gió lạnh, ăn uống lành mạnh, giảm căng thẳng và thường xuyên kiểm tra với bác sĩ da liễu để tìm phương pháp điều trị phù hợp. Điều quan trọng là chăm sóc da cẩn thận và tuân thủ các biện pháp phòng ngừa."
+ },
+ {
+  "English": "Systemic contact dermatitis",
+  "Vietnamese": "Viêm gia tiếp xúc hệ thống",
+  "Suggestion": "Để tránh tình trạng này, hãy hạn chế tiếp xúc với các chất gây dị ứng đã được xác định và tuân thủ các biện pháp bảo vệ da, bao gồm sử dụng bảo vệ da và hạn chế tiếp xúc trực tiếp với chất gây dị ứng. Nếu bạn gặp các triệu chứng của bệnh, hãy tham khảo ý kiến ​​bác sĩ để được chẩn đoán và điều trị phù hợp."
+ },
+ {
+  "English": "Becker nevus",
+  "Vietnamese": "Bớt Becker",
+  "Suggestion": "Hãy tìm kiếm sự tư vấn từ bác sĩ da liễu. Bác sĩ sẽ đánh giá tình trạng của bạn và cung cấp phương pháp điều trị phù hợp, bao gồm laser hoặc phẫu thuật để làm giảm sự xuất hiện của nốt ruồi và cải thiện tình trạng da. Đừng tự ý điều trị bệnh và hãy tuân thủ theo chỉ định của chuyên gia y tế."
+ },
+ {
+  "English": "Confluent reticulated papillomatosis",
+  "Vietnamese": "Bệnh u nhú dạng lưới và hội tụ",
+  "Suggestion": "Để chẩn đoán và điều trị hiệu quả, nên tìm đến bác sĩ da liễu chuyên khoa để nhận được sự chăm sóc và hướng dẫn phù hợp. Đồng thời, duy trì một chế độ ăn lành mạnh và sử dụng các sản phẩm chăm sóc da phù hợp có thể giúp kiểm soát triệu chứng và cải thiện tình trạng da."
+ },
+ {
+  "English": "Molluscum contagiosum",
+  "Vietnamese": "U mềm lây",
+  "Suggestion": "Hãy tránh lây lan và tự chữa lành. Giữ da sạch, sử dụng thuốc trị vi khuẩn và kem axit salicylic. Áp dụng tea tree oil và tìm hiểu các phương pháp tẩy da hoặc lấy bóc. Nếu triệu chứng không giảm, tìm ý kiến bác sĩ để đánh giá và điều trị thích hợp."
+ },
+ {
+  "English": "Squamous cell carcinoma",
+  "Vietnamese": "Ung thư tế bào vảy",
+  "Suggestion": "Để điều trị hiệu quả, bạn nên tìm kiếm sự chăm sóc y tế chuyên sâu từ bác sĩ chuyên khoa ung thư da. Các phương pháp điều trị phổ biến bao gồm phẫu thuật lấy bỏ, phương pháp xạ trị và hóa trị. Đồng thời, hãy duy trì lối sống lành mạnh, tránh ánh nắng mặt trực tiếp, không hút thuốc và tăng cường sự chăm sóc cá nhân hàng ngày để bảo vệ da."
+ },
+ {
+  "English": "Pigmented progressive purpuric dermatosis",
+  "Vietnamese": "Bệnh da xuất huyết tăng sắc tố tiến triển",
+  "Suggestion": "Để điều trị bệnh da xuất huyết tăng sắc tố tiến triển, bạn nên tham khảo ý kiến chuyên gia y tế. Các phương pháp điều trị thông thường có thể bao gồm sử dụng kem chống nắng, thuốc tác động lên sắc tố, hoặc các phương pháp laser. Ngoài ra, duy trì một lối sống lành mạnh, bao gồm ăn uống cân bằng, tập thể dục đều đặn và giảm căng thẳng cũng có thể giúp cải thiện tình trạng da. Tuy nhiên, hãy luôn tuân thủ chỉ định và hướng dẫn của bác sĩ để đạt được kết quả tốt nhất."
+ },
+ {
+  "English": "Xerotic eczema",
+  "Vietnamese": "Bệnh chàm khô",
+  "Suggestion": "Để điều trị bệnh này, bạn có thể áp dụng các biện pháp sau: dùng kem dưỡng ẩm hàng ngày, tránh tắm nước nóng quá lâu, sử dụng xà phòng nhẹ và không chứa hóa chất, không gãi da, mặc áo bảo vệ da khỏi tác động từ môi trường. Hãy tham khảo ý kiến bác sĩ để được tư vấn cụ thể và điều trị hiệu quả."
+ },
+ {
+  "English": "Prurigo nodularis",
+  "Vietnamese": "Sẩn ngứa",
+  "Suggestion": "Hãy tham khảo ý kiến của bác sĩ chuyên khoa da liễu. Bác sĩ có thể đề xuất các phương pháp điều trị như sử dụng kem chống ngứa, thuốc chống dị ứng, thuốc corticosteroid, hay thuốc chống vi khuẩn nếu cần. Đồng thời, hãy hạn chế việc gãi ngứa để tránh tác động tổn thương lên da. Luôn duy trì vệ sinh da sạch và sử dụng các sản phẩm nhẹ nhàng, không gây kích ứng da."
+ },
+ {
+  "English": "Portwine stain",
+  "Vietnamese": "Bệnh bớt đỏ rượu vang",
+  "Suggestion": "Để điều trị bệnh này, bạn có thể áp dụng một số phương pháp như laser, áp lực hoặc phẫu thuật. Tuy nhiên, tùy thuộc vào tình trạng cụ thể của bệnh nhân, bạn nên tham khảo ý kiến của bác sĩ chuyên khoa da liễu để được tư vấn và điều trị phù hợp."
+ },
+ {
+  "English": "Hematoma",
+  "Vietnamese": "Khối máu tụ (máu bầm)",
+  "Suggestion": "Bạn nên áp dụng các biện pháp như nghỉ ngơi, nâng cao chân để giảm sưng và đau. Sử dụng băng bó hoặc túi đá để giảm viêm và đau. Hạn chế hoạt động vật lý cường độ cao và tránh các hoạt động có thể gây tổn thương thêm. Nếu tình trạng trở nên nghiêm trọng hoặc không giảm sau một thời gian, hãy tham khảo ý kiến bác sĩ để được tư vấn và điều trị chuyên sâu."
+ },
+ {
+  "English": "Steatocystoma multiplex",
+  "Vietnamese": "Đa u nang tuyến bã",
+  "Suggestion": "Để điều trị bệnh này, bạn nên tham khảo ý kiến của bác sĩ da liễu. Một số lời khuyên chung có thể bao gồm: thực hiện việc làm sạch da kỹ lưỡng hàng ngày, sử dụng kem chống vi khuẩn, hạn chế việc cạo hoặc nặn u nang, và thực hiện các phương pháp y tế như lấy nang hoặc hút nang nếu cần thiết."
+ },
+ {
+  "English": "Herpes zoster",
+  "Vietnamese": "Bệnh Zona",
+  "Suggestion": "Hãy tham khảo ý kiến của bác sĩ để được tư vấn và điều trị đúng cách. Bác sĩ có thể kê đơn thuốc giảm đau và kháng vi-rút như acyclovir, valacyclovir hoặc famciclovir để giảm triệu chứng và tăng tốc quá trình phục hồi. Đồng thời, đảm bảo giữ vệ sinh da sạch sẽ, tránh cọ xát quá mức và nghỉ ngơi đầy đủ để tăng cường hệ miễn dịch."
+ },
+ {
+  "English": "Urticaria pigmentosa",
+  "Vietnamese": "Mề đay sắc tố (hay bệnh tế bào bón nhiễm sắc phát ban)",
+  "Suggestion": "Để điều trị bệnh này, bạn nên tìm kiếm sự tư vấn và điều trị từ bác sĩ da liễu. Một số phương pháp điều trị thông thường bao gồm sử dụng thuốc chống histamine, corticosteroid, hoặc các loại thuốc khác để giảm ngứa và viêm. Hơn nữa, hạn chế tiếp xúc với các tác nhân kích thích da và duy trì vệ sinh da hàng ngày cũng có thể giúp giảm triệu chứng. Tuy nhiên, lời khuyên cụ thể về điều trị nên được tư vấn từ bác sĩ chuyên khoa."
+ },
+ {
+  "English": "Xanthoma",
+  "Vietnamese": "U vàng",
+  "Suggestion": "Để điều trị xanthoma, bạn nên tìm kiếm sự tư vấn và điều trị từ một bác sĩ da liễu chuyên nghiệp. Phương pháp điều trị thường bao gồm tẩy da mỡ bằng laser, phẫu thuật cắt bỏ hoặc dùng thuốc trị liệu. Đồng thời, duy trì một lối sống lành mạnh, bao gồm chế độ ăn uống cân đối và tập thể dục đều đặn để giảm mỡ trong cơ thể."
+ },
+ {
+  "English": "Orgarnoid nevus",
+  "Vietnamese": "Bớt thượng bì",
+  "Suggestion": "Để điều trị bệnh này, tôi khuyên bạn nên tham khảo ý kiến của bác sĩ chuyên khoa da liễu. Bác sĩ sẽ đánh giá tình trạng của nốt ruồi và đề xuất các phương pháp điều trị phù hợp như phẫu thuật, sử dụng laser hoặc cấp dưỡng cho da. Luôn luôn nhớ thực hiện theo chỉ dẫn của bác sĩ để đảm bảo an toàn và hiệu quả tốt nhất."
+ },
+ {
+  "English": "Erythema multiforme",
+  "Vietnamese": "Hồng ban đa dạng",
+  "Suggestion": "Để điều trị, bạn nên tham khảo ý kiến của bác sĩ da liễu. Trong khi chờ hẹn khám, hãy tránh tiếp xúc với các tác nhân gây kích ứng như thuốc, thức ăn hoặc chất dị ứng khác. Để giảm ngứa và sưng, bạn có thể sử dụng kem dầu khoáng hoặc các loại kem chống ngứa được đề xuất bởi bác sĩ. Đồng thời, hạn chế việc gãi, tránh ánh nắng mặt trời và duy trì một lối sống lành mạnh để tăng cường hệ miễn dịch."
+ },
+ {
+  "English": "Scabies",
+  "Vietnamese": "Bệnh ghẻ",
+  "Suggestion": "Để điều trị bệnh ghẻ, lời khuyên là sử dụng kem chứa permetrin hoặc lindane, được áp dụng lên da theo hướng dẫn của bác sĩ. Ngoài ra, cần rửa sạch đồ dùng cá nhân, giường và ga trải bằng nước nóng để tiêu diệt ký sinh trùng. Đồng thời, hạn chế tiếp xúc với người bệnh và giặt quần áo, vật dụng cá nhân của họ bằng nước nóng."
+ },
+ {
+  "English": "Juvenile xanthogranuloma",
+  "Vietnamese": "U hạt vàng ở thiếu niên",
+  "Suggestion": "Hãy tham khảo ý kiến của bác sĩ chuyên khoa da liễu. Đa số trường hợp JXG không gây hại và tự giảm đi sau một thời gian. Tuy nhiên, nếu các khối u gây khó chịu hoặc xuất hiện trên vùng nhạy cảm như mắt, hãy thảo luận với bác sĩ về các phương pháp điều trị như xóa bỏ bằng laser, mổ hoặc sử dụng thuốc. Quan trọng nhất, hãy đảm bảo theo dõi sự phát triển của bệnh và tuân thủ theo hướng dẫn của bác sĩ để đảm bảo sức khỏe tốt nhất cho trẻ."
+ },
+ {
+  "English": "Pyoderma gangrenosum",
+  "Vietnamese": "Viêm da mủ hoại thư",
+  "Suggestion": "Để điều trị hiệu quả, bạn nên tìm đến bác sĩ chuyên khoa da liễu để được tư vấn và theo dõi thường xuyên. Bác sĩ có thể đề xuất một liệu pháp kết hợp như sử dụng thuốc kháng viêm, steroid, hoặc các phương pháp chăm sóc da đặc biệt. Đồng thời, duy trì một lối sống lành mạnh với chế độ ăn uống cân bằng, tập thể dục đều đặn và giảm căng thẳng để hỗ trợ quá trình điều trị."
+ },
+ {
+  "English": "Poroma",
+  "Vietnamese": "Cứng viêm",
+  "Suggestion": "Để điều trị bệnh Poroma, quý vị nên tìm kiếm sự tư vấn từ bác sĩ da liễu chuyên khoa. Phương pháp điều trị thường bao gồm phẫu thuật lấy bỏ khối u và điều trị bổ trợ bằng hóa trị hoặc xạ trị tùy theo trạng thái của bệnh. Hãy luôn theo dõi sự phát triển của khối u và đảm bảo đến bác sĩ thường xuyên để theo dõi và điều trị kịp thời."
+ },
+ {
+  "English": "Abscess",
+  "Vietnamese": "Áp xe",
+  "Suggestion": "Hãy tham khảo ý kiến bác sĩ để xác định phương pháp điều trị thích hợp như sự rửa vết thương, việc dùng thuốc kháng sinh và khi cần thiết, phẫu thuật để thoát mủ. Hãy đảm bảo vệ sinh vết thương, thực hiện các biện pháp hạn chế nhiễm trùng và tuân thủ đúng hướng dẫn của bác sĩ. Quan trọng nhất là không tự điều trị và luôn tuân thủ lời khuyên của chuyên gia y tế."
+ },
+ {
+  "English": "Neurofibromatosis",
+  "Vietnamese": "U xơ thần kinh",
+  "Suggestion": "Hãy tìm kiếm sự hỗ trợ y tế chuyên môn. Theo dõi sát sao triệu chứng và định kỳ kiểm tra y tế để theo dõi sự tiến triển của bệnh. Đảm bảo chế độ dinh dưỡng cân đối và tăng cường vận động thể chất. Hãy tìm cách giảm căng thẳng và tạo ra môi trường hỗ trợ tinh thần. Cuối cùng, hãy luôn giữ lạc quan và không bỏ cuộc trong việc đối phó với bệnh."
+ },
+ {
+  "English": "Senile purpura",
+  "Vietnamese": "Ban xuất huyết ở người già",
+  "Suggestion": "Bệnh Ban xuất huyết là một căn bệnh nguy hiểm, đặc biệt đối với người già. Để điều trị hiệu quả, hãy tuân thủ các chỉ định của bác sĩ. Nghỉ ngơi đầy đủ, duy trì môi trường thoáng mát. Uống nhiều nước, ăn đồ ăn giàu vitamin C và K, hạn chế tác động lên cơ thể. Nếu có dấu hiệu nguy kịch, hãy liên hệ ngay với bác sĩ để được hỗ trợ và theo dõi chặt chẽ."
+ },
+ {
+  "English": "Ulcer",
+  "Vietnamese": "Viêm Loét",
+  "Suggestion": "Hãy đảm bảo vệ sinh vùng loét hàng ngày bằng cách rửa sạch và bôi thuốc chuyên dụng. Hạn chế áp lực và ma sát lên vùng loét. Đồng thời, hãy ăn uống lành mạnh, giàu chất dinh dưỡng và đặt biện pháp phòng ngừa áp lực dọc để ngăn ngừa sự tái phát. Hãy tham khảo ý kiến bác sĩ để được tư vấn và theo dõi thường xuyên để đảm bảo quá trình điều trị hiệu quả."
+ },
+ {
+  "English": "Nail dystrophy",
+  "Vietnamese": "Loạn dưỡng móng",
+  "Suggestion": "Để điều trị hiệu quả, bạn nên tham khảo ý kiến bác sĩ chuyên khoa Da liễu. Họ có thể đề xuất các phương pháp như áp dụng thuốc hoặc tiến hành các phẫu thuật nhỏ để khắc phục tình trạng móng bị hỏng. Đồng thời, hãy chú ý đến việc chăm sóc móng hàng ngày bằng cách giữ móng sạch và khô, không sử dụng công cụ móng không vệ sinh và tránh làm tổn thương móng."
+ },
+ {
+  "English": "Melanonychia",
+  "Vietnamese": "Đen móng tay",
+  "Suggestion": "Hãy thăm bác sĩ chuyên khoa da liễu để được chẩn đoán chính xác và tư vấn điều trị phù hợp. Đôi khi, Melanonychia có thể là dấu hiệu của một vấn đề nghiêm trọng như ung thư da, vì vậy không nên tự chẩn đoán. Sự theo dõi và đánh giá chuyên môn sẽ giúp bạn xác định nguyên nhân và lựa chọn phương pháp điều trị thích hợp như điều trị da liễu, phẫu thuật hoặc theo dõi thường xuyên."
+ },
+ {
+  "English": "Hidradenitis suppurativa",
+  "Vietnamese": "Bệnh viêm tuyến mồ hôi mủ",
+  "Suggestion": "Hãy tìm sự tư vấn từ bác sĩ chuyên khoa da liễu. Điều trị bao gồm sử dụng thuốc chống viêm, kháng sinh và hóa trị. Hạn chế áp lực lên khu vực bị ảnh hưởng, duy trì vệ sinh da hàng ngày, và thay đổi chế độ ăn lành mạnh cũng rất quan trọng. Hãy đảm bảo bạn theo dõi sự khám bệnh đều đặn và tuân thủ theo chỉ dẫn của bác sĩ để kiểm soát tình trạng bệnh.\""
+ },
+ {
+  "English": "Erosion\/Laceration",
+  "Vietnamese": "Xước\/Lở da",
+  "Suggestion": "Đầu tiên, làm sạch vùng tổn thương bằng nước muối sinh lý. Áp dụng một lớp băng vải không dính để bảo vệ da và tăng khả năng lành tổn thương. Hạn chế tiếp xúc với nhiệt độ cao và chất kích thích. Hãy tham khảo ý kiến bác sĩ để đánh giá và điều trị chính xác."
+ },
+ {
+  "English": "Pityriasis lichenoides et varioliformis acuta",
+  "Vietnamese": "Vảy phấn dạng lichen và đậu mùa cấp tính (PLEVA)",
+  "Suggestion": "Để điều trị PLVA, bạn nên tìm sự hỗ trợ từ bác sĩ da liễu. Họ sẽ đưa ra phác đồ điều trị dựa trên triệu chứng của bạn. Điều trị thường bao gồm sử dụng thuốc kháng viêm, thuốc kháng histamine và thuốc tác động đến hệ miễn dịch. Đồng thời, hãy giữ vệ sinh da hàng ngày và tránh tác động mạnh lên da như ánh nắng mặt trời."
+ },
+ {
+  "English": "Pompholyx",
+  "Vietnamese": "Bệnh tổ đĩa",
+  "Suggestion": "Để điều trị bệnh, bạn nên tham khảo ý kiến của bác sĩ da liễu. Tuy nhiên, dưới đây là một số lời khuyên chung: hạn chế tiếp xúc với chất kích thích, thường xuyên giữ vùng da bị ảnh hưởng sạch sẽ và khô ráo, sử dụng kem dưỡng da không chứa chất gây kích ứng, và tránh stress. Hãy tuân thủ chế độ chăm sóc da theo chỉ dẫn của bác sĩ để đạt được kết quả tốt nhất."
+ },
+ {
+  "English": "Chronic eczema",
+  "Vietnamese": "Chàm viêm da mãn tính",
+  "Suggestion": "Hãy tuân thủ các biện pháp chăm sóc da hàng ngày để kiểm soát triệu chứng. Sử dụng kem dưỡng ẩm dày đặc, tránh tiếp xúc với chất gây kích ứng, và hạn chế tắm nước nóng. Bạn nên tham khảo ý kiến của bác sĩ để được chỉ định thuốc chống viêm hoặc dùng thuốc bôi ngoài da. Đồng thời, tạo ra môi trường thoải mái với việc giảm căng thẳng và duy trì một lối sống lành mạnh."
+ },
+ {
+  "English": "Cyst",
+  "Vietnamese": "U nang da",
+  "Suggestion": "Để điều trị bệnh này, bạn nên tham khảo ý kiến của bác sĩ chuyên khoa da liễu. Bác sĩ sẽ đánh giá và chỉ định phương pháp điều trị phù hợp, bao gồm đặt thuốc, hút chân không hoặc phẫu thuật nếu cần thiết. Đồng thời, hãy tránh tự mổ hoặc ép u nang, vì điều này có thể gây viêm nhiễm và làm tăng nguy cơ tái phát. Hãy luôn giữ da sạch sẽ, vệ sinh hàng ngày và tuân thủ lời khuyên của bác sĩ để đảm bảo quá trình điều trị hiệu quả."
+ },
+ {
+  "English": "Syphilis",
+  "Vietnamese": "Giang mai",
+  "Suggestion": "Bạn nên tham khảo bác sĩ để được xác định và chẩn đoán chính xác bệnh giang mai. Điều trị bệnh này thường bao gồm sử dụng kháng sinh đặc trị, và rất quan trọng là hoàn thành toàn bộ quá trình điều trị để đảm bảo loại bỏ triệt để vi khuẩn gây bệnh. Hơn nữa, hãy tránh quan hệ tình dục không an toàn và chia sẻ thông tin về bệnh với đối tác để bảo vệ sức khỏe của bạn và người khác."
+ },
+ {
+  "English": "Normal nail",
+  "Vietnamese": "Móng tay bình thường",
+  "Suggestion": "Không có"
+ },
+ {
+  "English": "Lichen planus",
+  "Vietnamese": "Bệnh Liken phẳng",
+  "Suggestion": "Để điều trị hiệu quả, bạn nên tìm kiếm sự tư vấn từ bác sĩ chuyên khoa da liễu. Bác sĩ sẽ đưa ra những phương pháp phù hợp như sử dụng thuốc kháng viêm, thuốc chống ngứa, và thuốc bôi da. Ngoài ra, bạn cần hạn chế tiếp xúc với chất kích thích như hóa chất, mỹ phẩm, và thực phẩm gây dị ứng. Đồng thời, duy trì một lối sống lành mạnh và giảm căng thẳng để hỗ trợ quá trình điều trị."
+ },
+ {
+  "English": "Staphylococcal scalded skin syndrome",
+  "Vietnamese": "Hội chứng bong vảy da do tụ cầu",
+  "Suggestion": "Hãy đến ngay bác sĩ chuyên khoa da liễu để được chẩn đoán chính xác. Điều trị bao gồm sử dụng kháng sinh để tiêu diệt vi khuẩn, chăm sóc da một cách nhẹ nhàng bằng cách sử dụng băng vệ sinh và kem dưỡng ẩm. Đồng thời, bạn nên duy trì vệ sinh cá nhân tốt, thường xuyên rửa tay và tránh chạm vào các vết thương. Quan trọng nhất là hãy tuân thủ đầy đủ các chỉ định và hẹn tái khám để đảm bảo điều trị hiệu quả và tránh biến chứng."
+ },
+ {
+  "English": "Hypertrophic scar",
+  "Vietnamese": "Sẹo phì đại",
+  "Suggestion": "Bạn nên tham khảo ý kiến ​​bác sĩ da liễu. Bác sĩ có thể đề xuất các phương pháp như laser, phẫu thuật, tiêm corticoid hoặc thuốc bôi đặc biệt. Bạn cũng có thể thử các liệu pháp tự nhiên như dùng gel silicone hoặc bôi dầu hạnh nhân để làm mờ sẹo. Đồng thời, hạn chế tiếp xúc với ánh nắng mặt trời và đảm bảo chế độ ăn uống lành mạnh để tăng cường quá trình phục hồi."
+ },
+ {
+  "English": "Inflammed cyst",
+  "Vietnamese": "Viêm u nang",
+  "Suggestion": "Để điều trị bệnh viêm u nang, bạn cần tham khảo ý kiến của bác sĩ chuyên khoa để đảm bảo một phương pháp điều trị thích hợp. Ngoài ra, hãy thực hiện vệ sinh kỹ lưỡng, sử dụng nước muối sinh lý để làm sạch vùng bị tổn thương và tránh việc tự tiếp xúc hoặc vỡ nang. Đồng thời, tuân thủ đúng đường dẫn của bác sĩ và uống thuốc theo chỉ định để đạt hiệu quả tốt nhất trong quá trình điều trị."
+ },
+ {
+  "English": "Cafe au lait macule",
+  "Vietnamese": "Bớt cà phê sữa",
+  "Suggestion": "Đây là một tình trạng thường không gây nguy hiểm và không cần điều trị, trừ khi số lượng và kích thước các vết nâu tăng lên đáng kể. Nếu bạn lo lắng về vết nâu này, tốt nhất hãy tham khảo ý kiến của bác sĩ da liễu để đảm bảo không có vấn đề gì nghiêm trọng. Đồng thời, hãy luôn bảo vệ da khỏi ánh nắng mặt trực tiếp và sử dụng kem chống nắng để tránh làm tăng sự xuất hiện của vết nâu."
+ },
+ {
+  "English": "Pityriasis rosea",
+  "Vietnamese": "Vảy phấn hồng",
+  "Suggestion": "Để điều trị, hãy áp dụng những biện pháp sau: tránh tiếp xúc với chất kích thích da, giữ vệ sinh da sạch sẽ, dùng kem dưỡng ẩm để giảm ngứa và tránh việc cọ hay chà nhằm tránh tình trạng tổn thương da. Hãy nhớ, bệnh Pityriasis rosea thường tự giảm đi sau một thời gian và không cần điều trị đặc biệt. Tuy nhiên, nếu triệu chứng trở nên nghiêm trọng hoặc kéo dài, hãy tham khảo ý kiến bác sĩ để được tư vấn và điều trị thích hợp."
+ },
+ {
+  "English": "Parapsoriasis",
+  "Vietnamese": "Á vảy nến",
+  "Suggestion": "Để điều trị hiệu quả, bạn nên tham khảo ý kiến của bác sĩ chuyên khoa da liễu. Thông thường, phương pháp điều trị bao gồm sử dụng kem chứa corticosteroid và ánh sáng hồng ngoại hoặc ánh sáng UVB. Hãy tuân thủ đúng hướng dẫn của bác sĩ và chăm sóc da hàng ngày bằng cách giữ da sạch, không chà xát mạnh và giữ ẩm cho da. Đồng thời, duy trì một lối sống lành mạnh, ăn uống cân đối và tránh căng thẳng cũng có thể giúp hỗ trợ quá trình điều trị."
+ },
+ {
+  "English": "Pityriasis lichenoides chronica",
+  "Vietnamese": "Vảy phấn dạng Lichen mạn tính",
+  "Suggestion": "Để điều trị PLC, bạn nên tham khảo ý kiến bác sĩ chuyên khoa da liễu. Họ có thể đưa ra lựa chọn điều trị phù hợp như sử dụng corticosteroid ngoại sinh, thuốc kháng histamin hoặc ánh sáng hồng ngoại. Ngoài ra, duy trì một lối sống lành mạnh, chăm sóc da đúng cách và tránh căng thẳng cũng có thể giúp cải thiện tình trạng da của bạn."
+ },
+ {
+  "English": "Neurofibroma",
+  "Vietnamese": "U xơ thần kinh",
+  "Suggestion": "Đây là một loại u lành tính nhỏ, mọc trên da và có màu hồng, xám, đỏ hoặc nâu2. Hiện chưa có phương pháp điều trị đặc hiệu cho bệnh này và vấn đề điều trị chỉ giới hạn ở việc theo dõi mức độ phát triển của bệnh và can thiệp khi có triệu chứng3. Nếu bạn có bất kỳ câu hỏi nào, hãy tham khảo ý kiến bác sĩ để được tư vấn phương pháp hỗ trợ điều trị tốt nhất2."
+ },
+ {
+  "English": "Cutaneous horn",
+  "Vietnamese": "Sừng da",
+  "Suggestion": "Sừng da là một chất cứng hình nón phía trên da, được tạo thành từ keratin dày đặc. Chúng được đặt tên như vậy vì chúng giống như sừng của động vật. Chúng xuất hiện từ các tổn thương da lành tính, tiền ác tính hoặc ác tính. Nếu bạn phát hiện sừng da trên da của mình, điều quan trọng là bạn nên đến bác sĩ để chẩn đoán và loại trừ bất kỳ bệnh lý ác tính nào. Điều trị có thể bao gồm việc loại bỏ sự phát triển và bất kỳ tổn thương nền nào."
+ },
+ {
+  "English": "Epidermal nevus",
+  "Vietnamese": "bớt thượng bì",
+  "Suggestion": "Bớt thượng bì một tình trạng da lành tính do sự phát triển quá mức của biểu bì. Các tổn thương có thể xuất hiện ngay từ khi sinh hoặc phát triển trong thời thơ ấu. Sự bất thường xuất phát từ một khuyết tật ở lớp ngoài cùng của phôi, lớp tạo ra biểu bì và mô thần kinh. Nếu bạn có sừng da, điều quan trọng là bạn nên đến bác sĩ da liễu để chẩn đoán và quản lý đúng cách. Các lựa chọn điều trị có thể bao gồm quan sát, thuốc bôi ngoài da hoặc loại bỏ phẫu thuật."
+ },
+ {
+  "English": "Syringoma",
+  "Vietnamese": "U tuyến mồ hôi lành tính",
+  "Suggestion": "U tuyến mồ hôi lành tính là một khối u lành tính do tuyến mồ hôi hoạt động quá mức. Chúng thường phát triển ở cổ, má trên và vùng dưới mắt nhưng cũng có thể mọc ở các bộ phận khác của cơ thể. Trong hầu hết các trường hợp, syringomas là vô hại và không gây ra triệu chứng. Nếu bạn có syringomas và muốn loại bỏ chúng vì lý do thẩm mỹ, bạn có thể tham khảo ý kiến bác sĩ da liễu để thảo luận về các phương pháp điều trị như điện phẫu thuật hoặc loại bỏ bằng laser."
+ },
+ {
+  "English": "Seborrheic dermatitis",
+  "Vietnamese": "Viêm da tiết bã",
+  "Suggestion": "Viêm da tiết bã là một tình trạng da phổ biến, không lây nhiễm và dễ quản lý. Loại viêm da này gây ra các đốm đỏ ngứa và vảy nhờn trên da của bạn cùng với các vảy trắng hoặc vàng trên da đầu. Nó chủ yếu ảnh hưởng đến các vùng giàu tuyến bã nhờn của da đầu, mặt và thân. Các lựa chọn điều trị có thể bao gồm dầu gội thuốc, kem và sữa dưỡng để kiểm soát các triệu chứng."
+ },
+ {
+  "English": "Toxic epidermal necrosis",
+  "Vietnamese": "Hội chứng nhiễm độc biểu bì",
+  "Suggestion": "Hội chứng nhiễm độc biểu bì (TEN) là một phản ứng da hiếm gặp và nguy hiểm đến tính mạng, thường do phản ứng với một loại thuốc. Nó gây ra các vùng da bong tróc và lột da trên ít nhất 30% cơ thể của bạn, bao gồm cả niêm mạc như miệng, mắt và sinh dục. Nếu bạn nghi ngờ mình bị TEN, điều quan trọng là bạn phải tìm đến sự chăm sóc y tế ngay lập tức. Điều trị có thể bao gồm ngừng dùng thuốc gây ra và cung cấp chăm sóc hỗ trợ trong môi trường bệnh viện."
+ },
+ {
+  "English": "Sebaceous hyperplasia",
+  "Vietnamese": "Tăng sinh bã nhờn",
+  "Suggestion": "Tăng sinh bã nhờn là một tình trạng da phổ biến khi các tuyến sản xuất dầu cho da lớn hơn bình thường. Nó có thể gây ra các nốt nhỏ màu vàng trên da, đặc biệt là trên trán hoặc má của người trung niên và người cao tuổi. Các nốt này là vô hại nhưng một số người có thể chọn điều trị chúng vì lý do thẩm mỹ. Các lựa chọn điều trị có thể bao gồm điện phẫu thuật, hơi laser hoặc thuốc uống để kiểm soát sự tích tụ bã nhờn."
+ },
+ {
+  "English": "Keratosis pilaris",
+  "Vietnamese": "Viêm lỗ chân lông sừng hóa",
+  "Suggestion": "Viêm lỗ chân lông sừng hóa là một tình trạng da phổ biến và vô hại gây ra các đốm da khô và nhỏ li ti, thường xuất hiện ở cánh tay trên, đùi, má hoặc mông. Các nốt thường không đau hoặc ngứa. Mặc dù không thể chữa khỏi hoặc ngăn ngừa được, các lựa chọn điều trị có thể bao gồm sữa dưỡng ẩm, kem chứa ure hoặc axit lactic hoặc thuốc bôi ngoài da chứa retinoid để cải thiện vẻ ngoài của da."
+ },
+ {
+  "English": "Atopic dermatitis",
+  "Vietnamese": "Viêm da dị ứng",
+  "Suggestion": "Viêm da dị ứng, còn được gọi là chàm, là một tình trạng da phổ biến gây ra da khô, ngứa và viêm da. Nó phổ biến ở trẻ em nhỏ nhưng có thể xuất hiện ở bất kỳ lứa tuổi nào. Điều trị có thể bao gồm dưỡng ẩm thường xuyên, kem hoặc thuốc bôi ngoài da để kiểm soát ngứa và phục hồi da và tránh các yếu tố kích thích như xà phòng cay hoặc chất gây dị ứng. Nếu bạn bị viêm da dị ứng, điều quan trọng là bạn nên đến bác sĩ da liễu để chẩn đoán và quản lý đúng cách."
+ },
+ {
+  "English": "Nummular eczema",
+  "Vietnamese": "Viêm da hình đồng xu",
+  "Suggestion": "Viêm da hình đồng xu, còn được gọi là viêm da đĩa và viêm da hình đồng xu, là một tình trạng da mãn tính gây ra các đốm hình đồng xu phát triển trên da. Các đốm này có thể ngứa và đôi khi chảy dịch trong. Nguyên nhân chính xác của viêm da hình đồng xu không được biết đến, nhưng nó có thể được kích hoạt bởi da khô, tổn thương da hoặc một số loại thuốc. Điều trị có thể bao gồm dưỡng ẩm cho da, sử dụng kem hoặc thuốc bôi ngoài da và tránh các yếu tố kích thích."
+ },
+ {
+  "English": "Eccrine hidrocystoma",
+  "Suggestion": "là một tổn thương u nang lành tính được cho là bắt nguồn từ sự giữ lại nang của tuyến mồ hôi bản địa. Những tổn thương nhỏ chứa dịch này thường được tìm thấy trên mí mắt. Chúng thường không có triệu chứng và không cần điều trị. Tuy nhiên, nếu chúng gây phiền toái về mặt thẩm mỹ, chúng có thể được loại bỏ bởi một bác sĩ da liễu."
+ },
+ {
+  "English": "Onychomysosis",
+  "Vietnamese": "nấm móng tay",
+  "Suggestion": "nấm móng tay, là một bệnh nhiễm trùng nấm của móng tay. Các triệu chứng có thể bao gồm đổi màu móng tay trắng hoặc vàng, dày lên của móng tay và tách rời móng tay khỏi giường móng tay. Móng chân thường bị ảnh hưởng nhiều hơn so với móng tay. Điều trị có thể bao gồm thuốc chống nấm, dạng bôi hoặc uống. Điều quan trọng là giữ vùng bị ảnh hưởng sạch sẽ và khô ráo để ngăn chặn sự lây lan của nhiễm trùng."
+ },
+ {
+  "English": "Striae distensae",
+  "Vietnamese": "vết rạn da",
+  "Suggestion": "vết rạn da, là một dạng sẹo trên da có thể giảm nhưng không biến mất hoàn toàn. Chúng được gây ra do sự rách nát của lớp hạ bì do căng da trong các giai đoạn tăng trưởng nhanh hoặc thay đổi nội tiết tố, chẳng hạn như mang thai, dậy thì, tăng cân hoặc sử dụng corticosteroid. Mặc dù vết rạn da là vô hại và không cần điều trị, một số người có thể chọn điều trị chúng vì lý do thẩm mỹ. Các lựa chọn điều trị có thể bao gồm thuốc bôi ngoài da chứa retinoid, microdermabrasion hoặc liệu pháp laser."
+ },
+ {
+  "English": "Alopecia areata",
+  "Vietnamese": "Rụng tóc từng mảng",
+  "Suggestion": "Rụng tóc từng mảng là một rối loạn miễn dịch gây ra rụng tóc. Nó thường xuất hiện dưới dạng các đốm hói rời rạc trên da đầu nhưng có thể ảnh hưởng đến lông trên bất kỳ bộ phận nào của cơ thể. Nguyên nhân chính xác của alopecia areata không được biết đến, nhưng được cho là do sự kích hoạt bởi sự kết hợp của các yếu tố di truyền và môi trường. Mặc dù không có phương pháp chữa trị cho alopecia areata, các lựa chọn điều trị có thể bao gồm corticosteroid, liều pháp miễn dịch địa phương hoặc minoxidil để thúc đẩy mọc tóc trở lại."
+ },
+ {
+  "English": "Guttate psoriasis",
+  "Vietnamese": "Vẩy nến dạng nhỏ giọt",
+  "Suggestion": "Vẩy nến dạng nhỏ giọt là một loại vẩy nến xuất hiện dưới dạng các đốm nhỏ đỏ và có vảy trên da. Nó thường phát triển đột ngột và thường được kích hoạt bởi một bệnh nhiễm trùng như viêm họng do liên cầu khuẩn. Vẩy nến dạng nhỏ giọt phổ biến nhất ở trẻ em và người trẻ tuổi. Mặc dù không có phương pháp chữa trị cho vẩy nến, các lựa chọn điều trị có thể bao gồm kem hoặc thuốc bôi ngoài da, liệu pháp ánh sáng hoặc thuốc uống để giảm viêm và kiểm soát các triệu chứng."
+ },
+ {
+  "English": "Psoriasis",
+  "Vietnamese": "Vẩy nến",
+  "Suggestion": "Vẩy nến là một tình trạng da mãn tính tự miễn gây ra các đốm đỏ và có vảy trên da. Các đốm này có thể ngứa và đôi khi đau. Nguyên nhân chính xác của vẩy nến không được biết đến, nhưng được cho là do sự kích hoạt bởi sự kết hợp của các yếu tố di truyền và môi trường. Mặc dù không có phương pháp chữa trị cho vẩy nến, các lựa chọn điều trị có thể bao gồm kem hoặc thuốc bôi ngoài da, liệu pháp ánh sáng hoặc thuốc uống để giảm viêm và kiểm soát các triệu chứng."
+ },
+ {
+  "English": "Urticaria",
+  "Vietnamese": "Mề đay",
+  "Suggestion": "Mề đay, còn được gọi là phát ban, là một tình trạng da được đặc trưng bởi các mụn nổi ngứa trên da. Nó thường được gây ra bởi một phản ứng dị ứng với những thứ như thực phẩm, phấn hoa, côn trùng cắn hoặc hóa chất. Mề đay cấp tính kéo dài trong ít hơn sáu tuần trong khi mề đay mãn tính kéo dài trong hơn sáu tuần. Các lựa chọn điều trị có thể bao gồm thuốc chống dị ứng, corticosteroid hoặc các loại thuốc khác để giảm viêm và kiểm soát các triệu chứng."
+ },
+ {
+  "English": "Erythema annulare centrifugum",
+  "Vietnamese": "Hồng ban hình nhẫn ly tâm",
+  "Suggestion": "Hồng ban hình nhẫn ly tâm là một tình trạng da hiếm gặp được đặc trưng bởi các tổn thương đỏ hình tròn hoặc hình cung với một lớp vảy kéo dài. Nguyên nhân chính xác của EAC không được biết đến, nhưng nó đã được liên kết với các bệnh lý nền và thuốc. Điều trị có thể bao gồm giải quyết bất kỳ bệnh lý nền nào và sử dụng corticosteroid hoặc thuốc chống dị ứng để giảm viêm và kiểm soát các triệu chứng."
+ },
+ {
+  "English": "Tinea corporis",
+  "Vietnamese": "nấm da toàn thân",
+  "Suggestion": "nấm da toàn thân là một bệnh nhiễm trùng nấm có thể ảnh hưởng đến bất kỳ bộ phận nào của cơ thể ngoại trừ tay, chân, da đầu, mặt, râu, bẹn và móng tay. Nó xuất hiện dưới dạng một vết phát ban hình tròn với da trong giữa sáng hơn. Điều trị có thể bao gồm thuốc chống nấm được bôi lên da hoặc uống."
+ },
+ {
+  "English": "Varicella",
+  "Vietnamese": "thủy đậu",
+  "Suggestion": "thủy đậu, là một bệnh nhiễm trùng virus rất dễ lây lan gây ra phát ban ngứa với các nốt nhỏ chứa dịch. Nó thường lây lan qua tiếp xúc trực tiếp với người bị nhiễm trùng. Mặc dù không có phương pháp chữa trị cho varicella, điều trị có thể bao gồm thuốc chống virus và các biện pháp để giảm các triệu chứng như ngứa và sốt."
+ },
+ {
+  "English": "Lupus erythematosus",
+  "Vietnamese": "Bệnh ban đỏ",
+  "Suggestion": " Bệnh ban đỏ là một nhóm các bệnh tự miễn khi hệ thống miễn dịch tấn công các mô khỏe mạnh. Các triệu chứng có thể ảnh hưởng đến nhiều hệ thống cơ thể, bao gồm khớp, da, thận, tế bào máu, tim và phổi. Dạng phổ biến và nặng nhất là lupus hệ thống (SLE). Điều trị có thể bao gồm thuốc để kiểm soát các triệu chứng và ngăn ngừa bùng phát. "
+ },
+ {
+  "English": "Palmoplantar pustulosis",
+  "Vietnamese": "Mụn mủ lòng bàn tay- bàn chân",
+  "Suggestion": "Mụn mủ lòng bàn tay- bàn chân là một rối loạn da mãn tính. Nếu bạn hút thuốc, hãy cố gắng bỏ. Chọn giày dép thoải mái được làm từ sợi tự nhiên. Tránh ma sát và thương tích nhỏ. Giảm tiếp xúc với các yếu tố kích hoạt có thể giúp giảm thiểu các cơn bùng phát ."
+ },
+ {
+  "English": "Morphea",
+  "Vietnamese": "Xơ cứng bì khu trú",
+  "Suggestion": "Xơ cứng bì khu trú là một tình trạng da hiếm gặp gây ra các đốm da không đau, có màu khác nhau trên da của bạn. Hãy ăn các thực phẩm có tính chất chống viêm và giữ cho cơ thể bạn được cấp nước. Tránh thực phẩm chưa qua chế biến, thực phẩm giàu đường, rượu, caffeine và thịt."
+ },
+ {
+  "English": "Herpes simplex"
+ },
+ {
+  "English": "Xanthelasma"
+ },
+ {
+  "English": "Fordyce spot"
+ },
+ {
+  "English": "Keratoderma"
+ },
+ {
+  "English": "Acanthosis nigricans"
+ },
+ {
+  "English": "Milia"
+ },
+ {
+  "English": "Lymphangioma"
+ },
+ {
+  "English": "Melasma"
+ },
+ {
+  "English": "Tinea versicolor"
+ },
+ {
+  "English": "Subungual hematoma"
+ },
+ {
+  "English": "Tinea pedis"
+ },
+ {
+  "English": "Condyloma"
+ },
+ {
+  "English": "Acne scar"
+ },
+ {
+  "English": "Pityriasis alba"
+ },
+ {
+  "English": "Photosensitive dermatitis"
+ },
+ {
+  "English": "Papular urticaria"
+ },
+ {
+  "English": "Pustular psoriasis"
+ },
+ {
+  "English": "Poikiloderma"
+ },
+ {
+  "English": "Tinea faciei"
+ },
+ {
+  "English": "Granuloma annulare"
+ },
+ {
+  "English": "Viral exanthem"
+ },
+ {
+  "English": "Burn"
+ }
+]
