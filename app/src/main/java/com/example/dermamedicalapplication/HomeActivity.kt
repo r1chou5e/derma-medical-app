@@ -65,6 +65,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, SearchActivity::class.java))
         }
 
+        binding.exploreBtn.setOnClickListener {
+            startActivity(Intent(this, IntroduceActivity::class.java))
+        }
+
     }
 
     private fun checkUser() {

@@ -118,7 +118,9 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
-    fun showDatePickerDialog(view: View){
+}
+
+    fun showDatePickerDialog(view: View) {
         val datePickerDialog = DatePickerDialog(
             this,
             DatePickerDialog.OnDateSetListener { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
@@ -133,5 +135,4 @@ class QuestionActivity : AppCompatActivity() {
 
         datePickerDialog.show()
     }
-
 }

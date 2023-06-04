@@ -11,5 +11,13 @@
         <item name="colorControlNormal">@android:color/transparent</item> <!-- Màu chân khi không được chọn -->
         <item name="colorControlActivated">#80777777</item> <!-- Màu chân khi được chọn -->
     </style>
+    <style name="TextInputLayoutNoUnderline" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+        <item name="boxStrokeErrorColor">@android:color/transparent</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+    </style>
+
+
 
 </resources>
