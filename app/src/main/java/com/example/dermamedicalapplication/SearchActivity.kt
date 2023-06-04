@@ -38,6 +38,7 @@ class SearchActivity : AppCompatActivity() {
         postArrayList = ArrayList()
         postTitleArray = ArrayList()
 
+
         val ref = FirebaseDatabase.getInstance().getReference("Post")
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -48,8 +49,8 @@ class SearchActivity : AppCompatActivity() {
                     // add to arrayList
                     postArrayList.add(post!!)
 
-                    if (post.title.length > 48) {
-                        val subString = post.title.substring(0,45)
+                    if (post.title.length > 43) {
+                        val subString = post.title.substring(0,40)
                         postTitleArray.add("$subString...")
                     }
                     else {
