@@ -167,12 +167,13 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_below="@id/dobTv"
-                       android:inputType="none"
-                       android:hint="Chọn năm"
+                       android:layout_marginStart="20dp"
                        android:focusable="false"
-                       android:textAlignment="center"
+                       android:hint="Chọn năm"
+                       android:inputType="none"
+                       android:minHeight="48dp"
                        android:onClick="showDatePickerDialog"
-                       android:layout_marginStart="20dp"/>
+                       android:textAlignment="center" />
 
 
                </RelativeLayout>

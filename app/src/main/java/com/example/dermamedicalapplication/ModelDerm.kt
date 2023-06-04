@@ -2,25 +2,25 @@ package com.example.dermamedicalapplication
 
 import android.content.Context
 import android.net.Uri
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.tasks.await
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONArray
 import java.nio.charset.Charset
-import java.nio.file.Files
-import java.nio.file.Paths
 import kotlin.system.exitProcess
 
 object ModelDerm {
     private val client = OkHttpClient()
 
     // Phương thức để gửi yêu cầu modelDerm và nhận kết quả trả về
-    fun modelDerm(context: Context, url: String, apiKey: String, imageList: List<Uri>): String {
+    fun modelDerm(context: Context, url: String, apiKey: String, imageList: List<Uri>,info: List<String>): String {
         val args =
-            "<id></id><race></race><birth></birth><sex></sex><location></location><pruritus></pruritus><pain></pain><onset></onset>"
+            "<id></id><race></race><birth>" + info[1] + "</birth><sex>" + info[0] + "</sex><location></location><pruritus>"+info[2]+"</pruritus><pain>"+info[2]+"</pain><onset>"+info[3]+"</onset>"
 
         val builder = MultipartBody.Builder()
             .setType(MultipartBody.FORM)
@@ -64,51 +64,6 @@ object ModelDerm {
         }
     }
 
-    // Phương thức để xử lý và hiển thị kết quả trả về từ modelDerm
-    fun processResponse(responseString: String): Disease {
-        val regex = Regex("<([^>]*)>([^<]*)</\\1>")
-        val matches = regex.findAll(responseString)
-        val result = StringBuilder()
-        val disease = Disease()
-
-        for (match in matches) {
-            val tag = match.groupValues[1]
-            val value = match.groupValues[2]
-            result.append("$tag: $value\n")
-            when (tag) {
-                "disease" -> {
-                    // Thực hiện hành động khi status là "disease"
-                    val temp = trimStringToArray(value)
-                    val detail = searchInJsonFile(temp[0])
-                    disease.probability = temp[1].toDouble().times(100).toString() + "%"
-                    disease.name = detail.vietnamese + " (" + detail.english + ")"
-                    disease.suggestion = detail.suggestion
-                }
-                "fine" -> {
-                    // Thực hiện hành động khi status là "fine"
-                    disease.dangerousLevel = value
-
-                }
-            }
-
-        }
-        return disease
-    }
-
-    class Disease {
-        var name: String = ""
-        var suggestion: String = ""
-        var probability: String = ""
-        var dangerousLevel: String = ""
-    }
-
-    class DiseaseDetail {
-        var english: String = ""
-        var suggestion: String = ""
-        var vietnamese: String = ""
-    }
-
-    // Phương thức để tạo một API key duy nhất với độ dài xác định
     fun getUniqueApiKey(length: Int): String {
         val lettersAndDigits = ('a'..'z') + ('A'..'Z') + ('0'..'9')
         return (1..length)
@@ -122,47 +77,81 @@ object ModelDerm {
             .toTypedArray()
     }
 
-    private fun searchInJsonFile(value: String): DiseaseDetail {
-        val diseaseDetail = DiseaseDetail()
-        val key = "English"
-        val jsonFilePath = "app/database/diseases_unlabeled.json"
-        val jsonData = String(Files.readAllBytes(Paths.get(jsonFilePath)), Charset.defaultCharset())
-        val jsonArray = JSONArray(jsonData)
+    // Phương thức để xử lý và hiển thị kết quả trả về từ modelDerm
+    suspend fun processResponse(responseString: String): Disease = coroutineScope {
+        val regex = Regex("<([^>]*)>([^<]*)</\\1>")
+        val matches = regex.findAll(responseString)
+        val result = StringBuilder()
+        val disease = Disease("","","","")
 
-        for (i in 0 until jsonArray.length()) {
-            val jsonObject = jsonArray.getJSONObject(i)
-            if (jsonObject.optString(key) == value) {
-                with(diseaseDetail) {
-                    english = jsonObject.optString("English")
-                    vietnamese = jsonObject.optString("Vietnamese")
-                    suggestion = jsonObject.optString("Suggestion")
-                }
-                break
-            }
-        }
-        return diseaseDetail
-    }
-
-    private fun searchDocument(disease: String): DiseaseDetail {
-        val db = FirebaseFirestore.getInstance()
-        val diseaseDetail = DiseaseDetail()
-        db.collection("/DiseaseInfo")
-            .whereEqualTo("English", disease)
-            .get()
-            .addOnSuccessListener { documents ->
-                if (!documents.isEmpty) {
-                    val documentSnapshot = documents.documents[0]
-                    with(diseaseDetail) {
-                        english = documentSnapshot.getString("English").toString()
-                        vietnamese = documentSnapshot.getString("Vietnamese").toString()
-                        suggestion = documentSnapshot.getString("Suggestion").toString()
+        for (match in matches) {
+            val tag = match.groupValues[1]
+            val value = match.groupValues[2]
+            result.append("$tag: $value\n")
+            when (tag) {
+                "disease" -> {
+                    val temp = trimStringToArray(value)
+                    try {
+                        val detail = async { searchDocument(temp[0]) }
+                        val probability = String.format("%.2f", temp[1].toDouble() * 100)
+                        disease.probability = "$probability%"
+                        disease.name = detail.await().vietnamese + " (" + detail.await().english + ")"
+                        disease.suggestion = detail.await().suggestion
+                    } catch (e: Exception) {
+                        throw e
                     }
                 }
+                "fine" -> {
+                    // Thực hiện hành động khi status là "fine"
+                    disease.dangerousLevel = rateLevel(value)
+                }
             }
-            .addOnFailureListener { exception ->
-                println("Error getting documents: ${exception.message}")
-            }
-        return diseaseDetail
+        }
+
+        disease
     }
 
+    data class Disease (
+        var name: String,
+        var suggestion: String,
+        var probability: String,
+        var dangerousLevel: String
+    )
+
+    data class DiseaseData(
+        val english: String,
+        val suggestion: String,
+        val vietnamese: String
+    )
+
+    private fun rateLevel(fine :String) : String {
+        val temp = fine.toDouble()
+        return when {
+            temp > 0.0 && temp < 25.0 -> "Cực kỳ nghiêm trọng"
+            temp >= 25.0 && temp < 50.0 -> "Nghiêm trọng"
+            temp >= 50.0 && temp < 75.0 -> "Nhẹ"
+            else -> {"Bình thường"}
+        }
+    }
+
+    private suspend fun searchDocument(diseaseName: String): DiseaseData {
+        val db = FirebaseFirestore.getInstance()
+        try {
+            val querySnapshot = db.collection("DiseaseInfo")
+                .whereEqualTo("English", diseaseName)
+                .get()
+                .await()
+
+            for (document in querySnapshot.documents) {
+                return DiseaseData(
+                    english = document.getString("English").toString(),
+                    vietnamese = document.getString("Vietnamese").toString(),
+                    suggestion = document.getString("Suggestion").toString()
+                )
+            }
+        } catch (exception: Exception) {
+            throw exception
+        }
+        return DiseaseData("", "", "")
+    }
 }
