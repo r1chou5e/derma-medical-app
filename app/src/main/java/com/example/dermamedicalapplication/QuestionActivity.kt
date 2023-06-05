@@ -118,8 +118,6 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
-}
-
     fun showDatePickerDialog(view: View) {
         val datePickerDialog = DatePickerDialog(
             this,
@@ -135,4 +133,5 @@ class QuestionActivity : AppCompatActivity() {
 
         datePickerDialog.show()
     }
+
 }
