@@ -1,4 +1,4 @@
-
+package com.example.dermamedicalapplication.fragments
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -15,12 +15,20 @@ class AdminPostAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     }
 
     override fun createFragment(position: Int): Fragment {
-        return if (position == 0)
-            NewPostFragment()
-        else if (position == 1)
-            DeletedFragment()
-        else
-             ApprovedFragment()
+        when (position) {
+            0 -> {
+                return NewPostFragment()
+            }
+
+            1 -> {
+                return ApprovedFragment()
+            }
+
+            2 -> {
+                return DeletedFragment()
+            }
 
         }
+        return return NewPostFragment()
     }
+}

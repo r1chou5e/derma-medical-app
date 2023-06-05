@@ -1,22 +1,15 @@
 package com.example.dermamedicalapplication
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
+import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dermamedicalapplication.databinding.ActivityTakePictureBinding
-import com.github.dhaval2404.imagepicker.ImagePicker
 
 class TakePictureActivity : AppCompatActivity() {
-
-
-    var imageUri:Uri = QuestionActivity.imageUri
+    private var imageUri:Uri = QuestionActivity.imageUri
     private lateinit var binding: ActivityTakePictureBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +17,6 @@ class TakePictureActivity : AppCompatActivity() {
         binding = ActivityTakePictureBinding.inflate(layoutInflater)
         binding.displayPic.setImageURI(imageUri)
         setContentView(binding.root)
-
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {
@@ -40,10 +32,6 @@ class TakePictureActivity : AppCompatActivity() {
             true
         }
 
-
-
-
-
         binding.Confirm.setOnClickListener{
             startActivity(Intent(this, DiagnoseActivity::class.java))
         }
@@ -54,19 +42,8 @@ class TakePictureActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

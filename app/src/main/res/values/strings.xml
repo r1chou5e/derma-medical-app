@@ -3,4 +3,23 @@
     <string name="new_user_signup">Chưa có tài khoản ? <b>Đăng ký ngay</b></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="post_content_ex"> Nước là hợp chất dễ kiếm nhất và đặc biệt cần thiết cho sự sống. Một người không thể sống mà không có nước trong vòng một tuần. Vì vậy, cơ thể bắt buộc phải cung cấp đủ nước. Nước uống tinh khiết là chất lỏng lành mạnh nhất mà bạn có thể sử dụng gần như cả ngày nếu bạn có một máy lọc nước tốt ở nhà hay nơi làm việc.
+        Dưới đây là một số lợi ích cho thấy nước là thức uống lành mạnh nhất cho sức khỏe con người.
+        Nước là phương tiện để vận chuyển các chất thải ra khỏi tế bào đến thận của bạn. Độc tố chính của cơ thể, urê nitơ máu là một hợp chất hòa tan trong nước được loại bỏ qua nước tiểu. Uống nước đúng cách, đủ lượng nước làm giảm căng thẳng cho thận và giúp nước tiểu của bạn ít đặc. Uống đủ nước là điều quan trọng hơn ở khu vực khí hậu ấm áp để ngăn ngừa sỏi thận.
+        Nước rất cần thiết cho sự phân phối chất dinh dưỡng hợp lý vì đây là thành phần lớn nhất của cơ thể. Nước cũng giúp điều chỉnh nhiệt độ thích hợp trong cơ thể. Nước hỗ trợ các hoạt động của đường tiêu hóa. Một lượng nước không đủ sẽ khiến bạn có nguy cơ bị táo bón.
+    </string>
+    <string name="select_gender">Chọn giới tính</string>
+    <string-array name="gender_array">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
+    <string name="introduce_app"><i>Bạn đang cần một giải pháp hiệu quả để quản lý tình trạng da liễu của mình? DermaTech sẽ là trợ thủ đắc lực của bạn. Được thiết kế đặc biệt cho người dùng quan tâm đến sức khỏe da, ứng dụng này giúp bạn theo dõi và quản lý tình trạng da một cách thuận tiện và dễ dàng.</i></string>
+    <string name="definition_script"><i><b>DermaTech</b></i> là một ứng dụng Android được thiết kế để theo dõi và quản lý tình trạng da liễu. Được phát triển bởi nhóm <b>Tri-Fecta</b>, ứng dụng đáp ứng nhu cầu của những người quan tâm đến sức khỏe da, DermaTech cung cấp một công cụ thuận tiện và dễ sử dụng cho việc ghi lại thông tin về triệu chứng, các thay đổi về da và liên tục cập nhật những thông tin liên quan đến da liễu.</string>
+    <string name="tech_script">DermaTech sử dụng công nghệ Trí tuệ nhân tạo (AI) để hỗ trợ trong việc chẩn đoán bệnh da liễu. Công nghệ AI trong DermaTech được xây dựng dựa trên việc huấn luyện mô hình máy học sử dụng dữ liệu lớn về các loại bệnh da, triệu chứng và hình ảnh liên quan.
+\n\nKhi người dùng cung cấp thông tin về triệu chứng da và cung cấp hình ảnh của vùng da bị ảnh hưởng, công nghệ AI trong DermaTech sẽ phân tích và so khớp với cơ sở dữ liệu để đưa ra các khả năng chẩn đoán. Nó cung cấp thông tin về các bệnh da có thể có và đề xuất các khả năng chẩn đoán sơ bộ.
+\n\nTuy nhiên, cần lưu ý rằng chẩn đoán bệnh da là một quá trình phức tạp và đòi hỏi sự chính xác cao. Công nghệ AI trong DermaTech chỉ mang tính chất tư vấn và hỗ trợ, không thay thế cho sự tư vấn và chẩn đoán từ các chuyên gia da liễu. Việc chẩn đoán cuối cùng và đề xuất điều trị nên được thực hiện bởi các chuyên gia y tế.</string>
+    <string name="community_script">DermaTech cung cấp tính năng cho phép người dùng đăng bài viết liên quan đến chăm sóc da và kinh nghiệm cá nhân. Tính năng này giúp người dùng chia sẻ thông tin, kinh nghiệm, và nhận được sự hỗ trợ từ cộng đồng người dùng khác.
+\n\nNgười dùng có thể viết bài về các phương pháp chăm sóc da hiệu quả, sản phẩm làm đẹp được yêu thích, kỹ thuật trang điểm, hoặc những gợi ý về chế độ dinh dưỡng tốt cho da. Họ cũng có thể chia sẻ câu chuyện về việc điều trị các vấn đề da cụ thể mà họ đã trải qua và cung cấp thông tin về kết quả và những phương pháp hiệu quả mà họ đã thử.\n\nTính năng đăng bài viết trong DermaTech tạo ra một môi trường trao đổi thông tin và kinh nghiệm giữa các thành viên cộng đồng. Người dùng có thể tương tác với nhau bằng cách bình luận, đặt câu hỏi hoặc chia sẻ ý kiến. Điều này giúp xây dựng một cộng đồng chăm sóc da, nơi mọi người có thể học hỏi và tương tác với nhau.
+\n\nTính năng đăng bài viết của DermaTech tạo ra một không gian cho người dùng chia sẻ và học hỏi về chăm sóc da, kỹ thuật làm đẹp và các vấn đề liên quan. Nó thúc đẩy sự giao tiếp và chia sẻ thông tin giữa các thành viên cộng đồng, mang lại lợi ích cho tất cả những người quan tâm đến sức khỏe da và làn da đẹp.
+    </string>
 </resources>

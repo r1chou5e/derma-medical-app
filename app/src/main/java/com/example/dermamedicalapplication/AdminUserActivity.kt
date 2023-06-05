@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.databinding.ActivityAdminPostBinding
 import com.example.dermamedicalapplication.databinding.ActivityAdminUserBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -24,6 +25,7 @@ class AdminUserActivity : AppCompatActivity(), AdminUserAdapter.MyClickListener 
     lateinit var recyclerView: RecyclerView
     lateinit var fm: FragmentManager
     lateinit var viewPage: View
+    val firebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +44,11 @@ class AdminUserActivity : AppCompatActivity(), AdminUserAdapter.MyClickListener 
             true
         }
 
+        binding.backBtn.setOnClickListener {
+            firebaseAuth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
 
     }
 

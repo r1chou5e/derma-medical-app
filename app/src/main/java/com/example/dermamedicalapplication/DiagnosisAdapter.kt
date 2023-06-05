@@ -7,16 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.databinding.DiagnosisRowBinding
 
-class DiagnosisAdapter:RecyclerView.Adapter<DiagnosisAdapter.DiagnosisHolder> {
-
-    private val context: Context
+class DiagnosisAdapter(
+    private val context: Context,
     private val diagnosisArrayList: ArrayList<DiagnosisModel>
-    private lateinit var binding: DiagnosisRowBinding
+) : RecyclerView.Adapter<DiagnosisAdapter.DiagnosisHolder>() {
 
-    constructor(context: Context, diagnosisArrayList: ArrayList<DiagnosisModel>) : super() {
-        this.context = context
-        this.diagnosisArrayList = diagnosisArrayList
-    }
+    private lateinit var binding: DiagnosisRowBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiagnosisHolder {
         binding = DiagnosisRowBinding.inflate(LayoutInflater.from(context), parent, false)

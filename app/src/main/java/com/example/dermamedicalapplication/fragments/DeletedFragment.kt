@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.AdminPostListAdapter
@@ -21,6 +22,9 @@ import com.example.dermamedicalapplication.postContent
 import com.example.dermamedicalapplication.postId
 import com.example.dermamedicalapplication.postImageUrl
 import com.example.dermamedicalapplication.postTitle
+import com.example.dermamedicalapplication.status
+import com.example.dermamedicalapplication.timestamp
+import com.example.dermamedicalapplication.uid
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -47,6 +51,7 @@ class DeletedFragment : Fragment(), AdminPostListAdapter.MyClickListener {
 
         viewPage = inflater.inflate(R.layout.fragment_deleted, container, false)
 
+
         return viewPage
 
     }
@@ -63,7 +68,7 @@ class DeletedFragment : Fragment(), AdminPostListAdapter.MyClickListener {
                     val model = ds.getValue(PostModel::class.java)
                     // add to arrayList
                     if (model != null) {
-                        if(model.status == "deleted") {
+                        if(model.status == "denied") {
                             postArrayList.add(model!!)
                         }
                     }
@@ -86,6 +91,9 @@ class DeletedFragment : Fragment(), AdminPostListAdapter.MyClickListener {
         intent.putExtra(postImageUrl, postArrayList[position].imageUrl)
         intent.putExtra(postContent, postArrayList[position].content)
         intent.putExtra(postTitle, postArrayList[position].title)
+        intent.putExtra(uid, postArrayList[position].uid)
+        intent.putExtra(timestamp, postArrayList[position].timestamp)
+        intent.putExtra(status,postArrayList[position].status )
 
         if(position != -1)
         {

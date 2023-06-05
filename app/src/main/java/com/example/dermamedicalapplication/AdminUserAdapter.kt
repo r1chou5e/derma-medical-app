@@ -28,7 +28,7 @@ class AdminUserAdapter:RecyclerView.Adapter<AdminUserAdapter.UserHolder> {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserHolder {
         binding = UserRowBinding.inflate(LayoutInflater.from(context), parent, false)
 
-            return UserHolder(binding.root)
+        return UserHolder(binding.root)
     }
 
     override fun getItemCount(): Int {
@@ -50,7 +50,7 @@ class AdminUserAdapter:RecyclerView.Adapter<AdminUserAdapter.UserHolder> {
         holder.userName.text = fullname
         holder.userStatus.text = status
 
-        Log.d("hihi", (binding.userStatus.text == "locked").toString())
+
         if(binding.userStatus.text.toString() == "locked")
         {
             binding.lock.visibility = View.GONE

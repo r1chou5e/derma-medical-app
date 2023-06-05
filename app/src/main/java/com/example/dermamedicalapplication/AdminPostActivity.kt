@@ -1,18 +1,20 @@
 package com.example.dermamedicalapplication
 
-import AdminPostAdapter
+import com.example.dermamedicalapplication.fragments.AdminPostAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dermamedicalapplication.databinding.ActivityAdminPostBinding
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.auth.FirebaseAuth
 
 
 class AdminPostActivity : AppCompatActivity() {
     private lateinit var binding :ActivityAdminPostBinding
     lateinit var view: ViewPager2
     lateinit var adapter: AdminPostAdapter
+    val firebaseAuth = FirebaseAuth.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminPostBinding.inflate(layoutInflater)
@@ -34,9 +36,10 @@ class AdminPostActivity : AppCompatActivity() {
         view.adapter = adapter
 
 
+
         binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết mới"))
-        binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết đã duyệt "))
-        binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết đã xoá"))
+        binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết đã duyệt"))
+        binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết đã từ chối"))
 
         binding.postTab.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener
         {
@@ -65,7 +68,11 @@ class AdminPostActivity : AppCompatActivity() {
             }
         })
 
-
+        binding.backBtn.setOnClickListener {
+            firebaseAuth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
 
     }
 

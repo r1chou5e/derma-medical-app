@@ -55,6 +55,7 @@ class AdminPostListAdapter:RecyclerView.Adapter<AdminPostListAdapter.PostHolder>
 
 
 
+
         if (imageUrl.isNotEmpty()) {
             Picasso.get()
                 .load(imageUrl)

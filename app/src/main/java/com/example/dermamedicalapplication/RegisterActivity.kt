@@ -115,9 +115,11 @@ class RegisterActivity : AppCompatActivity() {
         hashMap["uid"] = uid
         hashMap["email"] = email
         hashMap["fullname"] = fullname
+        hashMap["phoneNumber"] = phoneNumber
         hashMap["profileImage"] = ""
         hashMap["userType"] = "user"
         hashMap["timestamp"] = timestamp
+        hashMap["stautus"] = "active"
 
         // Set data to db
         val ref = FirebaseDatabase.getInstance().getReference("User")

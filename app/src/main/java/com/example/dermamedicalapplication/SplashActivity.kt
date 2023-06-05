@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed(Runnable {
             checkUser()
-//          startActivity(Intent(this, SearchActivity::class.java))
+//          startActivity(Intent(this, ProfileOneActivity::class.java))
         }, 2000)
     }
 
@@ -46,7 +46,8 @@ class SplashActivity : AppCompatActivity() {
                             finish()
 
                         } else if (userType == "admin") {
-
+                            startActivity(Intent(this@SplashActivity, AdminPostActivity::class.java))
+                            finish()
                         }
                     }
 
