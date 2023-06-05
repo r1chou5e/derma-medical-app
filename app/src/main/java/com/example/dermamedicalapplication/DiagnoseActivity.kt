@@ -41,6 +41,10 @@ class DiagnoseActivity : AppCompatActivity() {
         // Xử lý phản hồi sau một khoảng thời gian nhất định
         processImage(imageUri, list)
 
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
+
     }
 
     private fun processImage(uri: Uri, info: List<String>) {

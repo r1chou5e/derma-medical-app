@@ -46,7 +46,8 @@ class SplashActivity : AppCompatActivity() {
                             finish()
 
                         } else if (userType == "admin") {
-
+                            startActivity(Intent(this@SplashActivity, AdminPostActivity::class.java))
+                            finish()
                         }
                     }
 

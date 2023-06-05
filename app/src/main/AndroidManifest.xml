@@ -18,6 +18,15 @@
         android:theme="@style/Theme.DermaMedicalApplication"
         tools:targetApi="31">
         <activity
+            android:name=".AdminPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".IntroduceActivity"
             android:exported="false" />
         <activity

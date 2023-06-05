@@ -34,18 +34,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="60dp"
-                android:layout_toRightOf="@id/backBtn"
                 android:text="CHI TIẾT CHẨN ĐOÁN"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/notificationBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="10dp"
-                app:srcCompat="@drawable/ic_notification_gray" />
 
             <ImageView
                 android:id="@+id/searchBtn"
@@ -68,7 +59,8 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/contactDoctorBtn"
                 android:layout_below="@id/title"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
@@ -224,27 +216,28 @@
                 android:id="@+id/contactDoctorBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageView3"
-                android:text="Liên hệ bác sĩ"
-                android:layout_marginTop="30dp"
+                android:layout_above="@id/rateDiagnosisBtn"
                 android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="25dp"
-                android:shadowDy="4"
                 android:background="@drawable/shape_button01"
-                android:textColor="@color/white"/>
+                android:shadowDy="4"
+                android:text="Liên hệ bác sĩ"
+                android:textColor="@color/white" />
 
             <android.widget.Button
                 android:id="@+id/rateDiagnosisBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/contactDoctorBtn"
-                android:text="Đánh giá chuẩn đoán"
-                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true"
                 android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="25dp"
-                android:shadowDy="4"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_button01"
-                android:textColor="@color/white"/>
+                android:shadowDy="4"
+                android:text="Đánh giá chuẩn đoán"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 

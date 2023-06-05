@@ -1,9 +1,12 @@
 package com.example.dermamedicalapplication
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import com.example.dermamedicalapplication.WaterReminderActivity.Companion.currentProgress
 import com.example.dermamedicalapplication.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -11,7 +14,10 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.lang.Exception
+import java.lang.Integer.parseInt
 
+const val waterAmount = "waterAmount"
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
@@ -22,11 +28,19 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var postAdapter: PostAdapter
 
+    lateinit var sharedPref: SharedPreferences
+    //now get Editor
+    lateinit var  editor: SharedPreferences.Editor
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Create object of SharedPreferences.
 
+        sharedPref  = getSharedPreferences("Water", MODE_PRIVATE);
+        editor = sharedPref.edit();
         // init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
@@ -59,6 +73,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.drinkWaterRl.setOnClickListener {
             startActivity(Intent(this, WaterReminderActivity::class.java))
+
         }
 
         binding.searchBtn.setOnClickListener {
@@ -68,6 +83,14 @@ class HomeActivity : AppCompatActivity() {
         binding.exploreBtn.setOnClickListener {
             startActivity(Intent(this, IntroduceActivity::class.java))
         }
+
+
+        Log.d("haha", currentProgress.toString())
+        var water = currentProgress
+        binding.numberDrinkWaterTv.text = "${water}/2000"
+
+
+
 
     }
 
@@ -111,7 +134,10 @@ class HomeActivity : AppCompatActivity() {
                     // get data as model
                     val model = ds.getValue(PostModel::class.java)
                     // add to arrayList
-                    postArrayList.add(model!!)
+                    if (model != null) {
+                        if(model.status == "pending")
+                            postArrayList.add(model!!)
+                    }
                 }
 
                 if (postArrayList.isEmpty()) {
