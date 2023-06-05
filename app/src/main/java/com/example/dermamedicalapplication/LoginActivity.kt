@@ -108,7 +108,7 @@ class LoginActivity : AppCompatActivity() {
                         finish()
 
                     } else if (userType == "admin") {
-
+                        startActivity(Intent(this@LoginActivity, AdminPostActivity::class.java))
                     }
                 }
 

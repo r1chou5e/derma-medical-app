@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_admin_scene"
+    tools:context=".AdminPostActivity">
+
+    <ScrollView
+        android:id="@+id/contentSv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adminNav"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/ownerRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/authorTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tác giả: Huỳnh Gia Phú" />
+
+                <TextView
+                    android:id="@+id/timestampTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="CN, 20/11/2023 10:20" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/thumbnailRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ownerRl">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/thumbnailIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/rounded_corner"
+                    app:srcCompat="@drawable/placeholder_square" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/postRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thumbnailRl"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/postTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Lợi ích của việc uống nước đối với sức khỏe chúng ta."
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/postContentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postTitleTv"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/post_content_ex" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_back_gray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="93dp"
+            android:text="QUẢN LÝ BÀI VIẾT"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/adminNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        app:menu="@menu/admin_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <RelativeLayout
+        android:id="@+id/approvedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/contentSv"
+        android:layout_alignBottom="@id/contentSv"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/approvedBtnBg"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#00A80000"
+            app:srcCompat="@drawable/shape_green" />
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@id/approvedBtnBg"
+            android:layout_alignTop="@id/approvedBtnBg"
+            app:srcCompat="@drawable/ic_check_foreground" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/check"
+            android:text="Phê Duyệt"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/denyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/contentSv"
+        android:layout_alignBottom="@id/contentSv"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/denyBtnBg"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#00A80000"
+            app:srcCompat="@drawable/shape_red" />
+
+        <ImageView
+            android:id="@+id/deny"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@id/denyBtnBg"
+            android:layout_alignTop="@id/denyBtnBg"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/ic_cancel_white" />
+
+        <TextView
+            android:id="@+id/denyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/deny"
+            android:text="Từ chối"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/contentSv"
+        android:layout_alignBottom="@id/contentSv"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/deleteBtnBg"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#00A80000"
+            app:srcCompat="@drawable/shape_red" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@id/deleteBtnBg"
+            android:layout_alignTop="@id/deleteBtnBg"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/ic_cancel_white" />
+
+        <TextView
+            android:id="@+id/deleteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/delete"
+            android:text="Xoá bài"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/undoDenyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/contentSv"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/undoDenyBtnBg"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#00A80000"
+            app:srcCompat="@drawable/shape_button01" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@id/undoDenyBtnBg"
+            android:layout_alignTop="@id/undoDenyBtnBg"
+            app:srcCompat="@drawable/ic_undo_foreground" />
+
+        <TextView
+            android:id="@+id/undoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imageView10"
+            android:text="Hoàn tác"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

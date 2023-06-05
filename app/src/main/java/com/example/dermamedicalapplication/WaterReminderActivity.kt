@@ -1,7 +1,10 @@
 package com.example.dermamedicalapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.view.View.OnTouchListener
@@ -12,22 +15,43 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dermamedicalapplication.databinding.ActivityWaterReminderBinding
 import java.lang.Integer.parseInt
+import java.util.Calendar
 
 
 class WaterReminderActivity : AppCompatActivity() {
     lateinit var binding : ActivityWaterReminderBinding
-
-    var currentProgress: Int = 0
     lateinit var progressbar : ProgressBar;
+
+    companion object {
+        var currentProgress:Int = 0
+    }
     var amount: Int = 0
+    // Create object of SharedPreferences.
+    lateinit var sharedPref: SharedPreferences
+    //now get Editor
+    lateinit var  editor: SharedPreferences.Editor
 
 
+
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val intent = Intent(this, HomeActivity::class.java)
         binding = ActivityWaterReminderBinding.inflate(layoutInflater)
         progressbar = binding.progressBar
         setContentView(binding.root)
-
+        sharedPref  = getSharedPreferences("Water", MODE_PRIVATE);
+        editor = sharedPref.edit();
+        if(sharedPref.getInt("waterAmount", 0) == null) {
+            currentProgress = 0
+            editor.putInt("waterAmount", currentProgress)
+            editor.apply()
+            editor.commit()
+        }else
+        {
+            currentProgress = sharedPref.getInt("waterAmount", 0)
+        }
         binding.bottomNavigationView.selectedItemId = R.id.WaterReminder
 
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -63,7 +87,7 @@ class WaterReminderActivity : AppCompatActivity() {
         }
 
         binding.addBtn.setOnClickListener{
-            if(currentProgress < progressbar.max) {
+            if((currentProgress as Int) < progressbar.max) {
                 addProgress()
             }
         }
@@ -73,6 +97,14 @@ class WaterReminderActivity : AppCompatActivity() {
             startActivity(Intent(this, ReminderSettingActivity::class.java))
 
         }
+        progressbar.max = 2000
+        progressbar.progress = currentProgress
+        binding.textView2.text = "${currentProgress}/2000 ml"
+
+
+
+
+
 
     }
 
@@ -100,6 +132,10 @@ class WaterReminderActivity : AppCompatActivity() {
             currentProgress += amount
             progressbar.progress = currentProgress
             binding.textView2.text = "${currentProgress}/2000 ml"
+            editor.putInt("waterAmount", currentProgress);
+            //commits your edits
+            editor.commit();
+
 
             if(currentProgress >= 2000)
             {

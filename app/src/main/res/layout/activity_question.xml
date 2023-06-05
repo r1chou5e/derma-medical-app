@@ -33,8 +33,8 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbarRl"
         android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/toolbarRl"
         android:layout_centerHorizontal="true">
 
         <ImageView
@@ -43,23 +43,26 @@
             android:layout_height="520dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:background="@drawable/small_white_curved_rectangle"
-            tools:layout_centerHorizontal="true"/>
+            android:background="@drawable/shadow"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/large_white_curved_rectangle"
+            tools:layout_centerHorizontal="true" />
 
         <RelativeLayout
             android:id="@+id/questionTitleRl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignTop="@id/innerBg"
-            android:elevation="20dp">
+            android:layout_centerHorizontal="true"
+            android:elevation="20dp"
+            tools:elevation="11dp">
 
             <ImageView
                 android:id="@+id/questionTitleBgIv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/shape_blue_curved_corner_title"/>
-            
+                android:src="@drawable/shape_blue_curved_corner_title" />
+
             <TextView
                 android:id="@+id/questionTitleTv"
                 android:layout_width="350dp"
@@ -69,17 +72,18 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
         <ScrollView
             android:id="@+id/questionSv"
-            android:layout_below="@id/questionTitleRl"
             android:layout_width="wrap_content"
             android:layout_height="470dp"
-            android:scrollbars="none"
-            android:layout_centerHorizontal="true">
+            android:layout_below="@id/questionTitleRl"
+            android:layout_centerHorizontal="true"
+            android:elevation="11dp"
+            android:scrollbars="none">
 
             <RelativeLayout
                 android:id="@+id/questionListRl"
@@ -104,8 +108,8 @@
                         android:layout_marginEnd="20dp"
                         android:text="Giới tính của bạn ?"
                         android:textColor="@color/black"
-                        android:textStyle="bold|normal"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold|normal" />
 
                     <RelativeLayout
                         android:id="@+id/genderAnswerRl"
@@ -125,16 +129,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Nam" />
+                                android:text="Nam"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/female"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="50dp"
-                                android:textSize="18sp"
-                                android:text="Nữ" />
+                                android:text="Nữ"
+                                android:textSize="18sp" />
 
                         </RadioGroup>
 
@@ -143,40 +147,40 @@
 
                 </RelativeLayout>
 
-               <RelativeLayout
-                   android:id="@+id/dobRl"
-                   android:layout_width="350dp"
-                   android:layout_height="wrap_content"
-                   android:layout_alignEnd="@id/innerBg"
-                   android:elevation="20dp"
-                   android:layout_below="@id/genderQuizRl"
-                   tools:ignore="NotSibling">
+                <RelativeLayout
+                    android:id="@+id/dobRl"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderQuizRl"
+                    android:layout_alignEnd="@id/innerBg"
+                    android:elevation="20dp"
+                    tools:ignore="NotSibling">
 
                     <TextView
                         android:id="@+id/dobTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Ngày tháng năm sinh ?"
-                        android:textSize="20sp"
                         android:layout_marginStart="20dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black" />
+                        android:text="Ngày tháng năm sinh ?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                   <EditText
-                       android:id="@+id/dobEt"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_below="@id/dobTv"
-                       android:layout_marginStart="20dp"
-                       android:focusable="false"
-                       android:hint="Chọn năm"
-                       android:inputType="none"
-                       android:minHeight="48dp"
-                       android:onClick="showDatePickerDialog"
-                       android:textAlignment="center" />
+                    <EditText
+                        android:id="@+id/dobEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dobTv"
+                        android:layout_marginStart="20dp"
+                        android:focusable="false"
+                        android:hint="Chọn năm"
+                        android:inputType="none"
+                        android:minHeight="48dp"
+                        android:onClick="showDatePickerDialog"
+                        android:textAlignment="center" />
 
 
-               </RelativeLayout>
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/symptomQuizRl"
@@ -194,10 +198,10 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="20dp"
-                        android:textStyle="bold"
                         android:text="Thời gian bắt đầu triệu chứng ?"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:id="@+id/symptomAnswerRl"
@@ -217,32 +221,32 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Trong vòng 1 tuần" />
+                                android:text="Trong vòng 1 tuần"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/month"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Trong vòng 1 tháng" />
+                                android:text="Trong vòng 1 tháng"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/year"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Trong vòng 1 năm" />
+                                android:text="Trong vòng 1 năm"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/congential"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Trên 1 năm / Bẩm sinh" />
+                                android:text="Trên 1 năm / Bẩm sinh"
+                                android:textSize="18sp" />
 
                         </RadioGroup>
 
@@ -269,8 +273,8 @@
                         android:layout_marginEnd="20dp"
                         android:text="Mức độ của các triệu chứng đau, ngứa ?"
                         android:textColor="@color/black"
-                        android:textStyle="bold|normal"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold|normal" />
 
                     <RelativeLayout
                         android:id="@+id/levelAnswerRl"
@@ -290,24 +294,24 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Không có" />
+                                android:text="Không có"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/normal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Nhẹ - Trung bình" />
+                                android:text="Nhẹ - Trung bình"
+                                android:textSize="18sp" />
 
                             <RadioButton
                                 android:id="@+id/serious"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
-                                android:textSize="18sp"
-                                android:text="Nặng" />
+                                android:text="Nặng"
+                                android:textSize="18sp" />
 
                         </RadioGroup>
 
@@ -324,12 +328,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/innerBg"
-            android:text="Chụp ảnh vị trí vết thương"
-            android:layout_marginTop="30dp"
             android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="25dp"
-            android:shadowDy="4"
             android:background="@drawable/shape_button01"
+            android:shadowDy="4"
+            android:text="Chụp ảnh vị trí vết thương"
             android:textColor="@color/white"
             tools:ignore="NotSibling" />
 
@@ -337,13 +341,12 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        app:itemIconTint="@color/blue"
-        app:itemTextColor="@color/blue"
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav">
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        app:menu="@menu/bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>

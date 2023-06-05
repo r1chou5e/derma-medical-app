@@ -10,10 +10,11 @@ class UserModel {
     var phoneNumber:String = ""
     var gender:String = ""
     var dob:String = ""
+    var status:String=""
 
     constructor()
 
-    constructor(uid:String, email:String, fullname:String, timestamp:Long, profileImage:String, userType:String, phoneNumber:String, gender:String, dob:String) {
+    constructor(uid:String, email:String, fullname:String, timestamp:Long, profileImage:String, userType:String, phoneNumber:String, gender:String, dob:String, status:String) {
         this.uid = uid
         this.fullname = fullname
         this.timestamp = timestamp
@@ -22,6 +23,7 @@ class UserModel {
         this.phoneNumber = phoneNumber
         this.gender = gender
         this.dob = dob
+        this.status = status
     }
 
 }
