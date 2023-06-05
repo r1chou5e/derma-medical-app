@@ -325,12 +325,12 @@
 
         <TextView
             android:id="@+id/noPostTv"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/postListTitleTv"
+            android:layout_marginStart="20dp"
             android:text="Chưa có bài viết nào"
-            android:layout_marginStart="20dp"/>
+            android:visibility="gone" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -341,7 +341,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/post_row"/>
+            tools:listitem="@layout/post_row" />
 
     </RelativeLayout>
 

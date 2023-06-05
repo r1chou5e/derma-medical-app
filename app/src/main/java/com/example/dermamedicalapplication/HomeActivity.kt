@@ -92,7 +92,10 @@ class HomeActivity : AppCompatActivity() {
                     // get data as model
                     val model = ds.getValue(PostModel::class.java)
                     // add to arrayList
-                    postArrayList.add(model!!)
+                    if (model != null) {
+                        if(model.status == "pending")
+                            postArrayList.add(model!!)
+                    }
                 }
 
                 if (postArrayList.isEmpty()) {

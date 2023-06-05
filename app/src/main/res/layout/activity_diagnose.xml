@@ -73,12 +73,11 @@
             android:id="@+id/diagnose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/diagnosePic"
             android:layout_alignStart="@id/imageView3"
-            android:layout_alignEnd="@id/imageView3"
-            android:layout_alignTop="@id/imageView3"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="20dp"
             android:elevation="21dp">
 
             <TextView
@@ -101,56 +100,28 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/Time"
-            android:layout_width="330dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/diagnose"
-            android:layout_alignStart="@id/imageView3"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:elevation="21dp">
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/diagnoseTitle"
-                android:text="18:10 24/3/2023"
-                android:textColor="#120000"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/diagnoseTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thời gian: "
-                android:textColor="#120000"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
         <ImageView
             android:id="@+id/diagnosePic"
             android:layout_width="350dp"
             android:layout_height="200dp"
-            android:layout_below="@id/Time"
+            android:layout_alignTop="@id/imageView3"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:elevation="21dp"
             app:srcCompat="@color/black"
+            tools:layout_marginTop="10dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <RelativeLayout
             android:id="@+id/Description"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/diagnosePic"
-            android:layout_alignEnd="@id/imageView3"
+            android:layout_below="@id/diagnose"
             android:layout_alignStart="@id/imageView3"
+            android:layout_alignEnd="@id/imageView3"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="5dp"
             android:elevation="21dp">
 
             <TextView

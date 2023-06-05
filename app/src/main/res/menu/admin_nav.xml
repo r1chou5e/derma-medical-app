@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Bài viết"
+        android:id="@+id/post"
+        android:icon="@drawable/ic_post_add_white"/>
+    <item android:title="Người dùng"
+        android:id="@+id/user"
+        android:icon="@drawable/ic_user_filled_gray"/>
+</menu>

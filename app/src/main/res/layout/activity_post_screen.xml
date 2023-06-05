@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_admin_scene"
+    tools:context=".AdminPostActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_back_gray" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="93dp"
+            android:text="QUẢN LÝ BÀI VIẾT"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            app:srcCompat="@drawable/ic_search_gray" />
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/adminNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/blue"
+        app:menu="@menu/admin_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adminNav"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/approvedBtn"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shadow"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/small_white_curved_rectangle"
+            tools:ignore="NotSibling" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/imageView3"
+            android:layout_alignTop="@id/imageView3"
+            android:layout_alignEnd="@id/imageView3"
+            android:layout_alignBottom="@id/imageView3"
+            android:elevation="21dp"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/postPic"
+                    android:layout_width="350dp"
+                    android:layout_height="300dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="21dp"
+                    app:srcCompat="@color/black"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <TextView
+                    android:id="@+id/postTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postPic"
+                    android:text="Chẩn đoán: "
+                    android:textColor="#120000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/postContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/postTitle"
+                    android:layout_marginTop="5dp"
+                    android:text="TextView"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/approvedBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/imageView3"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/approvedBtnBg"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="#00A80000"
+                app:srcCompat="@drawable/shape_green" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@id/approvedBtnBg"
+                android:layout_alignTop="@id/approvedBtnBg"
+                app:srcCompat="@drawable/ic_checked_foreground" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/imageView6"
+                android:text="Đăng bài"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/deleteBtnBg"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="#00A80000"
+                app:srcCompat="@drawable/shape_red" />
+
+            <ImageView
+                android:id="@+id/x"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@id/deleteBtnBg"
+                android:layout_alignTop="@id/deleteBtnBg"
+                app:srcCompat="@drawable/ic_cancel_white" />
+
+            <TextView
+                android:id="@+id/deleteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/x"
+                android:text="Xoá bài"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

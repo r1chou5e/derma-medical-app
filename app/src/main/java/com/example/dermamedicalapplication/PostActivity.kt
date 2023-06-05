@@ -139,6 +139,7 @@ class PostActivity : AppCompatActivity(), ThumbnailImageViewFragment.ThumbnailIm
         hashMap["content"] = content
         hashMap["imageUrl"] = uploadedImageUrl
         hashMap["timestamp"] = timestamp
+        hashMap["status"] = "pending"
 
         // db reference DB > Post > PostId > PostInfo
         val ref = FirebaseDatabase.getInstance().getReference("Post")
