@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "984303658580",
+    "firebase_url": "https://derma-medical-app-default-rtdb.firebaseio.com",
+    "project_id": "derma-medical-app",
+    "storage_bucket": "derma-medical-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984303658580:android:185be07c7dc99e4bf76fc1",
+        "android_client_info": {
+          "package_name": "com.example.dermamedicalapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984303658580-d451pkbr1h8b3ol6pd567l5rs93aoipf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9e4WIfWvTb4NoEnngZyPb1vyfE3IXw3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984303658580-d451pkbr1h8b3ol6pd567l5rs93aoipf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
