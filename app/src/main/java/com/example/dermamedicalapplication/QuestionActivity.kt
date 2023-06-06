@@ -109,13 +109,27 @@ class QuestionActivity : AppCompatActivity() {
         }
 
         binding.scanBtn.setOnClickListener {
-            ImagePicker.Companion.with(this)
-                .compress(1024)
-                .maxResultSize(1080, 1080)
-                .createIntent { intent ->
-                    startForProfileImageResult.launch(intent)
-                }
+            if (allGroupChecked()) {
+                ImagePicker.Companion.with(this)
+                    .compress(1024)
+                    .maxResultSize(1080, 1080)
+                    .createIntent { intent ->
+                        startForProfileImageResult.launch(intent)
+                    }
+            }
+            else {
+                Toast.makeText(this, "Các câu hỏi không được để trống...", Toast.LENGTH_SHORT).show()
+            }
+
         }
+    }
+
+    private fun allGroupChecked() : Boolean {
+        val genderRadio = binding.genderAnswerRg.checkedRadioButtonId
+        val symptomRadio = binding.symptomAnswerRg.checkedRadioButtonId
+        val levelRadio = binding.levelAnswerRg.checkedRadioButtonId
+
+        return genderRadio != -1 && symptomRadio != -1 && levelRadio != -1
     }
 
     fun showDatePickerDialog(view: View) {

@@ -38,13 +38,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/searchBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_toStartOf="@id/notificationBtn"
-                app:srcCompat="@drawable/ic_search_gray" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -60,7 +53,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_above="@id/contactDoctorBtn"
+                android:layout_above="@id/saveDiagnoseBtn"
                 android:layout_below="@id/title"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
@@ -213,20 +206,20 @@
             </RelativeLayout>
 
             <android.widget.Button
-                android:id="@+id/contactDoctorBtn"
+                android:id="@+id/saveDiagnoseBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/rateDiagnosisBtn"
+                android:layout_above="@id/reDiagnoseBtn"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/shape_button01"
                 android:shadowDy="4"
-                android:text="Liên hệ bác sĩ"
+                android:text="Lưu chẩn đoán"
                 android:textColor="@color/white" />
 
             <android.widget.Button
-                android:id="@+id/rateDiagnosisBtn"
+                android:id="@+id/reDiagnoseBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -236,7 +229,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_button01"
                 android:shadowDy="4"
-                android:text="Đánh giá chuẩn đoán"
+                android:text="Chẩn đoán lại"
                 android:textColor="@color/white" />
 
         </RelativeLayout>

@@ -37,11 +37,14 @@ class TakePictureActivity : AppCompatActivity() {
         }
 
         binding.Cancel.setOnClickListener{
-            startActivity(Intent(this, DiagnoseActivity::class.java))
+            startActivity(Intent(this, QuestionActivity::class.java))
         }
 
         setContentView(binding.root)
 
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
 
     }
 }
