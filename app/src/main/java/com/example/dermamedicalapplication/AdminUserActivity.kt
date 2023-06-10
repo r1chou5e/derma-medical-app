@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
@@ -88,11 +90,25 @@ class AdminUserActivity : AppCompatActivity(), AdminUserAdapter.MyClickListener 
     }
 
      override fun deleteUser(position: Int) {
-        val ref = FirebaseDatabase.getInstance().getReference("User")
-         Log.d("haha", position.toString())
-         if(position != -1) {
-             ref.child(userArrayList[position].uid).removeValue()
-         }
+         val builder = AlertDialog.Builder(this@AdminUserActivity)
+         builder.setMessage("Bạn có chắc muốn xóa người dùng này ?")
+             .setCancelable(false)
+             .setPositiveButton("Có") { dialog, id ->
+                 // Delete selected note from database
+                 val ref = FirebaseDatabase.getInstance().getReference("User")
+                 Log.d("haha", position.toString())
+                 if(position != -1) {
+                     ref.child(userArrayList[position].uid).removeValue()
+                 }
+                 Toast.makeText(this, "Người dùng đã được xoá.", Toast.LENGTH_SHORT).show()
+
+             }
+             .setNegativeButton("Không") { dialog, id ->
+                 // Dismiss the dialog
+                 dialog.dismiss()
+             }
+         val alert = builder.create()
+         alert.show()
 
     }
 
@@ -103,6 +119,7 @@ class AdminUserActivity : AppCompatActivity(), AdminUserAdapter.MyClickListener 
          if(position != -1) {
              ref.child(userArrayList[position].uid).updateChildren(updateStatus)
          }
+         Toast.makeText(this, "Người dùng đã bị khoá.", Toast.LENGTH_SHORT).show()
     }
 
     override fun unlockUser(position: Int) {
@@ -112,6 +129,7 @@ class AdminUserActivity : AppCompatActivity(), AdminUserAdapter.MyClickListener 
         if(position != -1) {
             ref.child(userArrayList[position].uid).updateChildren(updateStatus)
         }
+        Toast.makeText(this, "Người dùng đã được mở khoá. ", Toast.LENGTH_SHORT).show()
     }
 }
 
