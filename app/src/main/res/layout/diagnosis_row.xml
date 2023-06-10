@@ -16,7 +16,7 @@
         android:orientation="horizontal">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/rounded_corner"
+            android:id="@+id/thumbnailIv"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_margin="10dp"
@@ -30,34 +30,34 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/titleTv"
+                android:id="@+id/diseaseTv"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chẩn đoán 1"
+                android:text="Mề đay"
                 android:textSize="17sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/timestampTv"
                 android:layout_marginTop="3dp"
-                android:layout_below="@id/titleTv"
+                android:layout_below="@id/diseaseTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thời gian: 00:33 03/02/2021" />
 
             <TextView
-                android:id="@+id/diseaseTv"
+                android:id="@+id/probabilityTv"
                 android:layout_marginTop="2dp"
                 android:layout_below="@id/timestampTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bệnh: Mề đay" />
+                android:text="Tỷ lệ chính xác: 89%" />
 
             <TextView
                 android:id="@+id/statusTv"
                 android:layout_marginTop="2dp"
-                android:layout_below="@id/diseaseTv"
+                android:layout_below="@id/probabilityTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tình trạng: nhẹ" />

@@ -41,6 +41,15 @@
         android:layout_below="@id/toolbarRl"
         android:layout_above="@id/bottomNavigationView">
 
+        <TextView
+            android:id="@+id/noDiagnoseTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:text="Chưa có chẩn đoán nào"
+            android:visibility="gone" />
+
         <!--  Diagnosis History  -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/diagnosisRv"

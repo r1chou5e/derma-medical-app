@@ -3,15 +3,21 @@ package com.example.dermamedicalapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.dermamedicalapplication.databinding.ActivityHistoryBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class HistoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHistoryBinding
 
-    private lateinit var diagnosisArrayList: ArrayList<DiagnosisModel>
+    private lateinit var diagnosisArrayList: ArrayList<DiagnoseModel>
 
     private lateinit var diagnosisAdapter: DiagnosisAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,13 +51,39 @@ class HistoryActivity : AppCompatActivity() {
 
         diagnosisArrayList = ArrayList()
 
-        repeat(10) {
-            diagnosisArrayList.add(DiagnosisModel())
-        }
+        // get all posts from firebase db
+        val ref = FirebaseDatabase.getInstance().getReference("Diagnose")
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                diagnosisArrayList.clear()
+                for (ds in snapshot.children) {
+                    // get data as model
+                    val model = ds.getValue(DiagnoseModel::class.java)
+                    // add to arrayList
+                    if (model != null) {
+                        diagnosisArrayList.add(model)
+                    }
+                }
 
-        diagnosisAdapter = DiagnosisAdapter(this@HistoryActivity, diagnosisArrayList)
+                if (diagnosisArrayList.isEmpty()) {
+                    binding.noDiagnoseTv.visibility = View.VISIBLE
+                }
+                else {
+                    binding.noDiagnoseTv.visibility = View.GONE
 
-        binding.diagnosisRv.adapter = diagnosisAdapter
+                    // setup adapter
+                    diagnosisAdapter = DiagnosisAdapter(this@HistoryActivity, diagnosisArrayList)
+
+                    // set adapter to RecyclerView
+                    binding.diagnosisRv.adapter = diagnosisAdapter
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
 
     }
 }
