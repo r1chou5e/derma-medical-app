@@ -73,6 +73,8 @@ class HistoryActivity : AppCompatActivity() {
                         }
                     }
 
+                    diagnosisArrayList = diagnosisArrayList.sortedByDescending { it.timestamp }.toMutableList()  as ArrayList<DiagnoseModel>
+
                     if (diagnosisArrayList.isEmpty()) {
                         binding.noDiagnoseTv.visibility = View.VISIBLE
                     }

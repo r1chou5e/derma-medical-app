@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
+import android.widget.Toast
 import com.example.dermamedicalapplication.WaterReminderActivity.Companion.currentProgress
 import com.example.dermamedicalapplication.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -16,6 +18,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.lang.Exception
 import java.lang.Integer.parseInt
+import java.text.SimpleDateFormat
+import java.util.Date
 
 const val waterAmount = "waterAmount"
 class HomeActivity : AppCompatActivity() {
@@ -27,6 +31,10 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var postArrayList: ArrayList<PostModel>
 
     private lateinit var postAdapter: PostAdapter
+
+    private var dangerousLevel = ""
+
+    private var lastDiagnoseId = ""
 
     lateinit var sharedPref: SharedPreferences
     //now get Editor
@@ -48,6 +56,8 @@ class HomeActivity : AppCompatActivity() {
         loadPosts()
 
         loadDiagnoseNumber()
+
+        loadCurrentStatus()
 
         binding.bottomNavigationView.selectedItemId = R.id.home
 
@@ -86,14 +96,71 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, IntroduceActivity::class.java))
         }
 
+        binding.statusBarRl.setOnClickListener {
+            val intent = Intent(this, DiagnoseDetailActivity::class.java)
+            intent.putExtra("diagnoseId", lastDiagnoseId)
+            startActivity(intent)
+        }
 
         Log.d("haha", currentProgress.toString())
         var water = currentProgress
         binding.numberDrinkWaterTv.text = "${water}/2000"
 
 
+    }
 
+    private fun loadCurrentStatus() {
 
+        var diagnosisArrayList = ArrayList<DiagnoseModel>()
+
+        val uid = firebaseAuth.currentUser?.uid
+
+        if (uid != null) {
+            val ref = FirebaseDatabase.getInstance().getReference("Diagnose").orderByChild("uid").equalTo(uid)
+            ref.addValueEventListener(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    diagnosisArrayList.clear()
+                    for (ds in snapshot.children) {
+                        // get data as model
+                        val model = ds.getValue(DiagnoseModel::class.java)
+                        // add to arrayList
+                        if (model != null) {
+                            diagnosisArrayList.add(model)
+                        }
+                    }
+
+                    diagnosisArrayList = diagnosisArrayList.sortedByDescending { it.timestamp }.toMutableList() as ArrayList<DiagnoseModel>
+
+                    lastDiagnoseId = diagnosisArrayList[0].id
+
+                    binding.dermaStatusTimeTv.text = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                        .format(diagnosisArrayList[0].timestamp?.let { Date(it) }).toString()
+
+                    var icon: ImageView = binding.dermaStatusIconIv
+
+                     dangerousLevel = diagnosisArrayList[0].dangerousLevel
+
+                    if (dangerousLevel == "Cực kỳ nghiêm trọng") {
+                        icon.setImageResource(R.drawable.confused)
+                    }
+                    else if (dangerousLevel == "Nghiêm trọng") {
+                        icon.setImageResource(R.drawable.sad)
+                    }
+                    else if (dangerousLevel == "Nhẹ") {
+                        icon.setImageResource(R.drawable.neutral)
+                    }
+                    else if (dangerousLevel == "Bình thường") {
+                        icon.setImageResource(R.drawable.smiling)
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            })
+
+        }
     }
 
     private fun loadDiagnoseNumber() {
