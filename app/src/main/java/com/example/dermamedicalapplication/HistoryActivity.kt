@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.dermamedicalapplication.databinding.ActivityHistoryBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -18,11 +19,15 @@ class HistoryActivity : AppCompatActivity() {
 
     private lateinit var diagnosisAdapter: DiagnosisAdapter
 
+    private lateinit var firebaseAuth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        firebaseAuth = FirebaseAuth.getInstance()
 
         loadDiagnosises()
 
@@ -49,41 +54,45 @@ class HistoryActivity : AppCompatActivity() {
 
     private fun loadDiagnosises() {
 
+        val uid = firebaseAuth.currentUser?.uid
+
         diagnosisArrayList = ArrayList()
 
-        // get all posts from firebase db
-        val ref = FirebaseDatabase.getInstance().getReference("Diagnose")
-        ref.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                diagnosisArrayList.clear()
-                for (ds in snapshot.children) {
-                    // get data as model
-                    val model = ds.getValue(DiagnoseModel::class.java)
-                    // add to arrayList
-                    if (model != null) {
-                        diagnosisArrayList.add(model)
+        if (uid != null) {
+            // get all diagnose from firebase db
+            val ref = FirebaseDatabase.getInstance().getReference("Diagnose").orderByChild("uid").equalTo(uid)
+            ref.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    diagnosisArrayList.clear()
+                    for (ds in snapshot.children) {
+                        // get data as model
+                        val model = ds.getValue(DiagnoseModel::class.java)
+                        // add to arrayList
+                        if (model != null) {
+                            diagnosisArrayList.add(model)
+                        }
+                    }
+
+                    if (diagnosisArrayList.isEmpty()) {
+                        binding.noDiagnoseTv.visibility = View.VISIBLE
+                    }
+                    else {
+                        binding.noDiagnoseTv.visibility = View.GONE
+
+                        // setup adapter
+                        diagnosisAdapter = DiagnosisAdapter(this@HistoryActivity, diagnosisArrayList)
+
+                        // set adapter to RecyclerView
+                        binding.diagnosisRv.adapter = diagnosisAdapter
                     }
                 }
 
-                if (diagnosisArrayList.isEmpty()) {
-                    binding.noDiagnoseTv.visibility = View.VISIBLE
+                override fun onCancelled(error: DatabaseError) {
+
                 }
-                else {
-                    binding.noDiagnoseTv.visibility = View.GONE
 
-                    // setup adapter
-                    diagnosisAdapter = DiagnosisAdapter(this@HistoryActivity, diagnosisArrayList)
-
-                    // set adapter to RecyclerView
-                    binding.diagnosisRv.adapter = diagnosisAdapter
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-
-        })
+            })
+        }
 
     }
 }
