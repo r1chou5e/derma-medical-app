@@ -47,6 +47,8 @@ class HomeActivity : AppCompatActivity() {
 
         loadPosts()
 
+        loadDiagnoseNumber()
+
         binding.bottomNavigationView.selectedItemId = R.id.home
 
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -91,6 +93,25 @@ class HomeActivity : AppCompatActivity() {
 
 
 
+
+    }
+
+    private fun loadDiagnoseNumber() {
+        val uid = firebaseAuth.currentUser?.uid
+
+        if (uid != null) {
+            val ref = FirebaseDatabase.getInstance().getReference("Diagnose").orderByChild("uid").equalTo(uid)
+            ref.addListenerForSingleValueEvent(object: ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    binding.numberDiagnosisTv.text = snapshot.childrenCount.toString()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+
+            })
+        }
 
     }
 
