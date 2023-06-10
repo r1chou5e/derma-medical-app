@@ -15,7 +15,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
 
         <!--   Back Button     -->
         <ImageButton
@@ -36,26 +37,6 @@
             android:text="NHẮC NHỞ UỐNG NƯỚC"
             android:textSize="18sp"
             android:textStyle="bold" />
-
-        <!--   Search Button     -->
-        <ImageButton
-            android:id="@+id/searchBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/notifyBtn"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_search_gray" />
-
-        <!--   Notification Button     -->
-        <ImageButton
-            android:id="@+id/notifyBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_notification_gray" />
 
     </RelativeLayout>
 
@@ -117,19 +98,28 @@
                 android:layout_below="@id/questionTitleRl"
                 android:layout_alignEnd="@id/innerBg"
                 android:elevation="20dp"
-                android:paddingTop="20dp">
+                android:paddingTop="10dp">
 
                 <TextView
                     android:id="@+id/genderQuestionTv"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="20dp"
                     android:text="Quá trình"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold|normal" />
+
+                <ImageButton
+                    android:id="@+id/resetWaterBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_reset_water_gray"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
 
                 <TextView
                     android:id="@+id/textView2"

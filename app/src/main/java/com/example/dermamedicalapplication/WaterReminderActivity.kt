@@ -101,10 +101,19 @@ class WaterReminderActivity : AppCompatActivity() {
         progressbar.progress = currentProgress
         binding.textView2.text = "${currentProgress}/2000 ml"
 
+        binding.backBtn.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        }
 
-
-
-
+        binding.resetWaterBtn.setOnClickListener {
+            currentProgress = 0
+            progressbar.progress = currentProgress
+            binding.textView2.text = "${currentProgress}/2000 ml"
+            editor.putInt("waterAmount", currentProgress)
+            editor.apply()
+        }
 
     }
 
