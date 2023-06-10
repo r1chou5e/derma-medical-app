@@ -16,13 +16,13 @@ class AdminUserAdapter:RecyclerView.Adapter<AdminUserAdapter.UserHolder> {
     private val postArrayList: ArrayList<UserModel>
     private lateinit var binding: UserRowBinding
     private lateinit var listener: MyClickListener
+    private var count: Int = 0
+
 
     constructor(context: AdminUserActivity, postArrayList: ArrayList<UserModel>, listener: MyClickListener) {
         this.context = context
         this.postArrayList = postArrayList
         this.listener = listener
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserHolder {
@@ -38,6 +38,8 @@ class AdminUserAdapter:RecyclerView.Adapter<AdminUserAdapter.UserHolder> {
 
 
     override fun onBindViewHolder(holder: UserHolder, position: Int) {
+        count++
+
         // get data
         val model = postArrayList[position]
         val fullname = model.fullname
@@ -46,7 +48,7 @@ class AdminUserAdapter:RecyclerView.Adapter<AdminUserAdapter.UserHolder> {
         val status = model.status
 
         // set data
-        holder.userId.text = uid
+        holder.userId.text = count.toString()
         holder.userName.text = fullname
         holder.userStatus.text = status
 
