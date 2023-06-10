@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
 
     <application
@@ -17,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DermaMedicalApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".DiagnoseDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".AdminPostActivity"
             android:exported="false" />

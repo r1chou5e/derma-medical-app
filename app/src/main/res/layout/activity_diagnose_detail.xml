@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/view_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DiagnoseDetailActivity">
+
+    <!-- Layout chính -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ghost_white"
+        tools:context=".DiagnoseActivity"
+        android:id="@+id/main_layout">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:srcCompat="@drawable/ic_back_gray" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="60dp"
+                android:text="CHI TIẾT CHẨN ĐOÁN"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            tools:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@id/diagnoseBtn"
+                android:layout_below="@id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
+                app:srcCompat="@drawable/small_white_curved_rectangle"
+                tools:ignore="NotSibling" />
+            <ImageView
+                android:id="@+id/diseasePic"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_alignEnd="@id/imageView3"
+                android:layout_alignTop="@id/imageView3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="21dp"
+                app:srcCompat="@color/black"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+            <RelativeLayout
+                android:id="@+id/diseaseRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_alignEnd="@id/imageView3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:elevation="21dp"
+                android:layout_below="@id/diseasePic">
+
+                <TextView
+                    android:id="@+id/diseaseTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bệnh: "
+                    android:textColor="#120000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/diseaseNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/diseaseTitleTv"
+                    tools:text = "Disease"
+                    android:textColor="#120000"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timestampRl"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/diseaseRl"
+                android:layout_alignEnd="@id/imageView3"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:elevation="21dp">
+
+                <TextView
+                    android:id="@+id/timestampValueTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/timestampTitleTv"
+                    android:textColor="#120000"
+                    tools:text="Description"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/timestampTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian: "
+                    android:textColor="#120000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dangerousLevelRl"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/timestampRl"
+                android:layout_alignEnd="@id/imageView3"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:elevation="21dp">
+
+                <TextView
+                    android:id="@+id/dangerousLevelContentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/dangerousLevelTitleTv"
+                    android:textColor="#120000"
+                    tools:text="Description"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dangerousLevelTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả tình trạng: "
+                    android:textColor="#120000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/probabilityRl"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dangerousLevelRl"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:elevation="21dp">
+
+                <TextView
+                    android:id="@+id/probabilityValueTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/probabilityTitleTv"
+                    android:text="100%"
+                    android:textColor="#120000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/probabilityTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tỉ lệ chính xác: "
+                    android:textColor="#120000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/suggestionRl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/probabilityRl"
+                android:layout_alignEnd="@id/imageView3"
+                android:layout_alignStart="@id/imageView3"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_alignBottom="@id/imageView3"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:elevation="21dp">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/suggestionTitleTv">
+                    <TextView
+                        android:id="@+id/suggenstionContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#120000"
+                        android:textSize="16sp"
+                        tools:text="Suggestion"/>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/suggestionTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lời khuyên: "
+                    android:textColor="#120000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <android.widget.Button
+                android:id="@+id/diagnoseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_button01"
+                android:shadowDy="4"
+                android:text="Tiến hành chẩn đoán"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -66,9 +66,9 @@ class DiagnosisAdapter:RecyclerView.Adapter<DiagnosisAdapter.DiagnoseHolder> {
         }
 
         holder.itemView.setOnClickListener {
-//            val intent = Intent(context, PostDetailActivity::class.java)
-//            intent.putExtra("postId", id)
-//            context.startActivity(intent)
+            val intent = Intent(context, DiagnoseDetailActivity::class.java)
+            intent.putExtra("diagnoseId", id)
+            context.startActivity(intent)
         }
     }
 
