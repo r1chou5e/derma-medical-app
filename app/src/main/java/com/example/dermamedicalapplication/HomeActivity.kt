@@ -227,7 +227,7 @@ class HomeActivity : AppCompatActivity() {
                     val model = ds.getValue(PostModel::class.java)
                     // add to arrayList
                     if (model != null) {
-                        if(model.status == "pending")
+                        if(model.status == "approved")
                             postArrayList.add(model!!)
                     }
                 }
