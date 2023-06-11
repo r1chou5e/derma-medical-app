@@ -42,7 +42,6 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         // Create object of SharedPreferences.
@@ -131,25 +130,30 @@ class HomeActivity : AppCompatActivity() {
 
                     diagnosisArrayList = diagnosisArrayList.sortedByDescending { it.timestamp }.toMutableList() as ArrayList<DiagnoseModel>
 
-                    lastDiagnoseId = diagnosisArrayList[0].id
-
-                    binding.dermaStatusTimeTv.text = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                        .format(diagnosisArrayList[0].timestamp?.let { Date(it) }).toString()
-
                     var icon: ImageView = binding.dermaStatusIconIv
 
-                     dangerousLevel = diagnosisArrayList[0].dangerousLevel
+                    if (diagnosisArrayList.size > 0) {
+                        lastDiagnoseId = diagnosisArrayList[0].id
 
-                    if (dangerousLevel == "Cực kỳ nghiêm trọng") {
-                        icon.setImageResource(R.drawable.confused)
+                        binding.dermaStatusTimeTv.text = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                            .format(diagnosisArrayList[0].timestamp?.let { Date(it) }).toString()
+
+                        dangerousLevel = diagnosisArrayList[0].dangerousLevel
+
+                        if (dangerousLevel == "Cực kỳ nghiêm trọng") {
+                            icon.setImageResource(R.drawable.confused)
+                        }
+                        else if (dangerousLevel == "Nghiêm trọng") {
+                            icon.setImageResource(R.drawable.sad)
+                        }
+                        else if (dangerousLevel == "Nhẹ") {
+                            icon.setImageResource(R.drawable.neutral)
+                        }
+                        else if (dangerousLevel == "Bình thường") {
+                            icon.setImageResource(R.drawable.smiling)
+                        }
                     }
-                    else if (dangerousLevel == "Nghiêm trọng") {
-                        icon.setImageResource(R.drawable.sad)
-                    }
-                    else if (dangerousLevel == "Nhẹ") {
-                        icon.setImageResource(R.drawable.neutral)
-                    }
-                    else if (dangerousLevel == "Bình thường") {
+                    else {
                         icon.setImageResource(R.drawable.smiling)
                     }
                 }
