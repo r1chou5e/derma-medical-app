@@ -1,5 +1,6 @@
 package com.example.dermamedicalapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -7,17 +8,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
 import com.example.dermamedicalapplication.WaterReminderActivity.Companion.currentProgress
 import com.example.dermamedicalapplication.databinding.ActivityHomeBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import java.lang.Exception
-import java.lang.Integer.parseInt
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -118,6 +115,7 @@ class HomeActivity : AppCompatActivity() {
         if (uid != null) {
             val ref = FirebaseDatabase.getInstance().getReference("Diagnose").orderByChild("uid").equalTo(uid)
             ref.addValueEventListener(object: ValueEventListener {
+                @SuppressLint("SimpleDateFormat")
                 override fun onDataChange(snapshot: DataSnapshot) {
                     diagnosisArrayList.clear()
                     for (ds in snapshot.children) {

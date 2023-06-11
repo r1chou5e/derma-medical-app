@@ -1,10 +1,6 @@
 
 u
 Eapp/src/main/java/com/example/dermamedicalapplication/PostActivity.kt,0\9\090dba5c27b1c2e6770a984e9efd412419cdacb3
-w
-Gapp/src/main/java/com/example/dermamedicalapplication/DiagnosisModel.kt,6\0\601c18c79bd29367ee8d596c2aa9b2648a72cf09
-u
-Eapp/src/main/java/com/example/dermamedicalapplication/HomeActivity.kt,3\7\37a3ea0dae95a9a6198cb73ff1b48dfa795a5e0d
 v
 Fapp/src/main/java/com/example/dermamedicalapplication/LoginActivity.kt,d\2\d223309c66325818ac979b55e4c67d02c63f536a
 r
@@ -25,13 +21,17 @@ A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 ^
 .app/src/main/res/raw/loadinganimationblue.json,c\6\c67d429feb0386bf94838476616a605285720dea
-y
-Iapp/src/main/java/com/example/dermamedicalapplication/DiagnoseActivity.kt,c\b\cb5f5ce343f041f18a6eb9cffff22b88cd05a22f
 r
 Bapp/src/main/java/com/example/dermamedicalapplication/ModelDerm.kt,d\0\d0497a4957f81377bc84f352117627e62dfe9e67
+y
+Iapp/src/main/java/com/example/dermamedicalapplication/DiagnoseActivity.kt,c\b\cb5f5ce343f041f18a6eb9cffff22b88cd05a22f
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+w
+Gapp/src/main/java/com/example/dermamedicalapplication/SplashActivity.kt,7\2\725f377bbc13e795847bcb9177d3cf0331b80e66
+u
+Eapp/src/main/java/com/example/dermamedicalapplication/HomeActivity.kt,3\7\37a3ea0dae95a9a6198cb73ff1b48dfa795a5e0d

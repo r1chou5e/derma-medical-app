@@ -1,4 +1,7 @@
 
-Gkotlin:S1481M"*Remove this unused "email" local variable.(¾íŞİşÿÿÿÿ
-2kotlin:S1128"Remove this unused import.(Éà…¾
-wkotlin:S1186"ZAdd a nested comment explaining why this function is empty or complete the implementation.(î¹ìúÿÿÿÿ
+>kotlin:S6531‚"Remove this useless cast.(ùµƒŠùÿÿÿÿ8³ŸûÂŠ1
+Hkotlin:S1481¾"*Remove this unused "email" local variable.(¾íŞİşÿÿÿÿ
+xkotlin:S1186ó"ZAdd a nested comment explaining why this function is empty or complete the implementation.(î¹ìúÿÿÿÿ
+kotlin:S1186®"ZAdd a nested comment explaining why this function is empty or complete the implementation.(î¹ìúÿÿÿÿ8ÁŸûÂŠ1
+Nkotlin:S1066ß".Merge this "if" statement with the nested one.(ÁÚî§8ÅŸûÂŠ1
+]kotlin:S6511"=Merge chained "if" statements into a single "when" statement.(®Å¢À8ÇŸûÂŠ1
