@@ -21,7 +21,6 @@ import java.lang.Integer.parseInt
 import java.text.SimpleDateFormat
 import java.util.Date
 
-const val waterAmount = "waterAmount"
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding

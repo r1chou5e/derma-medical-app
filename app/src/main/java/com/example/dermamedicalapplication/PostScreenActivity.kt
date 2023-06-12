@@ -124,13 +124,13 @@ class PostScreenActivity : AppCompatActivity() {
         val updateStatus: HashMap<String, Any> = HashMap()
         updateStatus["status"] = "approved"
         intent.getStringExtra(postId)?.let { ref.child(it).updateChildren(updateStatus) }
-        startActivity(Intent(this, ActivityAdminPostBinding::class.java))
+        startActivity(Intent(this, AdminPostActivity::class.java))
     }
 
     private fun updateDeletePost() {
         val ref = FirebaseDatabase.getInstance().getReference("Post")
         intent.getStringExtra(postId)?.let { ref.child(it).removeValue() }
-        startActivity(Intent(this, ActivityAdminPostBinding::class.java))
+        startActivity(Intent(this, AdminPostActivity::class.java))
     }
 
     private fun updateUndoPost() {
@@ -138,7 +138,7 @@ class PostScreenActivity : AppCompatActivity() {
         val updateStatus: HashMap<String, Any> = HashMap()
         updateStatus["status"] = "pending"
         intent.getStringExtra(postId)?.let { ref.child(it).updateChildren(updateStatus) }
-        startActivity(Intent(this, ActivityAdminPostBinding::class.java))
+        startActivity(Intent(this, AdminPostActivity::class.java))
     }
 
     private fun updateDenyPost() {
@@ -146,7 +146,7 @@ class PostScreenActivity : AppCompatActivity() {
         val updateStatus: HashMap<String, Any> = HashMap()
         updateStatus["status"] = "denied"
         intent.getStringExtra(postId)?.let { ref.child(it).updateChildren(updateStatus) }
-        startActivity(Intent(this, ActivityAdminPostBinding::class.java))
+        startActivity(Intent(this, AdminPostActivity::class.java))
     }
 
             }

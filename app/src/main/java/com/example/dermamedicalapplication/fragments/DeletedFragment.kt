@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.AdminPostListAdapter
@@ -71,13 +72,23 @@ class DeletedFragment : Fragment(), AdminPostListAdapter.MyClickListener {
                     val model = ds.getValue(PostModel::class.java)
                     // add to arrayList
                     if (model != null) {
-                        if(model.status == "denied") {
+                        if (model.status == "denied") {
                             postArrayList.add(model!!)
                         }
                     }
                 }
-                var postAdapter = context?.let { AdminPostListAdapter(it, postArrayList, this@DeletedFragment) }
-                viewPage.findViewById<RecyclerView>(R.id.deletedPost).adapter = postAdapter
+                if (postArrayList.isNullOrEmpty()) {
+                    viewPage.findViewById<RecyclerView>(R.id.deletedPost).visibility = View.GONE
+                    viewPage.findViewById<TextView>(R.id.textView8).visibility = View.VISIBLE
+                } else {
+                    viewPage.findViewById<RecyclerView>(R.id.deletedPost).visibility = View.VISIBLE
+                    viewPage.findViewById<TextView>(R.id.textView8).visibility = View.GONE
+                    var postAdapter =
+                        context?.let { AdminPostListAdapter(it, postArrayList, this@DeletedFragment)
+                        }
+
+                    viewPage.findViewById<RecyclerView>(R.id.deletedPost).adapter = postAdapter
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {

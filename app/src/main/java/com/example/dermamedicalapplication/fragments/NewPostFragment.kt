@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
@@ -65,20 +66,29 @@ class NewPostFragment : Fragment(), AdminPostListAdapter.MyClickListener {
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 postArrayList.clear()
-                for (ds in snapshot.children) {
-                    // get data as model
-                    val model = ds.getValue(PostModel::class.java)
-                    // add to arrayList
-                    if (model != null) {
-                        if(model.status == "pending") {
-                            postArrayList.add(model!!)
+                if (snapshot.exists())
+                    for (ds in snapshot.children) {
+                        // get data as model
+                        val model = ds.getValue(PostModel::class.java)
+                        // add to arrayList
+                        if (model != null) {
+                            if (model.status == "pending") {
+                                postArrayList.add(model!!)
+                            }
                         }
                     }
-                }
 
-                var postAdapter = context?.let { AdminPostListAdapter(it, postArrayList, this@NewPostFragment) }
+                if (postArrayList.isNullOrEmpty()) {
+                    viewPage.findViewById<RecyclerView>(R.id.newPost).visibility = View.GONE
+                    viewPage.findViewById<TextView>(R.id.textView8).visibility = View.VISIBLE
+                } else{
+                    viewPage.findViewById<RecyclerView>(R.id.newPost).visibility = View.VISIBLE
+                    viewPage.findViewById<TextView>(R.id.textView8).visibility = View.GONE
+                var postAdapter =
+                    context?.let { AdminPostListAdapter(it, postArrayList, this@NewPostFragment) }
 
                 viewPage.findViewById<RecyclerView>(R.id.newPost).adapter = postAdapter
+            }
             }
 
             override fun onCancelled(error: DatabaseError) {

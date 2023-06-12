@@ -35,8 +35,6 @@ class AdminPostActivity : AppCompatActivity() {
         view = binding.view
         view.adapter = adapter
 
-
-
         binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết mới"))
         binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết đã duyệt"))
         binding.postTab.addTab( binding.postTab.newTab().setText("Bài viết đã từ chối"))
