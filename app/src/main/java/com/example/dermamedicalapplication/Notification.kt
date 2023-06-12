@@ -21,15 +21,14 @@ class Notification : BroadcastReceiver()
         val pendingIntent : PendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
         val notification = NotificationCompat.Builder(context, channelID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle(intent.getStringExtra(titleExtra))
-            .setContentText(intent.getStringExtra(messageExtra))
+            .setContentTitle(intent.getStringExtra("titleExtra"))
+            .setContentText(intent.getStringExtra("messageExtra"))
             .setSmallIcon(R.drawable.logo_without_title)
             .setContentIntent(pendingIntent)
             .build()
 
         val  manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         manager.notify(notificationID, notification)
-
 
     }
 

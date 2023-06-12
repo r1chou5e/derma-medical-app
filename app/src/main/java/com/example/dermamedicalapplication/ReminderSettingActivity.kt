@@ -55,8 +55,8 @@ class ReminderSettingActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, Notification::class.java)
         val title = "Water Reminder"
         val message = "Time to drink water 💧"
-        intent.putExtra(titleExtra, title)
-        intent.putExtra(messageExtra, message)
+        intent.putExtra("titleExtra", title)
+        intent.putExtra("messageExtra", message)
 
         val pendingIntent = PendingIntent.getBroadcast(
             applicationContext,
@@ -82,7 +82,6 @@ class ReminderSettingActivity : AppCompatActivity() {
     }
 
     private fun showAlert() {
-
 
         AlertDialog.Builder(this)
             .setTitle("Cài đặt thông báo")
