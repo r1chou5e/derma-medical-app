@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dermamedicalapplication.AdminPostListAdapter
@@ -70,15 +71,24 @@ class ApprovedFragment : Fragment(), AdminPostListAdapter.MyClickListener {
                     val model = ds.getValue(PostModel::class.java)
                     // add to arrayList
                     if (model != null) {
-                        if(model.status == "approved") {
+                        if (model.status == "approved") {
                             postArrayList.add(model!!)
                         }
                     }
                 }
 
-                var postAdapter = context?.let { AdminPostListAdapter(it, postArrayList, this@ApprovedFragment) }
+                if (postArrayList.isNullOrEmpty()) {
+                    viewPage.findViewById<RecyclerView>(R.id.approvedPost).visibility = View.GONE
+                    viewPage.findViewById<TextView>(R.id.textView8).visibility = View.VISIBLE
+                } else {
+                    viewPage.findViewById<RecyclerView>(R.id.approvedPost).visibility = View.VISIBLE
+                    viewPage.findViewById<TextView>(R.id.textView8).visibility = View.GONE
+                    var postAdapter =
+                        context?.let { AdminPostListAdapter(it, postArrayList, this@ApprovedFragment)
+                        }
 
-                viewPage.findViewById<RecyclerView>(R.id.approvedPost).adapter = postAdapter
+                    viewPage.findViewById<RecyclerView>(R.id.approvedPost).adapter = postAdapter
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {

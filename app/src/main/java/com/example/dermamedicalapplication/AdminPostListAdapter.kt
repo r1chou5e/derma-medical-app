@@ -53,9 +53,6 @@ class AdminPostListAdapter:RecyclerView.Adapter<AdminPostListAdapter.PostHolder>
         holder.postContentTv.text = content
 
 
-
-
-
         if (imageUrl.isNotEmpty()) {
             Picasso.get()
                 .load(imageUrl)
@@ -71,14 +68,11 @@ class AdminPostListAdapter:RecyclerView.Adapter<AdminPostListAdapter.PostHolder>
 
 
 
-
     }
 
     interface MyClickListener{
         fun onClick(position: Int)
-        {
-
-        }
+        {}
     }
 
     inner class PostHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
