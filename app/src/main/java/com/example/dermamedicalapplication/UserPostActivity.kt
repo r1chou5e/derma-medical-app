@@ -53,6 +53,9 @@ class UserPostActivity : AppCompatActivity() {
                         postArrayList.add(model!!)
                     }
 
+                    postArrayList = postArrayList.sortedByDescending { it.timestamp }.toMutableList()  as ArrayList<PostModel>
+
+
                     if (postArrayList.isEmpty()) {
                         binding.noPostTv.visibility = View.VISIBLE
                     }
