@@ -15,7 +15,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
 
         <!--   Back Button     -->
         <ImageButton
@@ -36,26 +37,6 @@
             android:text="NHẮC NHỞ UỐNG NƯỚC"
             android:textSize="18sp"
             android:textStyle="bold" />
-
-        <!--   Search Button     -->
-        <ImageButton
-            android:id="@+id/searchBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/notifyBtn"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_search_gray" />
-
-        <!--   Notification Button     -->
-        <ImageButton
-            android:id="@+id/notifyBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:background="@android:color/transparent"
-            android:padding="5dp"
-            android:src="@drawable/ic_notification_gray" />
 
     </RelativeLayout>
 
@@ -133,7 +114,8 @@
                 android:layout_below="@id/wakeUpTimeRl"
                 android:layout_alignEnd="@id/innerBg"
                 android:layout_marginTop="20dp"
-                android:elevation="20dp">
+                android:elevation="20dp"
+                tools:ignore="NotSibling">
 
                 <TextView
                     android:id="@+id/symptomQuestionTv"
@@ -163,7 +145,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sleepTimeRl"
                 android:layout_alignEnd="@id/innerBg"
-                android:elevation="20dp">
+                android:elevation="20dp"
+                tools:ignore="NotSibling">
 
                 <TextView
                     android:id="@+id/symptomQuestionTv3"

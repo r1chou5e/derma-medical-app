@@ -85,10 +85,12 @@
         <!--    Explore Button   -->
         <android.widget.Button
             android:id="@+id/exploreBtn"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Khám phá"
             android:textAllCaps="false"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textSize="16sp"
             android:background="@drawable/shape_button02"
             android:layout_alignParentEnd="true"/>
