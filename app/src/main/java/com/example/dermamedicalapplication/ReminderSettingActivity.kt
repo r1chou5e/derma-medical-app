@@ -7,8 +7,11 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.dermamedicalapplication.databinding.ActivityReminderSettingBinding
 import java.util.Calendar
 
@@ -46,6 +49,16 @@ class ReminderSettingActivity : AppCompatActivity() {
         }
 
         createNotificationChannel()
+
+        binding.notifSwitch.setOnClickListener{
+            if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED)
+            {
+                ActivityCompat.requestPermissions(this,
+                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 101)
+            }
+        }
+
         binding.confirmBtn.setOnClickListener {
             if(binding.notifSwitch.isChecked) {scheduleNotification()} }
 
