@@ -41,10 +41,13 @@ class ReminderSettingActivity : AppCompatActivity() {
             true
         }
 
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
 
-            createNotificationChannel()
-            binding.confirmBtn.setOnClickListener {
-                if(binding.notifSwitch.isChecked) {scheduleNotification()} }
+        createNotificationChannel()
+        binding.confirmBtn.setOnClickListener {
+            if(binding.notifSwitch.isChecked) {scheduleNotification()} }
 
     }
 
