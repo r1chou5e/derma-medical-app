@@ -85,9 +85,9 @@ class ReminderSettingActivity : AppCompatActivity() {
 
 
         AlertDialog.Builder(this)
-            .setTitle("Notification Scheduled")
-            .setMessage("Setting saved")
-            .setPositiveButton("Okay") { _, _ -> }
+            .setTitle("Cài đặt thông báo")
+            .setMessage("Cài đặt đã được lưu")
+            .setPositiveButton("Ok") { _, _ -> }
             .show()
     }
 
