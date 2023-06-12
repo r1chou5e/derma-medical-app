@@ -2,6 +2,7 @@ package com.example.dermamedicalapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dermamedicalapplication.databinding.ActivityAdminPostBinding
@@ -14,12 +15,12 @@ import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.Date
 
-const val postId = "id"
-const val postImageUrl = "imageUrl"
-const val postTitle = "title"
-const val postContent = "content"
-const val uid = "uid"
-const val timestamp = "timestamp"
+const val postId = "postId"
+const val postImageUrl = "postImageUrl"
+const val postTitle = "postTitle"
+const val postContent = "postContent"
+const val postUid = "postUid"
+const val postTimestamp = "postTimestamp"
 const val status = "status"
 
 class PostScreenActivity : AppCompatActivity() {
@@ -28,11 +29,53 @@ class PostScreenActivity : AppCompatActivity() {
     lateinit var binding: ActivityPostScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityPostScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val imageUrl = intent.getStringExtra(postImageUrl).toString()
+        val timestamp = intent.getStringExtra(postTimestamp)?.toLong()
 
-        loadData()
 
+
+        binding.timestampTv.text = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+            .format(timestamp?.let { Date(it) }).toString()
+//        Log.d("haha", "Ngu")
+        binding.postTitleTv.text = intent.getStringExtra(postTitle).toString()
+        binding.postContentTv.text = intent.getStringExtra(postContent).toString()
+        if (imageUrl!!.isNotEmpty()) {
+            Picasso.get()
+                .load(imageUrl)
+                .placeholder(R.drawable.placeholder_square) // Placeholder image
+                .error(R.drawable.placeholder_square) // Image error
+                .fit()
+                .centerCrop()
+                .into(binding.thumbnailIv)
+        } else {
+            // if imageUrl empty
+            binding.thumbnailIv.setImageResource(R.drawable.placeholder_square)
+            Log.d("haha", "Hay")
+        }
+
+        val uid = intent.getStringExtra(postUid).toString()
+
+        val ref = FirebaseDatabase.getInstance().getReference("User").child(uid)
+
+        ref.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    val user = snapshot.getValue(UserModel::class.java)
+                    val fullname = user?.fullname.toString()
+                    binding.authorTv.text = "Tác giả: $fullname"
+                } else {
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
+
+//        loadData()
         if (intent.getStringExtra(status) == "approved")
         {
             binding.approvedBtn.visibility = View.GONE
@@ -106,68 +149,10 @@ class PostScreenActivity : AppCompatActivity() {
         startActivity(Intent(this, ActivityAdminPostBinding::class.java))
     }
 
-    private fun loadData() {
-
-        val ref = FirebaseDatabase.getInstance().getReference("Post").child(postId)
-
-        ref.addListenerForSingleValueEvent(object: ValueEventListener {
-            override  fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    val post = snapshot.getValue(PostModel::class.java)
-                    val imageUrl = intent.getStringExtra(postImageUrl)
-                    val timestamp = intent.getStringExtra(timestamp)
-
-                    binding.timestampTv.text = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                        .format(timestamp?.let { Date(it) }).toString()
-                    binding.postTitleTv.text = intent.getStringExtra(postTitle)
-                    binding.postContentTv.text = intent.getStringExtra(postContent)
-
-                    val uid = post?.uid.toString()
-
-                    val ref = FirebaseDatabase.getInstance().getReference("User").child(uid)
-
-                    ref.addListenerForSingleValueEvent(object : ValueEventListener {
-                        override fun onDataChange(snapshot: DataSnapshot) {
-                            if (snapshot.exists()) {
-                                val user = snapshot.getValue(UserModel::class.java)
-                                val fullname = user?.fullname.toString()
-                                binding.authorTv.text = "Tác giả: $fullname"
-                            } else {
-                            }
-                        }
-
-                        override fun onCancelled(error: DatabaseError) {
-
-                        }
-                    })
-
-
-                    if (imageUrl != null) {
-                        if (imageUrl.isNotEmpty()) {
-                            Picasso.get()
-                                .load(imageUrl)
-                                .placeholder(R.drawable.placeholder_square) // Placeholder image
-                                .error(R.drawable.placeholder_square) // Image error
-                                .fit()
-                                .centerCrop()
-                                .into(binding.thumbnailIv)
-                        } else {
-                            // if imageUrl empty
-                            binding.thumbnailIv.setImageResource(R.drawable.placeholder_square)
-                        }
-                    }
-
-                }
-                else {
-
-                }
             }
 
-            override fun onCancelled(error: DatabaseError) {
 
-            }
 
-        })
 
-    }
-}
+
+
